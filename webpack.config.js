@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index/index.js',
-    uikitPage: './src/uikit-page/uikit-page.js'
+    colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -87,10 +87,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/uikit-page/uikit-page.pug',
-      filename: 'uikit-page.html',
-      chunks: ['uikitPage']
+      template: './src/uikit-page/colorAndType/colorAndType.pug',
+      filename: 'colorAndType.html',
+      chunks: ['colorAndType']
     })
-
   ]
 };

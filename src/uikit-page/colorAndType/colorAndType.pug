@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    title Toxin Hotel
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
+    link(rel="manifest" href="./favicons/site.webmanifest")
+    link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+  body
+    section.colorsAndType
+      div.colorsAndType__rowColor
+        include ../../components/colorItem/colorItem.pug  
+        +colorItem('colorItem__boxColor_darkShade100','Dark Shade 100%','#1F2041')
+        +colorItem('colorItem__boxColor_darkShade75','Dark Shade 75%','#1F2041')
+        +colorItem('colorItem__boxColor_darkShade50','Dark Shade 50%','#1F2041')
+        +colorItem('colorItem__boxColor_darkShade25','Dark Shade 25%','#1F2041')
+        +colorItem('colorItem__boxColor_darkShade5','Dark Shade 5%','#1F2041')
+        +colorItem('colorItem__boxColor_purple','Purple','#BC9CFF')
+        +colorItem('colorItem__boxColor_green','Green','#6FCF97')
+      div.colorsAndType__rowText
+        include ../../components/colorText/colorText.pug 
+        +colorText('colorText_h1','H1','This one is the sub-section or</br> widget title')   
+        +colorText('colorText_h2','H2','Next one is the item title inside</br> widgets')   
+        +colorText('colorText_h3','H3','This is a label or CTA text')   
+        +colorText('colorText_body','Body','This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.') 
+      
+           
+
+                            
+                            
