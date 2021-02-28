@@ -1,0 +1,17 @@
+mixin checkboxItem(title,flag)
+  li.checkboxList__item 
+    label(class='checkboxList__item-check checkboxList__item-check_option') 
+            input(type="checkbox" checked=flag class='checkboxList__item-check-input')
+            span.checkboxList__item-checkbox
+            span=title
+
+mixin checkboxList(show,rotate)
+  section.checkboxList
+    button(class='checkboxList__titleBtn '+ rotate) expandable checkbox list
+    ul(class='checkboxList__items '+ show)
+      +checkboxItem('Завтрак',false)
+      +checkboxItem('Письменный стол',false)
+      +checkboxItem('Стул для кормления',true)
+      +checkboxItem('Кроватка',true)
+      +checkboxItem('Телевизор',false)
+      +checkboxItem('Шампунь',false)

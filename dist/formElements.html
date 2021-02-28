@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="formElements.js"></script></head>
+  <body>
+    <section class="formElements">
+      <div class="formElements__row">
+        <div class="formElements__row-input">
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Text Field</span><span class="formElements__row-input-subTitle">Default</span></div>
+                        <input class="inputForm " type="text" value="" placeholder="Email">
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Text Field</span><span class="formElements__row-input-subTitle">Hover&nbsp;/&nbsp;Focus</span></div>
+                        <input class="inputForm inputForm_active" type="text" value="This is pretty awesome" placeholder="Email">
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span></div>
+            <section class="dropDown">
+              <div class="dropDown__header">
+                <button class="dropDown__titleBtn">Сколько гостей</button>
+              </div>
+              <div class="dropDown__body">
+                            <div class="dropDown__bodyItem">
+                              <div class="dropDown__bodyItem-title">взрослые</div>
+                              <div class="dropDown__bodyItem-btns"> 
+                                <button class="dropDown__bodyItem-btns-inc">-</button>
+                                <div class="dropDown__bodyItem-btns-count">0</div>
+                                <button class="dropDown__bodyItem-btns-dec">+</button>
+                              </div>
+                            </div>
+                            <div class="dropDown__bodyItem">
+                              <div class="dropDown__bodyItem-title">дети</div>
+                              <div class="dropDown__bodyItem-btns"> 
+                                <button class="dropDown__bodyItem-btns-inc">-</button>
+                                <div class="dropDown__bodyItem-btns-count">0</div>
+                                <button class="dropDown__bodyItem-btns-dec">+</button>
+                              </div>
+                            </div>
+                            <div class="dropDown__bodyItem">
+                              <div class="dropDown__bodyItem-title">младенцы</div>
+                              <div class="dropDown__bodyItem-btns"> 
+                                <button class="dropDown__bodyItem-btns-inc">-</button>
+                                <div class="dropDown__bodyItem-btns-count">0</div>
+                                <button class="dropDown__bodyItem-btns-dec">+</button>
+                              </div>
+                            </div>
+                <div class="dropDown__bodyItem">
+                  <div class="dropDown__bodyItem-btns-control"> 
+                    <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
+                    <button class="dropDown__bodyItem-btns-control-ok">применить</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">masked text field</span></div>
+<input class="inputFormMasked" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="10">
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">date Dropdown</span></div>
+                        <input class="datepicker-here data-dropdown__input" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">filter date dropdown</span></div>
+                        <input class="datepicker-here datepicker-filter" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true" dateFormat="dd">
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">subscription text field</span></div>
+                        <form class="inputFormEmail" action="#"> 
+                          <input class="inputForm inputForm_email" type="text" placeholder="Email">
+                          <button class="inputForm__email-btn" type="submit"></button>
+                        </form>
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span><span class="formElements__row-input-subTitle">Default</span></div>
+                        <section class="dropDownBed">
+                          <div class="dropDownBed__header">
+                            <button class="dropDownBed__titleBtn">2 спальни, 2 кровати...</button>
+                          </div>
+                          <div class="dropDownBed__body ">
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">спальни</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc dropDownBed__bodyItem-btns-inc_active">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">2</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">кровати</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc dropDownBed__bodyItem-btns-inc_active">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">2</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">ванные комнаты</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc ">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">0</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                          </div>
+                        </section>
+          </div>
+          <div class="formElements__row-input-item">
+            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span><span class="formElements__row-input-subTitle">expanded</span></div>
+                        <section class="dropDownBed">
+                          <div class="dropDownBed__header">
+                            <button class="dropDownBed__titleBtn">2 спальни, 2 кровати...</button>
+                          </div>
+                          <div class="dropDownBed__body dropDownBed__body_show">
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">спальни</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc dropDownBed__bodyItem-btns-inc_active">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">2</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">кровати</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc dropDownBed__bodyItem-btns-inc_active">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">2</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDownBed__bodyItem">
+                                          <div class="dropDownBed__bodyItem-title">ванные комнаты</div>
+                                          <div class="dropDownBed__bodyItem-btns"> 
+                                            <button class="dropDownBed__bodyItem-btns-inc ">-</button>
+                                            <div class="dropDownBed__bodyItem-btns-count">0</div>
+                                            <button class="dropDownBed__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                          </div>
+                        </section>
+          </div>
+          <div class="formElements__row-input-item">
+                        <section class="checkboxList">
+                          <button class="checkboxList__titleBtn">expandable checkbox list</button>
+                          <ul class="checkboxList__items">
+                            <li class="checkboxList__item"> 
+                              <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                <input class="checkboxList__item-check-input" type="checkbox">Завтрак<span class="checkboxList__item-checkbox"></span>
+                              </label>
+                            </li>
+                            <li class="checkboxList__item"> 
+                              <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                <input class="checkboxList__item-check-input" type="checkbox" checked>Письменный стол<span class="checkboxList__item-checkbox"></span>
+                              </label>
+                            </li>
+                                        <li class="checkboxList__item"> 
+                                          <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                            <input class="checkboxList__item-check-input" type="checkbox" checked><span>Стул для кормленияtrue</span><span class="checkboxList__item-checkbox"></span>
+                                          </label>
+                                        </li>
+                                        <li class="checkboxList__item"> 
+                                          <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                            <input class="checkboxList__item-check-input" type="checkbox" checked><span>Кроваткаtrue</span><span class="checkboxList__item-checkbox"></span>
+                                          </label>
+                                        </li>
+                                        <li class="checkboxList__item"> 
+                                          <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                            <input class="checkboxList__item-check-input" type="checkbox" checked><span>Телевизорfalse</span><span class="checkboxList__item-checkbox"></span>
+                                          </label>
+                                        </li>
+                                        <li class="checkboxList__item"> 
+                                          <label class="checkboxList__item-check checkboxList__item-check_option"> 
+                                            <input class="checkboxList__item-check-input" type="checkbox" checked><span>Шампуньfalse</span><span class="checkboxList__item-checkbox"></span>
+                                          </label>
+                                        </li>
+                          </ul>
+                        </section>
+          </div>
+        </div>
+        <div class="formElements__row-checkbox"></div>
+        <div class="formElements__row-btn"></div>
+      </div>
+    </section>
+  </body>
+</html>

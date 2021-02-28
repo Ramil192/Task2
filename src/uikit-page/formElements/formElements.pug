@@ -65,6 +65,12 @@ html
               span.formElements__row-input-subTitle expanded
             include ../../components/dropDownBed/dropDownBed.pug
             +dropDownBed('dropDownBed__body_show')
+          div.formElements__row-input-item
+            include ../../components/checkboxList/checkboxList.pug
+            +checkboxList()
+          div.formElements__row-input-item
+            include ../../components/checkboxList/checkboxList.pug
+            +checkboxList('checkboxList__items_show','checkboxList__titleBtn_rotate')
         div.formElements__row-checkbox
         div.formElements__row-btn
     
