@@ -58,6 +58,13 @@ html
               span.formElements__row-input-title Dropdown
               span.formElements__row-input-subTitle Default
             include ../../components/dropDownBed/dropDownBed.pug
+            +dropDownBed('')
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title Dropdown
+              span.formElements__row-input-subTitle expanded
+            include ../../components/dropDownBed/dropDownBed.pug
+            +dropDownBed('dropDownBed__body_show')
         div.formElements__row-checkbox
         div.formElements__row-btn
     

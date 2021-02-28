@@ -5,13 +5,13 @@ mixin dropDownBedItem(className,title,count)
       button(class='dropDownBed__bodyItem-btns-inc '+className) -
       div.dropDownBed__bodyItem-btns-count=count
       button.dropDownBed__bodyItem-btns-dec +
-
-section.dropDownBed
-  div.dropDownBed__header
-    button.dropDownBed__titleBtn 2 спальни, 2 кровати...
-  div.dropDownBed__body
-    +dropDownBedItem('dropDownBed__bodyItem-btns-inc_active','спальни','2')
-    +dropDownBedItem('dropDownBed__bodyItem-btns-inc_active','кровати','2')
-    +dropDownBedItem('','ванные комнаты','0')
+mixin dropDownBed(className)
+  section.dropDownBed
+    div.dropDownBed__header
+      button.dropDownBed__titleBtn 2 спальни, 2 кровати...
+    div(class='dropDownBed__body ' + className)
+      +dropDownBedItem('dropDownBed__bodyItem-btns-inc_active','спальни','2')
+      +dropDownBedItem('dropDownBed__bodyItem-btns-inc_active','кровати','2')
+      +dropDownBedItem('','ванные комнаты','0')
 
 
