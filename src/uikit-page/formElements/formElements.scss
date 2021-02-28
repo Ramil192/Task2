@@ -1,0 +1,47 @@
+.formElements {
+  max-width: 1440px;
+  padding: 176px 141px 146px 140px;
+  margin: 0px auto;
+  background: url(../../img/main-logo.svg)no-repeat 30px 62px;
+  &__row {
+    display: flex;
+  }
+  &__row-input {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  &__row-input-item {
+    margin-bottom: 20px;
+    &:nth-child(5){
+      margin-top: 19px;
+    }
+    &:nth-child(6){
+      margin-top: 19px;
+    }
+    &:nth-child(7){
+      margin-top: 19px;
+    }
+  }
+  &__row-input-text {
+    display: flex;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  &__row-input-title {
+    font-weight: bold;
+    flex-basis: 100%;
+    color: #1f2041;
+  }
+  &__row-input-subTitle {
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  &__row-checkbox {
+  }
+  &__row-btn {
+  }
+}

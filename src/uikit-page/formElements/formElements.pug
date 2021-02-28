@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    title Toxin Hotel
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
+    link(rel="manifest" href="./favicons/site.webmanifest")
+    link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+  body
+    section.formElements
+      div.formElements__row
+        div.formElements__row-input
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title Text Field
+              span.formElements__row-input-subTitle Default
+            include ../../components/inputForm/inputForm.pug
+            +inputForm('','')
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title Text Field
+              span.formElements__row-input-subTitle Hover&nbsp;/&nbsp;Focus
+            include ../../components/inputForm/inputForm.pug
+            +inputForm('inputForm_active','This is pretty awesome')
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title Dropdown
+            include ../../components/dropDown/dropDown.pug
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title masked text field
+            include ../../components/inputFormMask/inputFormMask.pug
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title date Dropdown
+            include ../../components/data-dropdown/data-dropdown.pug
+            +data-dropdown()
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title filter date dropdown
+            include ../../components/data-dropdown/data-dropdown.pug
+            +data-dropdown-filter()
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title subscription text field
+            include ../../components/inputForm/inputForm.pug
+            +inputFormEmail()
+          div.formElements__row-input-item
+            div.formElements__row-input-text
+              span.formElements__row-input-title Dropdown
+              span.formElements__row-input-subTitle Default
+            include ../../components/dropDownBed/dropDownBed.pug
+        div.formElements__row-checkbox
+        div.formElements__row-btn
+    

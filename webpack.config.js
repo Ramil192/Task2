@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: './src/index/index.js',
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
+    formElements: './src/uikit-page/formElements/formElements.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -90,6 +91,12 @@ module.exports = {
       template: './src/uikit-page/colorAndType/colorAndType.pug',
       filename: 'colorAndType.html',
       chunks: ['colorAndType']
-    })
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/uikit-page/formElements/formElements.pug',
+      filename: 'formElements.html',
+      chunks: ['formElements']
+    }),
   ]
 };

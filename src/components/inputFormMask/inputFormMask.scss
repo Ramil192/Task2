@@ -1,0 +1,17 @@
+.inputFormMasked {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 9px 0 10px 16px;
+  width: 320px;
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  &::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &:active,&:focus,&:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  }
+}

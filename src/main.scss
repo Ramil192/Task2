@@ -36,6 +36,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Montserrat';
+  font-size: 14px;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -68,6 +69,13 @@ select {
   font: inherit;
 }
 
+input,button {
+  outline:none;
+  background-color: #fff;
+  padding: 0px;
+  margin: 0px;
+  border: 0px solid transparent;
+}
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
