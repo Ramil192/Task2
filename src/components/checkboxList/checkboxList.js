@@ -1,5 +1,5 @@
 $(function(){
-  const checkboxBtn = document.querySelector('.checkboxList__titleBtn')
+  const checkboxBtn = document.querySelector('#checkboxListBtn')
   const checkboxItems = document.querySelector('.checkboxList__items')
   console.log(checkboxBtn); 
   checkboxBtn.addEventListener('click',()=>{

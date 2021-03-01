@@ -19,6 +19,15 @@
       background: url('../../img/arrow-down.svg')no-repeat 50%;
     }
   }
+  &__title {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+  }
   &__titleBtn_rotate{
     &::before{
       transform: rotate(180deg);
@@ -36,10 +45,12 @@
   &__item {
     margin-bottom: 12px;
   }
-  &__item-check_option{
-    margin-left: 30px;
+  &__item-title{
+    width: 192px;
   }
   &__item-check{
+    margin-left: 30px;
+    display: flex;
   }
   &__item-check-input{
     width: 1px;

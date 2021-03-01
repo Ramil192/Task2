@@ -1,6 +1,6 @@
 .formElements {
   max-width: 1440px;
-  padding: 176px 141px 146px 140px;
+  padding: 174px 141px 146px 140px;
   margin: 0px auto;
   background: url(../../img/main-logo.svg)no-repeat 30px 62px;
   &__row {
@@ -33,7 +33,7 @@
       margin-top: 31px;
     }
     &:nth-child(11){  
-      margin-top: 22px;
+      margin-top: 25px;
     }
     &:nth-child(12){  
       margin-top: 74px;
@@ -57,6 +57,7 @@
   }
 
   &__row-checkbox {
+    margin-left: 126px;
   }
   &__row-btn {
   }
