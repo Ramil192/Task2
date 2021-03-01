@@ -63,7 +63,19 @@
   }
   &__row-checkbox-item{
     &:nth-child(2){
-      margin-top: 41px;
+      margin-top: 43px;
     }
+    &:nth-child(3){
+      margin-top: 39px;
+    }
+    &:nth-child(4){
+      margin-top: 45px;
+    }
+  }
+  &__row-checkbox-item-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 14px;
   }
 }

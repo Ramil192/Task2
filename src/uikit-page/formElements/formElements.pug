@@ -80,5 +80,12 @@ html
           div.formElements__row-checkbox-item
             include ../../components/radioButtons/radioButtons.pug
             +radioButtons('Radio Buttons')
+          div.formElements__row-checkbox-item
+            include ../../components/toggle/toggle.pug
+            +toggle('Toggle')
+          div.formElements__row-checkbox-item
+            div.formElements__row-checkbox-item-title like button
+            include ../../components/likeButton/likeButton.pug
+            +likeButton(2,'')
         div.formElements__row-btn
     

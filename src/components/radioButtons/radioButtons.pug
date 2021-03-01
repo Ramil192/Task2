@@ -1,10 +1,11 @@
+mixin radioBtnItem(name,isFlag)
+  label.radioButtons__radio
+        input(type="radio" name='gender' class='radioButtons__radio-input' checked=isFlag)
+        span.radioButtons__radio-name=name
+        
 mixin radioButtons(title)
   section.radioButtons
     div.radioButtons__title=title
     div.radioButtons__items
-      label.radioButtons__radio
-        input(type="radio" name='gender' class='radioButtons__radio-input' checked)
-        span.radioButtons__radio-name Мужчина
-      label.radioButtons__radio
-        input(type="radio" name='gender' class='radioButtons__radio-input' )
-        span.radioButtons__radio-name Женщина 
+      +radioBtnItem('Мужчина',true)
+      +radioBtnItem('Женщина',false)  

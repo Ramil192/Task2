@@ -1,0 +1,10 @@
+mixin toggleItem(text,isFlag)
+  div.toggle__item=title
+      label.toggle__label
+        input(type='checkbox' class='toggle__checkbox' checked=isFlag)
+        span.toggle__text=text  
+
+mixin toggle(title)
+  section.toggle=title
+    +toggleItem('Получать спецпредложения',true)
+    +toggleItem('Получать спецпредложения',false)
