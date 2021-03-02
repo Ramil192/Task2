@@ -31,9 +31,8 @@ html
             include ../../components/inputForm/inputForm.pug
             +inputForm('inputForm_active','This is pretty awesome')
           div.formElements__row-input-item
-            div.formElements__row-input-text
-              span.formElements__row-input-title Dropdown
             include ../../components/dropDown/dropDown.pug
+            +dropDown('','dropdown')
           div.formElements__row-input-item
             div.formElements__row-input-text
               span.formElements__row-input-title masked text field
@@ -87,5 +86,12 @@ html
             div.formElements__row-checkbox-item-title like button
             include ../../components/likeButton/likeButton.pug
             +likeButton(2,'')
+          div.formElements__row-checkbox-item
+            div.formElements__row-checkbox-item-title rate button
+            include ../../components/rateBtn/rateBtn.pug
+            +rateBtn()
+          div.formElements__row-checkbox-item
+            include ../../components/dropDown/dropDown.pug
+            +dropDown('dropDown__body_show','dropdown')
         div.formElements__row-btn
     

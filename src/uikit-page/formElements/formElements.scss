@@ -12,12 +12,13 @@
    
   }
   &__row-input-item {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     &:nth-child(5){
-      margin-top: 19px;
+      margin-top: 21px;
     }
     &:nth-child(6){
       margin-top: 19px;
+      margin-bottom: 25px;
     }
     &:nth-child(7){
       margin-top: 19px;
@@ -71,11 +72,20 @@
     &:nth-child(4){
       margin-top: 45px;
     }
+    &:nth-child(5){
+      margin-top: 38px;
+    }
+    &:nth-child(6){
+      margin-top: 189px;
+    }
   }
   &__row-checkbox-item-title{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
     margin-bottom: 14px;
+    &:nth-child(3){
+      color: red;
+    }
   }
 }

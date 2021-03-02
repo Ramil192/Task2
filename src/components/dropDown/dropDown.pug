@@ -6,15 +6,17 @@ mixin dropDownItem(title)
       div.dropDown__bodyItem-btns-count 0
       button.dropDown__bodyItem-btns-dec +
 
-section.dropDown
-  div.dropDown__header
-    button.dropDown__titleBtn Сколько гостей
-  div.dropDown__body
-    +dropDownItem('взрослые')
-    +dropDownItem('дети')
-    +dropDownItem('младенцы')
-    div.dropDown__bodyItem
-       div.dropDown__bodyItem-btns-control 
-         button.dropDown__bodyItem-btns-control-clean очистить
-         button.dropDown__bodyItem-btns-control-ok применить
+mixin dropDown(className,title)
+  section.dropDown
+    div.dropDown__title=title 
+    div.dropDown__header
+      button.dropDown__titleBtn Сколько гостей
+    div(class='dropDown__body ' + className)
+      +dropDownItem('взрослые')
+      +dropDownItem('дети')
+      +dropDownItem('младенцы')
+      div.dropDown__bodyItem
+        div.dropDown__bodyItem-btns-control 
+          button.dropDown__bodyItem-btns-control-clean очистить
+          button.dropDown__bodyItem-btns-control-ok применить
 
