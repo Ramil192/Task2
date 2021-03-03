@@ -100,4 +100,17 @@ html
           div.formElements__row-btn-item
             include ../../components/range-slider/range-slider.pug
             +range-slider('Range Slider')
+          div.formElements__row-btn-item
+            div.formElements__row-btn-item-title buttons
+            include ../../components/buttons/buttons.pug
+            +btnWithBackColor('CLICK ME')
+          div.formElements__row-btn-item
+            include ../../components/buttons/buttons.pug
+            +btnWithBorder('CLICK ME')
+          div.formElements__row-btn-item
+            include ../../components/buttons/buttons.pug
+            +btnJustName('CLICK ME')
+          div.formElements__row-btn-item
+            include ../../components/buttons/buttons.pug
+            +btnForm('перейти к оплате')
     
