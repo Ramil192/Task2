@@ -28,44 +28,44 @@
                         <input class="inputForm inputForm_active" type="text" value="This is pretty awesome" placeholder="Email">
           </div>
           <div class="formElements__row-input-item">
-            <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span></div>
-            <section class="dropDown">
-              <div class="dropDown__header">
-                <button class="dropDown__titleBtn">Сколько гостей</button>
-              </div>
-              <div class="dropDown__body">
+                        <section class="dropDown">
+                          <div class="dropDown__title">dropdown</div>
+                          <div class="dropDown__header">
+                            <button class="dropDown__titleBtn">Сколько гостей</button>
+                          </div>
+                          <div class="dropDown__body ">
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">взрослые</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">дети</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">младенцы</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
                             <div class="dropDown__bodyItem">
-                              <div class="dropDown__bodyItem-title">взрослые</div>
-                              <div class="dropDown__bodyItem-btns"> 
-                                <button class="dropDown__bodyItem-btns-inc">-</button>
-                                <div class="dropDown__bodyItem-btns-count">0</div>
-                                <button class="dropDown__bodyItem-btns-dec">+</button>
+                              <div class="dropDown__bodyItem-btns-control"> 
+                                <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
+                                <button class="dropDown__bodyItem-btns-control-ok">применить</button>
                               </div>
                             </div>
-                            <div class="dropDown__bodyItem">
-                              <div class="dropDown__bodyItem-title">дети</div>
-                              <div class="dropDown__bodyItem-btns"> 
-                                <button class="dropDown__bodyItem-btns-inc">-</button>
-                                <div class="dropDown__bodyItem-btns-count">0</div>
-                                <button class="dropDown__bodyItem-btns-dec">+</button>
-                              </div>
-                            </div>
-                            <div class="dropDown__bodyItem">
-                              <div class="dropDown__bodyItem-title">младенцы</div>
-                              <div class="dropDown__bodyItem-btns"> 
-                                <button class="dropDown__bodyItem-btns-inc">-</button>
-                                <div class="dropDown__bodyItem-btns-count">0</div>
-                                <button class="dropDown__bodyItem-btns-dec">+</button>
-                              </div>
-                            </div>
-                <div class="dropDown__bodyItem">
-                  <div class="dropDown__bodyItem-btns-control"> 
-                    <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
-                    <button class="dropDown__bodyItem-btns-control-ok">применить</button>
-                  </div>
-                </div>
-              </div>
-            </section>
+                          </div>
+                        </section>
           </div>
           <div class="formElements__row-input-item">
             <div class="formElements__row-input-text"><span class="formElements__row-input-title">masked text field</span></div>
@@ -285,16 +285,87 @@
                                           <input class="radioButtons__radio-input" type="radio" name="gender" checked><span class="radioButtons__radio-name">Мужчина</span>
                                         </label>
                                         <label class="radioButtons__radio">
-                                          <input class="radioButtons__radio-input" type="radio" name="gender" checked><span class="radioButtons__radio-name">Женщина</span>
+                                          <input class="radioButtons__radio-input" type="radio" name="gender"><span class="radioButtons__radio-name">Женщина</span>
                                         </label>
                           </div>
                         </section>
           </div>
           <div class="formElements__row-checkbox-item">
-                        <section class="toggle">
-                          <label class="toggle__label">Radio Buttons
-                            <input class=".toggle__checkbox" type="checkbox&quot;">
+                        <section class="toggle">Toggle
+                                      <div class="toggle__item">
+                                        <label class="toggle__label">
+                                          <input class="toggle__checkbox" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
+                                        </label>
+                                      </div>
+                                      <div class="toggle__item">
+                                        <label class="toggle__label">
+                                          <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+                                        </label>
+                                      </div>
+                        </section>
+          </div>
+          <div class="formElements__row-checkbox-item">
+            <div class="formElements__row-checkbox-item-title">like button</div>
+                        <section class="likeButton ">
+                          <div class="likeButton__count">2</div>
+                        </section>
+          </div>
+          <div class="formElements__row-checkbox-item">
+            <div class="formElements__row-checkbox-item-title">rate button</div>
+                        <div class="rating" data-total-value="4">
+                          <div class="rating__item" data-item-value="5"> </div>
+                          <div class="rating__item" data-item-value="4"> </div>
+                          <div class="rating__item" data-item-value="3"> </div>
+                          <div class="rating__item" data-item-value="2"> </div>
+                          <div class="rating__item" data-item-value="1"> </div>
+                        </div>
+          </div>
+          <div class="formElements__row-checkbox-item">
+                        <section class="dropDown">
+                          <div class="dropDown__title">dropdown</div>
+                          <div class="dropDown__header">
+                            <button class="dropDown__titleBtn">Сколько гостей</button>
+                          </div>
+                          <div class="dropDown__body dropDown__body_show">
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">взрослые</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">дети</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                                        <div class="dropDown__bodyItem">
+                                          <div class="dropDown__bodyItem-title">младенцы</div>
+                                          <div class="dropDown__bodyItem-btns"> 
+                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                          </div>
+                                        </div>
+                            <div class="dropDown__bodyItem">
+                              <div class="dropDown__bodyItem-btns-control"> 
+                                <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
+                                <button class="dropDown__bodyItem-btns-control-ok">применить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+          </div>
+          <div class="formElements__row-checkbox-item">
+                        <section class="richCheckboxBtn">rich Checkbox Buttons
+                          <label class="richCheckboxBtn__check">
+                            <input class="richCheckboxBtn__checkbox" type="checkbox"><span></span>
                           </label>
+                          <div class="richCheckboxBtn__text"></div>
                         </section>
           </div>
         </div>

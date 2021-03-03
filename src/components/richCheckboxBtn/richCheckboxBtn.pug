@@ -1,0 +1,16 @@
+mixin richCheckboxBtnItem(subTitle,text)
+  div.richCheckboxBtn__item
+    label.richCheckboxBtn__check
+      input(class='richCheckboxBtn__checkbox' type="checkbox")
+      span.richCheckboxBtn__subTitle=subTitle
+    div.richCheckboxBtn__text!=text
+
+mixin richCheckboxBtn(title,subTitle,text)
+  section.richCheckboxBtn=title
+  div.div.richCheckboxBtn__wrapper
+    div.richCheckboxBtn__item
+      label.richCheckboxBtn__check
+        input(class='richCheckboxBtn__checkbox' type="checkbox")
+        span.richCheckboxBtn__subTitle=subTitle
+      div.richCheckboxBtn__text!=text 
+    +richCheckboxBtnItem('Помощник для инвалидов','На 1 этаже вас встретит специалист</br>  и проводит до номера.') 

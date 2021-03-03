@@ -73,4 +73,8 @@
   &__items_show{
     display: block;
   }
+  &__item-text{
+    display: flex;
+    flex-direction: column;
+  }
 }
