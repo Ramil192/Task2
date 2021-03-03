@@ -60,8 +60,7 @@
   &__row-checkbox {
     margin-left: 126px;
   }
-  &__row-btn {
-  }
+ 
   &__row-checkbox-item{
     &:nth-child(2){
       margin-top: 43px;
@@ -90,5 +89,8 @@
     &:nth-child(3){
       color: red;
     }
+  }
+  &__row-btn {
+    margin-left: 73px;
   }
 }
