@@ -1,0 +1,12 @@
+mixin commentary(name,date,text)
+  section.commentary
+    div.commentary__item
+      div.commentary__header
+        img(class='commentary__img' src="../../img/man.png", alt="avatar")
+        div.commentary__header-text
+          div.commentary__header-name=name
+          div.commentary__header-date=date
+      div.commentary__body
+        include ../likeButton/likeButton.pug
+        +likeButton('12','')
+        div.commentary__body-text=text

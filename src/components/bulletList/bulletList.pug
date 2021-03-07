@@ -1,0 +1,11 @@
+mixin bulletListItem(text)
+  div.bulletList__item!=text
+
+
+mixin bulletList(title)
+  section.bulletList
+    div.bulletList__title=title 
+    div.bulletList__items
+      +bulletListItem('Нельзя с питомцами')
+      +bulletListItem('Без вечеринок и мероприятий')
+      +bulletListItem('Время прибытия — после 13:00,</br>а выезд до 12:00')
