@@ -1,0 +1,24 @@
+.roomSearch {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 29px 30px ;
+  background-color: #fff;
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 24px;
+    line-height: 29px
+  }
+  &__item{
+    &:nth-child(2){
+      margin-bottom: 20px;
+    }
+    &:nth-child(3){
+      margin-bottom: 28px;
+    }
+  }
+}

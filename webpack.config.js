@@ -8,6 +8,7 @@ module.exports = {
     index: './src/index/index.js',
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
     formElements: './src/uikit-page/formElements/formElements.js',
+    cards: './src/uikit-page/cards/cards.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -97,6 +98,12 @@ module.exports = {
       template: './src/uikit-page/formElements/formElements.pug',
       filename: 'formElements.html',
       chunks: ['formElements']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/uikit-page/cards/cards.pug',
+      filename: 'cards.html',
+      chunks: ['cards']
     }),
   ]
 };

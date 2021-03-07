@@ -1,0 +1,13 @@
+mixin twoInputRange()
+  section.twoInputRange
+    .twoInputRange__arrival
+        h3.twoInputRange__header прибытие
+        .twoInputRange__data-dropdown
+            label(for="start") 
+            input.twoInputRange__input.datepicker-here.datepickers(id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+    .twoInputRange__departure
+        h3.twoInputRange__header выезд
+        .twoInputRange__data-dropdown
+            label(for="end") 
+            input.twoInputRange__input.datepicker-here.datepickers(id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+                    
