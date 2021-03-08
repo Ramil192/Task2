@@ -1,0 +1,18 @@
+mixin signIn()
+  section.signIn
+    div.signIn__title Войти
+    div.signIn__item
+      include ../inputForm/inputForm.pug
+      +inputForm('','','Email')
+    div.signIn__item
+      include ../inputForm/inputForm.pug
+      +inputForm('','','Пароль')
+    div.signIn__item
+      include ../buttons/buttons.pug
+      +btnForm('Войти')
+    div.signIn__item
+      span.signIn__item-text Нет аккаунта на Toxin?
+      include ../buttons/buttons.pug
+      +btnWithBorder('создать')
+
+
