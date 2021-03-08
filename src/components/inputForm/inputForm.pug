@@ -1,5 +1,5 @@
-mixin inputForm(className,value)
-  input(class='inputForm '+className type="text" value=value placeholder="Email")
+mixin inputForm(className,value,placeholder)
+  input(class='inputForm '+className type="text" value=value placeholder=placeholder)
 mixin inputFormEmail()
   form(action="#" class='inputFormEmail') 
     input(class='inputForm inputForm_email' type="text" placeholder="Email")

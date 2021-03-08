@@ -35,8 +35,8 @@ html
             +dropDown('','dropdown')
           div.formElements__row-input-item
             div.formElements__row-input-text
-              span.formElements__row-input-title masked text field
             include ../../components/inputFormMask/inputFormMask.pug
+            +inputFormMask('masked text field')
           div.formElements__row-input-item
             div.formElements__row-input-text
               span.formElements__row-input-title date Dropdown
@@ -80,8 +80,10 @@ html
             include ../../components/radioButtons/radioButtons.pug
             +radioButtons('Radio Buttons')
           div.formElements__row-checkbox-item
+            div.formElements__row-checkbox-item-title Toggle
             include ../../components/toggle/toggle.pug
-            +toggle('Toggle')
+            +toggle('Получать спецпредложения',true)
+            +toggle('Получать спецпредложения',false)
           div.formElements__row-checkbox-item
             div.formElements__row-checkbox-item-title like button
             include ../../components/likeButton/likeButton.pug

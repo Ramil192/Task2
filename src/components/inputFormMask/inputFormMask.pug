@@ -1,1 +1,4 @@
-input(class='inputFormMasked' type="text" placeholder="ДД.ММ.ГГГГ" maxlength=10)
+mixin inputFormMask(title)
+  section.inputFormMask
+    div.inputFormMask__title=title
+    input(class='inputFormMasked__input' type="text" placeholder="ДД.ММ.ГГГГ" maxlength=10)

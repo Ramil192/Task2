@@ -1,5 +1,5 @@
 $(function () {
-  const inputMask = document.querySelector('.inputFormMasked')
+  const inputMask = document.querySelector('.inputFormMasked__input')
   let prevLength = 0;
 
   if(inputMask){

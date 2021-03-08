@@ -16,5 +16,12 @@ html
     meta(name="theme-color" content="#ffffff")
   body
     section.cards
-      include ../../components/roomSearch/roomSearch.pug
-      +roomSearch('Найдём номера под ваши пожелания')
+      div.cards__left-colum
+        div.cards__left-colum-item
+          include ../../components/roomSearch/roomSearch.pug
+          +roomSearch('Найдём номера под ваши пожелания')
+        div.cards__left-colum-item
+          include ../../components/accountRegistration/accountRegistration.pug
+          +accountRegistration('Регистрация аккаунта')
+      div.cards__centre-colum
+      div.cards__right-colum
