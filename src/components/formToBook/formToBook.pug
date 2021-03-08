@@ -1,0 +1,28 @@
+mixin formToBook()
+  section.formToBook
+    div.formToBook__header
+      div.formToBook__header-number 888
+      div.formToBook__header-dayPay 9 990₽ 
+    div.formToBook__item
+      include ../twoInputRange/twoInputRange.pug
+      +twoInputRange()
+    div.formToBook__item
+      include ../dropDown/dropDown.pug
+      +dropDown('','гости')
+    div.formToBook__item
+      span.formToBook__text 9 990₽ х 4 суток 
+      span.formToBook__text 39 960₽ 
+    div.formToBook__item
+      span.formToBook__text Сбор за услуги: скидка 2 179₽ 
+      span.formToBook__text 0₽ 
+    div.formToBook__item
+      span.formToBook__text Сбор за дополнительные </br> услуги
+      span.formToBook__text 300₽ 
+    div.formToBook__item
+      span.formToBook__text-total Итого 
+      span.formToBook__text-total 38 081₽ 
+    div.formToBook__item
+      include ../buttons/buttons.pug
+      +btnForm('забронировать')
+
+
