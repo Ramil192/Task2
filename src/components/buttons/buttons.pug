@@ -1,8 +1,8 @@
 mixin btnWithBackColor(name)
   button.btnWithBackColor=name
-mixin btnWithBorder(name)
-  button.btnWithBorder=name
+mixin btnWithBorder(name,className)
+  button(class='btnWithBorder '+className)=name
 mixin btnJustName(name)
   button.btnJustName=name
-mixin btnForm(name)
-  button(class='btnForm' type='submit')=name
+mixin btnForm(name,className)
+  button(class='btnForm '+className type='submit')=name

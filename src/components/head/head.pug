@@ -1,0 +1,22 @@
+include ../buttons/buttons.pug
+
+mixin head()
+  section.head
+    section.head__item
+      ul.head__list
+        li.head__link.head__link_bold
+          a О нас
+        li.head__link
+          a Услуги
+          button.head__link_downBtn 
+        li.head__link
+          a Вакансии
+        li.head__link
+          a Новости
+        li.head__link
+          a Соглашения
+          button.head__link_downBtn 
+        li.head__link
+          +btnWithBorder('войти','btnWithBorder_head')
+        li.head__link
+          +btnForm('зарегистрироваться','btnForm_head')

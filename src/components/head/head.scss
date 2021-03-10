@@ -1,0 +1,75 @@
+.head{
+  max-width: 100%;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 70px;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+  }
+  background-color: #fff;
+  &__item{
+    display: flex;
+    justify-content: flex-end;
+    padding: 19px 108px 18px 0px;
+    max-width: 1440px;
+    margin: 0px auto;
+    background: url('../../img/Logo.svg') no-repeat 140px 15px;
+    position: relative;
+    z-index: 2;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__link{
+    margin-right: 20px;
+    color: rgba(31, 32, 65, 0.5);
+    position: relative;
+    &:last-child{
+      width: 196px;
+    }
+  }
+  &__link_bold{
+    font-weight: bold;
+    color: black;
+  }
+  &__link_downBtn{
+    width: 21px;
+    height: 11px;
+    &::before{
+      content: '';
+      width: 21px;
+      height: 17px;
+      position:absolute;
+      background: url('../../img/headDown.svg') no-repeat 5px 8px;
+      right: 0px;
+      top: 0px;
+    }
+  }
+}
+@media(max-width:1154px){
+  .head{
+    &__item{
+      padding-right: 30px;
+      background: url('../../img/Logo.svg') no-repeat 30px 15px;
+    }
+  }
+}
+@media(max-width:962px){
+  .head{
+    &__item{
+      padding-left: 30px;
+      background: url('') ;
+    }
+    &__list{
+      justify-content:center ;
+    }
+    &__link{
+      margin-bottom: 10px;
+    }
+  }
+}

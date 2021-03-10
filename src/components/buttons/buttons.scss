@@ -24,6 +24,11 @@
     opacity: 0.5;
   }
 }
+.btnWithBorder_head {
+  width: 87px;
+  padding: 6px 15px 6px 16px;
+  border-width: 2px;
+}
 .btnJustName {
   color: #bc9cff;
   font-weight: bold;
@@ -50,5 +55,12 @@
     background: url('../../img/arrow_forward.svg')no-repeat 0px 0px;
     position: absolute;
     right: -12px;
+  }
+}
+
+.btnForm_head {
+  padding: 9px 0px 7px 0px;
+  &::before{
+    background: url('');
   }
 }

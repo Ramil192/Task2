@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="cards.js"></script></head>
+  <body>
+    <section class="cards">
+      <div class="cards__left-colum">
+        <div class="cards__left-colum-item">
+                    <section class="roomSearch">
+                      <div class="roomSearch__title">Найдём номера под ваши пожелания</div>
+                      <div class="roomSearch__item"> 
+                                      <section class="twoInputRange">
+                                        <div class="twoInputRange__arrival">
+                                          <h3 class="twoInputRange__header">прибытие</h3>
+                                          <div class="twoInputRange__data-dropdown">
+                                            <label for="start"> </label>
+                                            <input class="twoInputRange__input datepicker-here datepickers" id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+                                          </div>
+                                        </div>
+                                        <div class="twoInputRange__departure">
+                                          <h3 class="twoInputRange__header">выезд</h3>
+                                          <div class="twoInputRange__data-dropdown">
+                                            <label for="end"> </label>
+                                            <input class="twoInputRange__input datepicker-here datepickers" id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+                                          </div>
+                                        </div>
+                                      </section>
+                      </div>
+                      <div class="roomSearch__item"> 
+                                      <section class="dropDown">
+                                        <div class="dropDown__title">гости</div>
+                                        <div class="dropDown__header">
+                                          <button class="dropDown__titleBtn">Сколько гостей</button>
+                                        </div>
+                                        <div class="dropDown__body ">
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">взрослые</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">дети</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">младенцы</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                          <div class="dropDown__bodyItem">
+                                            <div class="dropDown__bodyItem-btns-control"> 
+                                              <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
+                                              <button class="dropDown__bodyItem-btns-control-ok">применить</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                      </div>
+                      <div class="roomSearch__item"> 
+                                      <button class="btnForm undefined" type="submit">подобрать номер</button>
+                      </div>
+                    </section>
+        </div>
+        <div class="cards__left-colum-item">
+                    <section class="accountRegistration">
+                      <div class="accountRegistration__title">Регистрация аккаунта</div>
+                      <div class="accountRegistration__item">
+                                      <input class="inputForm " type="text" value="" placeholder="Имя">
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <input class="inputForm " type="text" value="" placeholder="Фамилия">
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <section class="radioButtons">
+                                        <div class="radioButtons__title"></div>
+                                        <div class="radioButtons__items">
+                                                        <label class="radioButtons__radio">
+                                                          <input class="radioButtons__radio-input" type="radio" name="gender" checked><span class="radioButtons__radio-name">Мужчина</span>
+                                                        </label>
+                                                        <label class="radioButtons__radio">
+                                                          <input class="radioButtons__radio-input" type="radio" name="gender"><span class="radioButtons__radio-name">Женщина</span>
+                                                        </label>
+                                        </div>
+                                      </section>
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <section class="inputFormMask">
+                                        <div class="inputFormMask__title">дата рождения</div>
+                                        <input class="inputFormMasked__input" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="10">
+                                      </section>
+                      </div>
+                      <div class="accountRegistration__item">
+                        <div class="accountRegistration__item-title">данные для входа в сервис</div>
+                                      <input class="inputForm " type="text" value="" placeholder="Email">
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <input class="inputForm " type="text" value="" placeholder="Пароль">
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <div class="toggle">
+                                        <label class="toggle__label">
+                                          <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+                                        </label>
+                                      </div>
+                      </div>
+                      <div class="accountRegistration__item">
+                                      <button class="btnForm undefined" type="submit">перейти к оплате</button>
+                      </div>
+                      <div class="accountRegistration__item">
+                        <div class="accountRegistration__footer"><span>Уже есть аккаунт на Toxin</span>
+                                          <button class="btnWithBorder undefined">войти</button>
+                        </div>
+                      </div>
+                    </section>
+        </div>
+      </div>
+      <div class="cards__centre-colum">
+        <div class="cards__centre-colum-item">
+                    <section class="formToBook">
+                      <div class="formToBook__header"> 
+                                      <div class="textPayAndNumber">
+                                        <div class="textPayAndNumber__number">888</div>
+                                        <div class="textPayAndNumber__pay">9 990₽</div>
+                                      </div>
+                      </div>
+                      <div class="formToBook__item">
+                                      <section class="twoInputRange">
+                                        <div class="twoInputRange__arrival">
+                                          <h3 class="twoInputRange__header">прибытие</h3>
+                                          <div class="twoInputRange__data-dropdown">
+                                            <label for="start"> </label>
+                                            <input class="twoInputRange__input datepicker-here datepickers" id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+                                          </div>
+                                        </div>
+                                        <div class="twoInputRange__departure">
+                                          <h3 class="twoInputRange__header">выезд</h3>
+                                          <div class="twoInputRange__data-dropdown">
+                                            <label for="end"> </label>
+                                            <input class="twoInputRange__input datepicker-here datepickers" id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+                                          </div>
+                                        </div>
+                                      </section>
+                      </div>
+                      <div class="formToBook__item">
+                                      <section class="dropDown">
+                                        <div class="dropDown__title">гости</div>
+                                        <div class="dropDown__header">
+                                          <button class="dropDown__titleBtn">Сколько гостей</button>
+                                        </div>
+                                        <div class="dropDown__body ">
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">взрослые</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">дети</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="dropDown__bodyItem">
+                                                          <div class="dropDown__bodyItem-title">младенцы</div>
+                                                          <div class="dropDown__bodyItem-btns"> 
+                                                            <button class="dropDown__bodyItem-btns-inc">-</button>
+                                                            <div class="dropDown__bodyItem-btns-count">0</div>
+                                                            <button class="dropDown__bodyItem-btns-dec">+</button>
+                                                          </div>
+                                                        </div>
+                                          <div class="dropDown__bodyItem">
+                                            <div class="dropDown__bodyItem-btns-control"> 
+                                              <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
+                                              <button class="dropDown__bodyItem-btns-control-ok">применить</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                      </div>
+                      <div class="formToBook__item"><span class="formToBook__text">9 990₽ х 4 суток </span><span class="formToBook__text">39 960₽ </span></div>
+                      <div class="formToBook__item"><span class="formToBook__text">Сбор за услуги: скидка 2 179₽ </span><span class="formToBook__text">0₽ </span></div>
+                      <div class="formToBook__item"><span class="formToBook__text">Сбор за дополнительные </br> услуги</span><span class="formToBook__text">300₽ </span></div>
+                      <div class="formToBook__item"><span class="formToBook__text-total">Итого </span><span class="formToBook__text-total">38 081₽ </span></div>
+                      <div class="formToBook__item">
+                                      <button class="btnForm undefined" type="submit">забронировать</button>
+                      </div>
+                    </section>
+        </div>
+        <div class="cards__centre-colum-item">
+                    <section class="signIn">
+                      <div class="signIn__title">Войти</div>
+                      <div class="signIn__item">
+                                      <input class="inputForm " type="text" value="" placeholder="Email">
+                      </div>
+                      <div class="signIn__item">
+                                      <input class="inputForm " type="text" value="" placeholder="Пароль">
+                      </div>
+                      <div class="signIn__item">
+                                      <button class="btnForm undefined" type="submit">Войти</button>
+                      </div>
+                      <div class="signIn__item"><span class="signIn__item-text">Нет аккаунта на Toxin?</span>
+                                      <button class="btnWithBorder undefined">создать</button>
+                      </div>
+                    </section>
+        </div>
+      </div>
+      <div class="cards__right-colum">
+        <div class="cards__right-colum-item">
+                    <section class="calendar">
+                      <div class="datepicker-here"></div>
+                    </section>
+        </div>
+        <div class="cards__right-colum-item">
+                    <section class="rev_slide"> 
+                      <div class="rev_slide__item"><img src="../../img/photo/image-1.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-2.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-3.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-4.png" alt=""></div>
+                    </section>
+                    <div class="rev_slide__footer">
+                      <div class="rev_slide__footer-text">
+                                  <div class="textPayAndNumber">
+                                    <div class="textPayAndNumber__number">888</div>
+                                    <div class="textPayAndNumber__pay">9 990₽</div>
+                                  </div>
+                      </div>
+                      <div class="rev_slide__footer-rating">
+                                  <div class="rating" data-total-value="5">
+                                    <div class="rating__item" data-item-value="5"> </div>
+                                    <div class="rating__item" data-item-value="4"> </div>
+                                    <div class="rating__item" data-item-value="3"> </div>
+                                    <div class="rating__item" data-item-value="2"> </div>
+                                    <div class="rating__item" data-item-value="1"> </div>
+                                  </div><span class="rev_slide__footer-review">145</span>
+                      </div>
+                    </div>
+        </div>
+        <div class="cards__right-colum-item">
+                    <section class="rev_slide"> 
+                      <div class="rev_slide__item"><img src="../../img/photo/image-5.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-6.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-7.png" alt=""></div>
+                      <div class="rev_slide__item"><img src="../../img/photo/image-8.png" alt=""></div>
+                    </section>
+                    <div class="rev_slide__footer">
+                      <div class="rev_slide__footer-text">
+                                  <div class="textPayAndNumber">
+                                    <div class="textPayAndNumber__number">840</div>
+                                    <div class="textPayAndNumber__pay">9 990₽</div>
+                                  </div>
+                      </div>
+                      <div class="rev_slide__footer-rating">
+                                  <div class="rating" data-total-value="4">
+                                    <div class="rating__item" data-item-value="5"> </div>
+                                    <div class="rating__item" data-item-value="4"> </div>
+                                    <div class="rating__item" data-item-value="3"> </div>
+                                    <div class="rating__item" data-item-value="2"> </div>
+                                    <div class="rating__item" data-item-value="1"> </div>
+                                  </div><span class="rev_slide__footer-review">65</span>
+                      </div>
+                    </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

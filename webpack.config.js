@@ -9,6 +9,7 @@ module.exports = {
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
     formElements: './src/uikit-page/formElements/formElements.js',
     cards: './src/uikit-page/cards/cards.js',
+    headerAndFooter: './src/uikit-page/headerAndFooter/headerAndFooter.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -104,6 +105,12 @@ module.exports = {
       template: './src/uikit-page/cards/cards.pug',
       filename: 'cards.html',
       chunks: ['cards']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/uikit-page/headerAndFooter/headerAndFooter.pug',
+      filename: 'headerAndFooter.html',
+      chunks: ['headerAndFooter']
     }),
   ]
 };
