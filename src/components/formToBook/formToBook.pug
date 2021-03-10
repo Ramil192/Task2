@@ -1,8 +1,8 @@
 mixin formToBook()
   section.formToBook
-    div.formToBook__header
-      div.formToBook__header-number 888
-      div.formToBook__header-dayPay 9 990₽ 
+    div.formToBook__header 
+      include ../textPayAndNumber/textPayAndNumber.pug
+      +textPayAndNumber('888','9 990₽')
     div.formToBook__item
       include ../twoInputRange/twoInputRange.pug
       +twoInputRange()
