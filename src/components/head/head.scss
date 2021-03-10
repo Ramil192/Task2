@@ -13,24 +13,40 @@
   &__item{
     display: flex;
     justify-content: flex-end;
-    padding: 19px 108px 18px 0px;
+    padding: 17px 121px 18px 0px;
     max-width: 1440px;
     margin: 0px auto;
     background: url('../../img/Logo.svg') no-repeat 140px 15px;
     position: relative;
     z-index: 2;
   }
+  &__item_name{
+    padding:25px 25px 18px 0px;
+  }
   &__list{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
+  
   &__link{
     margin-right: 20px;
     color: rgba(31, 32, 65, 0.5);
     position: relative;
     &:last-child{
       width: 196px;
+    }
+  }
+  &__link_name{
+    vertical-align: center;
+    margin-left: 22px;
+    &::before{
+      content: '';
+      width: 1px;
+      height: 30px;
+      background: rgba(31, 32, 65, 0.1);
+      position: absolute;
+      margin-left: -20px;
     }
   }
   &__link_bold{
@@ -63,7 +79,7 @@
   .head{
     &__item{
       padding-left: 30px;
-      background: url('') ;
+      background: #fff url('') ;
     }
     &__list{
       justify-content:center ;
