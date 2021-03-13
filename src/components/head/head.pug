@@ -9,7 +9,7 @@ mixin headItem(text,className,flag)
 mixin head(name)
   - var className=name ? 'head__item_name':''
 
-  section.head
+  header.head
     div(class='head__item '+className)
       ul.head__list
         +headItem('О нас','head__link_bold')

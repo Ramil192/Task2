@@ -1,14 +1,6 @@
 .head{
   max-width: 100%;
-  &::before{
-    content: '';
-    width: 100%;
-    height: 70px;
-    display: block;
-    background-color: #fff;
-    position: absolute;
-    left: 0px;
-  }
+
   background-color: #fff;
   &__item{
     display: flex;

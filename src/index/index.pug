@@ -15,8 +15,12 @@ html
     meta(name="msapplication-TileColor" content="#da532c")
     meta(name="theme-color" content="#ffffff")
   body
-    main
-            
-
-                            
-                            
+    include ../components/head/head.pug
+    +head()
+    div.background
+      include ../components/roomSearch/roomSearch.pug
+      +roomSearch('Найдём номера под ваши пожелания')
+      div.background__text Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+    include ../components/footer/footer.pug
+    +footer()
+    
