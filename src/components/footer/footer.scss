@@ -139,4 +139,11 @@
     }
   }
 }
-
+@media(max-width:662px){
+  .footer {
+    padding-bottom: 50px;
+    &__warp {
+      padding: 50px 50px 0px 50px;
+    }
+  }
+}

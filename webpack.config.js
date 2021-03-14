@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index/index.js',
+    mainSignIn: './src/mainSignIn/mainSignIn.js',
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
     formElements: './src/uikit-page/formElements/formElements.js',
     cards: './src/uikit-page/cards/cards.js',
@@ -57,7 +58,7 @@ module.exports = {
               name: './img/[name].[ext]',
               context: path.resolve(__dirname, "src/"),
               // outputPath: 'dist/',
-              publicPath: '../',
+               publicPath: '../',
               useRelativePaths: true
             }
           }]
@@ -87,6 +88,12 @@ module.exports = {
       template: './src/index/index.pug',
       filename: 'index.html',
       chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/mainSignIn/mainSignIn.pug',
+      filename: 'mainSignIn.html',
+      chunks: ['mainSignIn']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',

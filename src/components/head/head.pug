@@ -1,8 +1,8 @@
 include ../buttons/buttons.pug
 
-mixin headItem(text,className,flag)
+mixin headItem(text,className,href,flag)
   li(class='head__link '+className)
-    a=text
+    a(href=href)=text
     if(flag)
       button.head__link_downBtn 
 
@@ -12,9 +12,9 @@ mixin head(name)
   header.head
     div(class='head__item '+className)
       ul.head__list
-        +headItem('О нас','head__link_bold')
-        +headItem('Услуги','',true)
-        +headItem('Вакансии','')
+        +headItem('О нас','head__link_bold','colorAndType.html')
+        +headItem('Услуги','','formElements.html',true)
+        +headItem('Вакансии','','cards.html')
         +headItem('Новости','')
         +headItem('Соглашения','',true)
         if (name)
