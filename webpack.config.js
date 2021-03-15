@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: './src/index/index.js',
     mainSignIn: './src/mainSignIn/mainSignIn.js',
+    registration: './src/registration/registration.js',
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
     formElements: './src/uikit-page/formElements/formElements.js',
     cards: './src/uikit-page/cards/cards.js',
@@ -94,6 +95,12 @@ module.exports = {
       template: './src/mainSignIn/mainSignIn.pug',
       filename: 'mainSignIn.html',
       chunks: ['mainSignIn']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/registration/registration.pug',
+      filename: 'registration.html',
+      chunks: ['registration']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',

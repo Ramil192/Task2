@@ -4,5 +4,8 @@ mixin btnWithBorder(name,className)
   a(class='btnWithBorder '+className href='mainSignIn.html')=name
 mixin btnJustName(name)
   button.btnJustName=name
-mixin btnForm(name,className)
-  button(class='btnForm '+className type='submit')=name
+mixin btnForm(name,className,flag)
+  if(flag)
+    a(class='btnForm '+className type='submit' href='registration.html')=name
+  else 
+    button(class='btnForm '+className type='submit')=name

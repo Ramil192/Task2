@@ -19,6 +19,7 @@
   border: 1px solid #bc9cff;
   text-transform: uppercase;
   width: 99px;
+  text-align: center;
   &:focus,
   &:active {
     opacity: 0.5;
@@ -26,7 +27,7 @@
 }
 .btnWithBorder_head {
   width: 87px;
-  padding: 6px 15px 6px 16px;
+  padding: 10px 15px 6px 22px;
   border-width: 2px;
 }
 .btnJustName {
@@ -59,7 +60,7 @@
 }
 
 .btnForm_head {
-  padding: 9px 0px 7px 0px;
+  padding: 9px 19px 7px 19px;
   &::before{
     background: url('');
   }

@@ -43,3 +43,9 @@
     align-items: center;
   }
 }
+
+@media (max-width: 380px) {
+  .accountRegistration {
+    padding: 5px;
+  }
+}

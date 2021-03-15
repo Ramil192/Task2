@@ -11,16 +11,18 @@ mixin head(name)
 
   header.head
     div(class='head__item '+className)
+      a(href='index.html').head__link
+        img(src="../../img/Logo.svg", alt="")
       ul.head__list
         +headItem('О нас','head__link_bold','colorAndType.html')
         +headItem('Услуги','','formElements.html',true)
         +headItem('Вакансии','','cards.html')
-        +headItem('Новости','')
-        +headItem('Соглашения','',true)
+        +headItem('Новости','','headerAndFooter.html')
+        +headItem('Соглашения','','',true)
         if (name)
           span.head__link.head__link_name=name         
         else
           li.head__link
             +btnWithBorder('войти','btnWithBorder_head')
           li.head__link
-            +btnForm('зарегистрироваться','btnForm_head') 
+            +btnForm('зарегистрироваться','btnForm_head',true) 
