@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 266px;
+  &__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
   &__header {
   }
   &__titleBtn {
@@ -83,7 +90,6 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-
   }
   &__bodyItem-btns-control {
     margin-top: 11px;

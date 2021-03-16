@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index/index.js',
+    searchRoom: './src/searchRoom/searchRoom.js',
     mainSignIn: './src/mainSignIn/mainSignIn.js',
     registration: './src/registration/registration.js',
     colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
@@ -89,6 +90,12 @@ module.exports = {
       template: './src/index/index.pug',
       filename: 'index.html',
       chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/searchRoom/searchRoom.pug',
+      filename: 'searchRoom.html',
+      chunks: ['searchRoom']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',

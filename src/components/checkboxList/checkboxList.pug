@@ -5,9 +5,9 @@ mixin checkboxItem(title,flag)
             span.checkboxList__item-checkbox
             div.checkboxList__item-title!=title
 
-mixin checkboxList(show,rotate)
+mixin checkboxList(show,rotate,title)
   section.checkboxList
-    button(class='checkboxList__titleBtn '+ rotate id='checkboxListBtn') expandable checkbox list
+    button(class='checkboxList__titleBtn '+ rotate id='checkboxListBtn')=title
     ul(class='checkboxList__items '+ show)
       +checkboxItem('Завтрак',false)
       +checkboxItem('Письменный стол',false)

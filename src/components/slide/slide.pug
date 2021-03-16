@@ -2,13 +2,14 @@ include ../textPayAndNumber/textPayAndNumber.pug
 include ../rateBtn/rateBtn.pug
 
 mixin slide(img,number,pay,rating,review)
-  section.rev_slide 
-    -for(let i=0;i<img.length;i++)
-      div.rev_slide__item
-        img(src=img[i], alt="")
-  div.rev_slide__footer
-    div.rev_slide__footer-text
-      +textPayAndNumber(number,pay)
-    div.rev_slide__footer-rating
-      +rateBtn(rating)
-      span.rev_slide__footer-review=review
+  div.rev
+    div.rev_slide 
+      -for(let i=0;i<img.length;i++)
+        div.rev_slide__item
+          img(src=img[i], alt="")
+    div.rev_slide__footer
+      div.rev_slide__footer-text
+        +textPayAndNumber(number,pay)
+      div.rev_slide__footer-rating
+        +rateBtn(rating)
+        span.rev_slide__footer-review=review

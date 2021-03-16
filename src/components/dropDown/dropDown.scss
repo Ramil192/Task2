@@ -1,12 +1,11 @@
 .dropDown {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  
   &__title {
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    margin-bottom: 3px;
   }
   &__header {
   }
@@ -22,7 +21,7 @@
     border-radius: 4px 4px 0px 0px;
 
     width: 100%;
-    background: url("../../img/arrow-down.svg") no-repeat 285px 9px;
+    background: url("../../img/arrow-down.svg") no-repeat 97% 40%;
   }
   &__titleBtn-img {
     margin-right: 9px;

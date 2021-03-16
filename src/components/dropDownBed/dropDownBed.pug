@@ -5,8 +5,9 @@ mixin dropDownBedItem(className,title,count)
       button(class='dropDownBed__bodyItem-btns-inc '+className) -
       div.dropDownBed__bodyItem-btns-count=count
       button.dropDownBed__bodyItem-btns-dec +
-mixin dropDownBed(className)
+mixin dropDownBed(className,title)
   section.dropDownBed
+    div.dropDownBed__title=title
     div.dropDownBed__header
       button.dropDownBed__titleBtn 2 спальни, 2 кровати...
     div(class='dropDownBed__body ' + className)
