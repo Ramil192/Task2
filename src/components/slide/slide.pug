@@ -12,4 +12,4 @@ mixin slide(img,number,pay,rating,review)
         +textPayAndNumber(number,pay)
       div.rev_slide__footer-rating
         +rateBtn(rating)
-        span.rev_slide__footer-review=review
+        a(href='roomDetails.html').rev_slide__footer-review=review

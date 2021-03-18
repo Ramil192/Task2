@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    title Toxin Hotel
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
+    link(rel="manifest" href="./favicons/site.webmanifest")
+    link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+  body
+    include ../components/head/head.pug
+    +head()
+    div.roomDetails
+      div.roomDetails__imgs
+        div.roomDetails__img-left
+          img(src="../img/roomDetail/image.png", alt="")
+        div.roomDetails__img-right
+          img(src="../img/roomDetail/image2.png", alt="")
+          img(src="../img/roomDetail/image3.png", alt="")
+      div.roomDetails__description
+        div.roomDetails__description-left
+          div.roomDetails__description-status
+            div.roomDetails__description-status-left
+              div.roomDetails__description-left-title.roomDetails_title Сведения о номере
+              include ../components/textList/textList.pug
+              +smile()
+              +city()
+              +comfort()
+            div.roomDetails__description-status-right
+              div.roomDetails__description-right-title.roomDetails_title Впечатления от номера
+              div.roomDetails__description-vote
+                div.roomDetails__description-vote-left 
+                  div.roomDetails__description-vote-left-count 260
+                  div.roomDetails__description-vote-left-vote голосов
+                div.roomDetails__description-vote-right
+                  ul
+                    li Великолепно
+                    li Хорошо
+                    li Удовлетворительно
+                    li Разочарован
+          div.roomDetails__commeentary
+            div.roomDetails__commeentary-header
+              div.roomDetails__commeentary-title Отзывы посетителей номера
+              div.roomDetails__commeentary-subTitle 2 отзыва
+            div.roomDetails__commeentary-item
+              include ../components/commentary/commentary.pug
+              +commentary(
+              'Мурад Сарафанов',
+              '5 дней назад',
+              'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+              '../img/man.png')
+            div.roomDetails__commeentary-item
+              include ../components/commentary/commentary.pug
+              +commentary(
+              'Патрисия Стёклышкова',
+              'Неделю назад',
+              'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+              '../img/image4.png')
+          div.roomDetails__regulations
+            div.roomDetails__regulations-item
+              include ../components/bulletList/bulletList.pug
+              +bulletList('Правила')
+            div.roomDetails__regulations-item
+              div.roomDetails__regulations-cancel
+                div.roomDetails__regulations-cancel-title Отмена
+                div.roomDetails__regulations-cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        div.roomDetails__description-right
+          include ../components/formToBook/formToBook.pug
+          +formToBook()
+      include ../components/footer/footer.pug
+      +footer()
+   

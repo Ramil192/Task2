@@ -1,8 +1,8 @@
-mixin commentary(name,date,text)
+mixin commentary(name,date,text,img)
   section.commentary
     div.commentary__item
       div.commentary__header
-        img(class='commentary__img' src="../../img/man.png", alt="avatar")
+        img(class='commentary__img' src=img, alt="avatar")
         div.commentary__header-text
           div.commentary__header-name=name
           div.commentary__header-date=date

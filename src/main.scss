@@ -27,6 +27,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  list-style-type: none;
 }
 a { 
   text-decoration: none; /* Отменяем подчеркивание у ссылки */
@@ -46,6 +47,10 @@ body {
 ul[class],
 ol[class] {
   list-style: none;
+}
+ul{
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
