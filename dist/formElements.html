@@ -79,7 +79,7 @@
                         <input class="datepicker-here data-dropdown__input" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
           </div>
           <div class="formElements__row-input-item">
-            <div class="formElements__row-input-text"><span class="formElements__row-input-title">filter date dropdown</span></div>
+                        <div class="data-dropdown-filter__title">filter date dropdown</div>
                         <input class="datepicker-here datepicker-filter" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true" dateFormat="dd">
           </div>
           <div class="formElements__row-input-item">
@@ -92,6 +92,7 @@
           <div class="formElements__row-input-item">
             <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span><span class="formElements__row-input-subTitle">Default</span></div>
                         <section class="dropDownBed">
+                          <div class="dropDownBed__title"></div>
                           <div class="dropDownBed__header">
                             <button class="dropDownBed__titleBtn">2 спальни, 2 кровати...</button>
                           </div>
@@ -126,6 +127,7 @@
           <div class="formElements__row-input-item">
             <div class="formElements__row-input-text"><span class="formElements__row-input-title">Dropdown</span><span class="formElements__row-input-subTitle">expanded</span></div>
                         <section class="dropDownBed">
+                          <div class="dropDownBed__title"></div>
                           <div class="dropDownBed__header">
                             <button class="dropDownBed__titleBtn">2 спальни, 2 кровати...</button>
                           </div>
@@ -159,7 +161,7 @@
           </div>
           <div class="formElements__row-input-item">
                         <section class="checkboxList">
-                          <button class="checkboxList__titleBtn undefined" id="checkboxListBtn">expandable checkbox list</button>
+                          <button class="checkboxList__titleBtn undefined" id="checkboxListBtn"></button>
                           <ul class="checkboxList__items undefined">
                                         <li class="checkboxList__item"> 
                                           <label class="checkboxList__item-check"> 
@@ -202,7 +204,7 @@
           </div>
           <div class="formElements__row-input-item">
                         <section class="checkboxList">
-                          <button class="checkboxList__titleBtn checkboxList__titleBtn_rotate" id="checkboxListBtn">expandable checkbox list</button>
+                          <button class="checkboxList__titleBtn checkboxList__titleBtn_rotate" id="checkboxListBtn"></button>
                           <ul class="checkboxList__items checkboxList__items_show">
                                         <li class="checkboxList__item"> 
                                           <label class="checkboxList__item-check"> 
@@ -365,12 +367,13 @@
           <div class="formElements__row-checkbox-item">
                         <section class="richCheckboxBtn">rich Checkbox Buttons</section>
                         <div class="div richCheckboxBtn__wrapper">
-                          <div class="richCheckboxBtn__item">
-                            <label class="richCheckboxBtn__check">
-                              <input class="richCheckboxBtn__checkbox" type="checkbox"><span class="richCheckboxBtn__subTitle">Широкий коридор</span>
-                            </label>
-                            <div class="richCheckboxBtn__text">Ширина коридоров в номере</br> не менее 91 см.</div>
-                          </div>
+                          <div class="richCheckboxBtn__item"> </div>
+                                      <div class="richCheckboxBtn__item">
+                                        <label class="richCheckboxBtn__check">
+                                          <input class="richCheckboxBtn__checkbox" type="checkbox"><span class="richCheckboxBtn__subTitle">Широкий коридор</span>
+                                        </label>
+                                        <div class="richCheckboxBtn__text">Ширина коридоров в номере</br> не менее 91 см.</div>
+                                      </div>
                                       <div class="richCheckboxBtn__item">
                                         <label class="richCheckboxBtn__check">
                                           <input class="richCheckboxBtn__checkbox" type="checkbox"><span class="richCheckboxBtn__subTitle">Помощник для инвалидов</span>
@@ -382,7 +385,7 @@
           <div class="formElements__row-checkbox-item">
                         <section class="commentary">
                           <div class="commentary__item">
-                            <div class="commentary__header"><img class="commentary__img" src="../../img/man.png" alt="avatar">
+                            <div class="commentary__header"><img class="commentary__img" alt="avatar">
                               <div class="commentary__header-text">
                                 <div class="commentary__header-name">Мурад Сарафанов</div>
                                 <div class="commentary__header-date">5 дней назад</div>
@@ -401,23 +404,24 @@
         <div class="formElements__row-btn">
           <div class="formElements__row-btn-item">
                         <div class="range-slider">
-                          <label class="range-slider__label" for="amount">Range Slider</label>
-                          <input class="range-slider__input" type="text" disabled id="amount" readonly>
+                          <div class="range-slider__item">
+                            <label class="range-slider__label" for="amount">Range Slider</label>
+                            <input class="range-slider__input" type="text" disabled id="amount" readonly>
+                          </div>
                           <div id="slider-range"></div>
+                          <div class="range-slider__text"></div>
                         </div>
           </div>
           <div class="formElements__row-btn-item">
             <div class="formElements__row-btn-item-title">buttons</div>
                         <button class="btnWithBackColor">CLICK ME</button>
           </div>
-          <div class="formElements__row-btn-item">
-                        <button class="btnWithBorder undefined">CLICK ME</button>
+          <div class="formElements__row-btn-item"><a class="btnWithBorder undefined" href="mainSignIn.html">CLICK ME</a>
           </div>
           <div class="formElements__row-btn-item">
                         <button class="btnJustName">CLICK ME</button>
           </div>
-          <div class="formElements__row-btn-item">
-                        <button class="btnForm undefined" type="submit">перейти к оплате</button>
+          <div class="formElements__row-btn-item"><a class="btnForm undefined" href="searchRoom.html">перейти к оплате</a>
           </div>
           <div class="formElements__row-btn-item">
             <div class="formElements__row-btn-item-title">pagination</div>

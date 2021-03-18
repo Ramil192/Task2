@@ -14,7 +14,7 @@
     <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="index.js"></script></head>
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="registration.js"></script></head>
   <body>
         <header class="head">
           <div class="head__item "><a class="head__link" href="index.html"><img src="../../img/Logo.svg" alt=""></a>
@@ -38,71 +38,55 @@
             </ul>
           </div>
         </header>
-    <div class="background">
-            <section class="roomSearch">
-              <div class="roomSearch__title">Найдём номера под ваши пожелания</div>
-              <div class="roomSearch__item"> 
-                          <section class="twoInputRange">
-                            <div class="twoInputRange__arrival">
-                              <h3 class="twoInputRange__header">прибытие</h3>
-                              <div class="twoInputRange__data-dropdown">
-                                <label for="start"> </label>
-                                <input class="twoInputRange__input datepicker-here datepickers" id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
-                              </div>
-                            </div>
-                            <div class="twoInputRange__departure">
-                              <h3 class="twoInputRange__header">выезд</h3>
-                              <div class="twoInputRange__data-dropdown">
-                                <label for="end"> </label>
-                                <input class="twoInputRange__input datepicker-here datepickers" id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
-                              </div>
+    <div class="mainSignIn">
+            <section class="accountRegistration">
+              <div class="accountRegistration__title">Регистрация аккаунта</div>
+              <div class="accountRegistration__item">
+                          <input class="inputForm " type="text" value="" placeholder="Имя">
+              </div>
+              <div class="accountRegistration__item">
+                          <input class="inputForm " type="text" value="" placeholder="Фамилия">
+              </div>
+              <div class="accountRegistration__item">
+                          <section class="radioButtons">
+                            <div class="radioButtons__title"></div>
+                            <div class="radioButtons__items">
+                                        <label class="radioButtons__radio">
+                                          <input class="radioButtons__radio-input" type="radio" name="gender" checked><span class="radioButtons__radio-name">Мужчина</span>
+                                        </label>
+                                        <label class="radioButtons__radio">
+                                          <input class="radioButtons__radio-input" type="radio" name="gender"><span class="radioButtons__radio-name">Женщина</span>
+                                        </label>
                             </div>
                           </section>
               </div>
-              <div class="roomSearch__item"> 
-                          <section class="dropDown">
-                            <div class="dropDown__title">гости</div>
-                            <div class="dropDown__header">
-                              <button class="dropDown__titleBtn">Сколько гостей</button>
-                            </div>
-                            <div class="dropDown__body ">
-                                        <div class="dropDown__bodyItem">
-                                          <div class="dropDown__bodyItem-title">взрослые</div>
-                                          <div class="dropDown__bodyItem-btns"> 
-                                            <button class="dropDown__bodyItem-btns-inc">-</button>
-                                            <div class="dropDown__bodyItem-btns-count">0</div>
-                                            <button class="dropDown__bodyItem-btns-dec">+</button>
-                                          </div>
-                                        </div>
-                                        <div class="dropDown__bodyItem">
-                                          <div class="dropDown__bodyItem-title">дети</div>
-                                          <div class="dropDown__bodyItem-btns"> 
-                                            <button class="dropDown__bodyItem-btns-inc">-</button>
-                                            <div class="dropDown__bodyItem-btns-count">0</div>
-                                            <button class="dropDown__bodyItem-btns-dec">+</button>
-                                          </div>
-                                        </div>
-                                        <div class="dropDown__bodyItem">
-                                          <div class="dropDown__bodyItem-title">младенцы</div>
-                                          <div class="dropDown__bodyItem-btns"> 
-                                            <button class="dropDown__bodyItem-btns-inc">-</button>
-                                            <div class="dropDown__bodyItem-btns-count">0</div>
-                                            <button class="dropDown__bodyItem-btns-dec">+</button>
-                                          </div>
-                                        </div>
-                              <div class="dropDown__bodyItem">
-                                <div class="dropDown__bodyItem-btns-control"> 
-                                  <button class="dropDown__bodyItem-btns-control-clean">очистить</button>
-                                  <button class="dropDown__bodyItem-btns-control-ok">применить</button>
-                                </div>
-                              </div>
-                            </div>
+              <div class="accountRegistration__item">
+                          <section class="inputFormMask">
+                            <div class="inputFormMask__title">дата рождения</div>
+                            <input class="inputFormMasked__input" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="10">
                           </section>
               </div>
-              <div class="roomSearch__item"> <a class="btnForm " href="searchRoom.html">подобрать номер</a>
+              <div class="accountRegistration__item">
+                <div class="accountRegistration__item-title">данные для входа в сервис</div>
+                          <input class="inputForm " type="text" value="" placeholder="Email">
+              </div>
+              <div class="accountRegistration__item">
+                          <input class="inputForm " type="text" value="" placeholder="Пароль">
+              </div>
+              <div class="accountRegistration__item">
+                          <div class="toggle">
+                            <label class="toggle__label">
+                              <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+                            </label>
+                          </div>
+              </div>
+              <div class="accountRegistration__item"><a class="btnForm undefined" href="searchRoom.html">перейти к оплате</a>
+              </div>
+              <div class="accountRegistration__item">
+                <div class="accountRegistration__footer"><span>Уже есть аккаунт на Toxin</span><a class="btnWithBorder undefined" href="mainSignIn.html">войти</a>
+                </div>
               </div>
             </section>
-      <div class="background__text">Лучшие номера для вашей работы,<br> отдыха и просто вдохновения</div>
     </div>
         <footer class="footer">
           <div class="footer__warp">
