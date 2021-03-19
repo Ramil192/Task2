@@ -55,14 +55,12 @@ module.exports = {
         exclude: /fonts/,
         use: [
           {
-
-            loader: 'file-loader',
+            loader: 'file-loader?name=img/[name].[ext]',
             options: {
               name: './img/[name].[ext]',
               context: path.resolve(__dirname, "src/"),
-              // outputPath: 'dist/',
-               publicPath: '../',
-              useRelativePaths: true
+              useRelativePaths: true,
+              emitFile: false
             }
           }]
       },

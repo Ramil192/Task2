@@ -20,10 +20,10 @@ html
     div.roomDetails
       div.roomDetails__imgs
         div.roomDetails__img-left
-          img(src="../img/roomDetail/image.png", alt="")
+          img(src="./img/roomDetail/image.png", alt="")
         div.roomDetails__img-right
-          img(src="../img/roomDetail/image2.png", alt="")
-          img(src="../img/roomDetail/image3.png", alt="")
+          img(src="./img/roomDetail/image2.png", alt="")
+          img(src="./img/roomDetail/image3.png", alt="")
       div.roomDetails__description
         div.roomDetails__description-left
           div.roomDetails__description-status
@@ -55,14 +55,14 @@ html
               'Мурад Сарафанов',
               '5 дней назад',
               'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-              '../img/man.png')
+              './img/man.png')
             div.roomDetails__commeentary-item
               include ../components/commentary/commentary.pug
               +commentary(
               'Патрисия Стёклышкова',
               'Неделю назад',
               'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-              '../img/image4.png')
+              './img/image4.png')
           div.roomDetails__regulations
             div.roomDetails__regulations-item
               include ../components/bulletList/bulletList.pug
