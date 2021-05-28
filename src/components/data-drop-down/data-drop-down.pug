@@ -1,0 +1,5 @@
+mixin data-drop-down(data)
+    input.datepicker-here.data-drop-down__input(type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+mixin data-drop-down-filter(title)
+    div.data-drop-down-filter__title=title 
+    input.datepicker-here.datepicker-filter(type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true" dateFormat="dd")

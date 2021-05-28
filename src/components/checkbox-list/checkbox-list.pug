@@ -1,0 +1,25 @@
+mixin checkboxItem(title,flag)
+  li.checkbox-list__item 
+    label(class='checkbox-list__item-check') 
+            input(type="checkbox" checked=flag class='checkbox-list__item-check-input')
+            span.checkbox-list__item-checkbox
+            div.checkbox-list__item-title!=title
+
+mixin checkbox-list(show,rotate,title)
+  section.checkbox-list
+    button(class='checkbox-list__titleBtn '+ rotate id='checkbox-listBtn')=title
+    ul(class='checkbox-list__items '+ show)
+      +checkboxItem('Завтрак',false)
+      +checkboxItem('Письменный стол',false)
+      +checkboxItem('Стул для кормления',true)
+      +checkboxItem('Кроватка',true)
+      +checkboxItem('Телевизор',false)
+      +checkboxItem('Шампунь',false)
+
+mixin checkboxButtons(title)
+  section.checkbox-list
+    div.checkbox-list__title=title
+    ul(class='checkbox-list__items checkbox-list__items_show')
+      +checkboxItem('Можно курить',false)
+      +checkboxItem('Можно с питомцами',true)
+      +checkboxItem('Можно пригласить гостей</br> (до 10 человек)',true)

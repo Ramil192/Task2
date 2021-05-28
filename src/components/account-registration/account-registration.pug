@@ -1,0 +1,35 @@
+
+mixin account-registration(title)
+  section.account-registration
+    div.account-registration__title=title
+    div.account-registration__item
+      include ../input-form/input-form.pug
+      +input-form('','','Имя')
+    div.account-registration__item
+      include ../input-form/input-form.pug
+      +input-form('','','Фамилия')
+    div.account-registration__item
+      include ../radio-buttons/radio-buttons.pug
+      +radio-buttons('')
+    div.account-registration__item
+      include ../input-form-mask/input-form-mask.pug
+      +input-form-mask('дата рождения')
+    div.account-registration__item
+      div.account-registration__item-title данные для входа в сервис
+      include ../input-form/input-form.pug
+      +input-form('','','Email')
+    div.account-registration__item
+      include ../input-form/input-form.pug
+      +input-form('','','Пароль')
+    div.account-registration__item
+      include ../toggle/toggle.pug
+      +toggle('Получать спецпредложения',false)
+    div.account-registration__item
+      include ../buttons/buttons.pug
+      +btnForm('перейти к оплате')
+    div.account-registration__item
+      div.account-registration__footer
+        span Уже есть аккаунт на Toxin
+        include ../buttons/buttons.pug
+        +btnWithBorder('войти')
+      

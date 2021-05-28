@@ -1,4 +1,4 @@
-include ../inputForm/inputForm.pug
+include ../input-form/input-form.pug
 
 mixin footerList(name,text,flag)
    ul.footer__list=name
@@ -6,7 +6,7 @@ mixin footerList(name,text,flag)
       li.footer__list-item
         a(href="#")!=text[i]
     if(flag)
-      +inputFormEmail('','')
+      +input-formEmail('','')
 
 
 mixin footer()

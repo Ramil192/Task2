@@ -1,11 +1,11 @@
 mixin btnWithBackColor(name)
   button.btnWithBackColor=name
 mixin btnWithBorder(name,className)
-  a(class='btnWithBorder '+className href='mainSignIn.html')=name
+  a(class='btnWithBorder '+className href='main-sign-in.html')=name
 mixin btnJustName(name)
   button.btnJustName=name
 mixin btnForm(name,className,flag)
   if(flag)
     a(class='btnForm '+className  href='registration.html')=name
   else 
-    a(class='btnForm '+className href='searchRoom.html' )=name
+    a(class='btnForm '+className href='search-room.html' )=name

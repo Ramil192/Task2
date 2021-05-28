@@ -1,0 +1,18 @@
+mixin drop-down-bedItem(className,title,count)
+  div.drop-down-bed__bodyItem
+    div.drop-down-bed__bodyItem-title=title
+    div.drop-down-bed__bodyItem-btns 
+      button(class='drop-down-bed__bodyItem-btns-inc '+className) -
+      div.drop-down-bed__bodyItem-btns-count=count
+      button.drop-down-bed__bodyItem-btns-dec +
+mixin drop-down-bed(className,title)
+  section.drop-down-bed
+    div.drop-down-bed__title=title
+    div.drop-down-bed__header
+      button.drop-down-bed__titleBtn 2 спальни, 2 кровати...
+    div(class='drop-down-bed__body ' + className)
+      +drop-down-bedItem('drop-down-bed__bodyItem-btns-inc_active','спальни','2')
+      +drop-down-bedItem('drop-down-bed__bodyItem-btns-inc_active','кровати','2')
+      +drop-down-bedItem('','ванные комнаты','0')
+
+

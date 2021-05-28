@@ -6,14 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index/index.js',
-    roomDetails: './src/roomDetails/roomDetails.js',
-    searchRoom: './src/searchRoom/searchRoom.js',
-    mainSignIn: './src/mainSignIn/mainSignIn.js',
+    roomDetails: './src/room-details/room-details.js',
+    searchRoom: './src/search-room/search-room.js',
+    mainSignIn: './src/main-sign-in/main-sign-in.js',
     registration: './src/registration/registration.js',
-    colorAndType: './src/uikit-page/colorAndType/colorAndType.js',
-    formElements: './src/uikit-page/formElements/formElements.js',
+    colorAndType: './src/uikit-page/color-and-type/color-and-type.js',
+    formElements: './src/uikit-page/form-elements/form-elements.js',
     cards: './src/uikit-page/cards/cards.js',
-    headerAndFooter: './src/uikit-page/headerAndFooter/headerAndFooter.js',
+    headerAndFooter: './src/uikit-page/header-and-footer/header-and-footer.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -92,20 +92,20 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/roomDetails/roomDetails.pug',
-      filename: 'roomDetails.html',
+      template: './src/room-details/room-details.pug',
+      filename: 'room-details.html',
       chunks: ['roomDetails']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/searchRoom/searchRoom.pug',
-      filename: 'searchRoom.html',
+      template: './src/search-room/search-room.pug',
+      filename: 'search-room.html',
       chunks: ['searchRoom']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/mainSignIn/mainSignIn.pug',
-      filename: 'mainSignIn.html',
+      template: './src/main-sign-in/main-sign-in.pug',
+      filename: 'main-sign-in.html',
       chunks: ['mainSignIn']
     }),
     new HtmlWebpackPlugin({
@@ -116,14 +116,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/uikit-page/colorAndType/colorAndType.pug',
-      filename: 'colorAndType.html',
+      template: './src/uikit-page/color-and-type/color-and-type.pug',
+      filename: 'color-and-type.html',
       chunks: ['colorAndType']
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/uikit-page/formElements/formElements.pug',
-      filename: 'formElements.html',
+      template: './src/uikit-page/form-elements/form-elements.pug',
+      filename: 'form-elements.html',
       chunks: ['formElements']
     }),
     new HtmlWebpackPlugin({
@@ -134,8 +134,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/uikit-page/headerAndFooter/headerAndFooter.pug',
-      filename: 'headerAndFooter.html',
+      template: './src/uikit-page/header-and-footer/header-and-footer.pug',
+      filename: 'header-and-footer.html',
       chunks: ['headerAndFooter']
     }),
   ]

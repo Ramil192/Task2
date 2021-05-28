@@ -1,0 +1,22 @@
+mixin drop-downItem(title)
+  div.drop-down__bodyItem
+    div.drop-down__bodyItem-title=title
+    div.drop-down__bodyItem-btns 
+      button.drop-down__bodyItem-btns-inc -
+      div.drop-down__bodyItem-btns-count 0
+      button.drop-down__bodyItem-btns-dec +
+
+mixin drop-down(className,title)
+  section.drop-down
+    div.drop-down__title=title 
+    div.drop-down__header
+      button.drop-down__titleBtn Сколько гостей
+    div(class='drop-down__body ' + className)
+      +drop-downItem('взрослые')
+      +drop-downItem('дети')
+      +drop-downItem('младенцы')
+      div.drop-down__bodyItem
+        div.drop-down__bodyItem-btns-control 
+          button.drop-down__bodyItem-btns-control-clean очистить
+          button.drop-down__bodyItem-btns-control-ok применить
+

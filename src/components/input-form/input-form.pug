@@ -1,0 +1,6 @@
+mixin input-form(className,value,placeholder)
+  input(class='input-form '+className type="text" value=value placeholder=placeholder)
+mixin input-formEmail()
+  form(action="#" class='input-formEmail') 
+    input(class='input-form input-form_email' type="text" placeholder="Email")
+    button(class='input-form__email-btn' type="submit")
