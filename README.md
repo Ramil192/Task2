@@ -1,4 +1,4 @@
-Demo Page: https://sohtr.github.io/Task2/
+Demo Page: https://ramil192.github.io/Task2/
 
 To clone repository to your local storage: 
 
@@ -25,3 +25,9 @@ To open "register page" press "Зарегистрироваться" button
 To open "login page" press "Войти" button
 
 To open "uikit page" press "О нас" button
+
+Использованные библиотеки:
+
+1 air-datepicker : http://t1m0n.name/air-datepicker/docs/index-ru.html
+2 range-slailder : https://api.jqueryui.com/slider/
+2 slick : https://kenwheeler.github.io/slick/
