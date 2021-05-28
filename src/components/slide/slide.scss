@@ -9,17 +9,21 @@
   &__footer-text {
     margin-bottom: 23px;
   }
+  &__img {
+    width: 270px;
+    height: 151px;
+  }
   &__footer-review {
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
-    &::after{
-      content: ' Отзывов';
+    &::after {
+      content: " Отзывов";
       font-weight: normal;
     }
   }
-  &__footer-rating{
+  &__footer-rating {
     display: flex;
     align-items: center;
     justify-content: space-between;

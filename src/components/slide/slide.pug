@@ -6,7 +6,7 @@ mixin slide(img,number,pay,rating,review)
     div.rev_slide 
       -for(let i=0;i<img.length;i++)
         div.rev_slide__item
-          img(src=img[i], alt="")
+          img(class='rev_slide__img' src=img[i], alt="")
     div.rev_slide__footer
       div.rev_slide__footer-text
         +textPayAndNumber(number,pay)
