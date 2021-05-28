@@ -24,7 +24,7 @@ To open "register page" press "Зарегистрироваться" button
 
 To open "login page" press "Войти" button
 
-To open "uikit page" press "О нас" button
+To open "uikit page" press "О нас, Услуги, Вакансии, Новости" button click
 
 Использованные библиотеки:
 
