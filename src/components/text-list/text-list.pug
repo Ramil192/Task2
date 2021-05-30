@@ -1,14 +1,11 @@
-mixin smile()
-  section.text-list.text-list_smile
-    div.text-list__title Комфорт
-    div.text-list__subtTitle Шумопоглощающие стены
-
-mixin city()
-  section.text-list.text-list_city
-    div.text-list__title Удобство
-    div.text-list__subtTitle Окно в каждой из спален
-
-mixin comfort()
-  section.text-list.text-list_comfort
-    div.text-list__title Уют
-    div.text-list__subtTitle Номер оснащен камином 
+mixin comfortList(options= {})
+  -
+    const {
+      list = [
+        {className:'text-list_smile', title:'Комфорт', subTitle:'Шумопоглощающие стены'},
+        {className:'text-list_city', title:'Удобство', subTitle:'Окно в каждой из спален'},
+      ]} = options;
+  -for(let {className,title,subTitle} of list)
+    section(class = 'text-list '+className)
+      div.text-list__title=title
+      div.text-list__subtTitle=subTitle

@@ -8,7 +8,14 @@ mixin form-to-book()
       +two-input-range()
     div.form-to-book__item
       include ../drop-down/drop-down.pug
-      +drop-down('','гости')
+      +drop-down({
+        title : 'гости',
+        list : [
+          "взрослые",
+          "дети",
+          "младенцы",
+        ], 
+      })
     div.form-to-book__item
       span.form-to-book__text 9 990₽ х 4 суток 
       span.form-to-book__text 39 960₽ 
@@ -23,6 +30,6 @@ mixin form-to-book()
       span.form-to-book__text-total 38 081₽ 
     div.form-to-book__item
       include ../buttons/buttons.pug
-      +btnForm('забронировать')
+      +buttons('забронировать','btnForm') 
 
 

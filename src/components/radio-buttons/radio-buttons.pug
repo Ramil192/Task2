@@ -1,11 +1,17 @@
-mixin radioBtnItem(name,isFlag)
-  label.radio-buttons__radio
-        input(type="radio" name='gender' class='radio-buttons__radio-input' checked=isFlag)
-        span.radio-buttons__radio-name=name
-        
-mixin radio-buttons(title)
+mixin radio-buttons(options = {})
+  -
+    const {
+      title = '',
+      list = [
+        {text:'Мужчина',isChecked:true},
+        {text:'Женчина',isChecked:true},
+      ]
+    }=options
+
   section.radio-buttons
     div.radio-buttons__title=title
     div.radio-buttons__items
-      +radioBtnItem('Мужчина',true)
-      +radioBtnItem('Женщина',false)  
+      -for(let {text,isChecked} of list)
+        label.radio-buttons__radio
+          input(type="radio" name='gender' class='radio-buttons__radio-input' checked=isChecked)
+          span.radio-buttons__radio-name=text

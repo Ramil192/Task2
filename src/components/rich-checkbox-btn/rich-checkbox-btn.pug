@@ -1,13 +1,18 @@
-mixin rich-checkbox-btnItem(subTitle,text)
-  div.rich-checkbox-btn__item
-    label.rich-checkbox-btn__check
-      input(class='rich-checkbox-btn__checkbox' type="checkbox")
-      span.rich-checkbox-btn__subTitle=subTitle
-    div.rich-checkbox-btn__text!=text
-
-mixin rich-checkbox-btn(title)
+mixin rich-checkbox-btn(options = {})
+  - 
+    const { 
+      title = '',
+      list = [
+        {subTitle:'Широкий коридор',text:'Ширина коридоров в номере</br> не менее 91 см.'},
+        {subTitle:'Помощник для инвалидов',text:'На 1 этаже вас встретит специалист</br>  и проводит до номера.'},
+      ], 
+    } = options;
   section.rich-checkbox-btn=title
   div.div.rich-checkbox-btn__wrapper
-    div.rich-checkbox-btn__item  
-    +rich-checkbox-btnItem('Широкий коридор','Ширина коридоров в номере</br> не менее 91 см.') 
-    +rich-checkbox-btnItem('Помощник для инвалидов','На 1 этаже вас встретит специалист</br>  и проводит до номера.') 
+    div.rich-checkbox-btn__item
+    -for(let {subTitle,text} of list)  
+        div.rich-checkbox-btn__item
+          label.rich-checkbox-btn__check
+            input(class='rich-checkbox-btn__checkbox' type="checkbox")
+            span.rich-checkbox-btn__subTitle=subTitle
+          div.rich-checkbox-btn__text!=text

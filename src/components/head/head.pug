@@ -1,28 +1,35 @@
 include ../buttons/buttons.pug
 
-mixin headItem(text,className,href,flag)
-  li(class='head__link '+className)
-    a(href=href)=text
-    if(flag)
-      button.head__link_downBtn 
+mixin head(options = {})
+  - 
+    const {
+      nameUser = '', 
+      text = 'Правила',
+      list = [
+        {text: 'О нас', className:'head__link_bold', href:'color-and-type.html', flag : false},
+        {text: 'Услуги', className:'', href:'form-elements.html', flag : true},
+        {text: 'Вакансии', className:'', href:'cards.html', flag : false},
+        {text: 'Новости', className:'', href:'header-and-footer.html', flag : false},
+        {text: 'Соглашения', className:'', href:'', flag : true}
+      ], 
+    } = options;
 
-mixin head(name)
-  - var className=name ? 'head__item_name':''
+  - var className=nameUser ? 'head__item_name':''
 
   header.head
     div(class='head__item '+className)
       a(href='index.html').head__link
         img(src="./img/Logo.svg", alt="")
       ul.head__list
-        +headItem('О нас','head__link_bold','color-and-type.html')
-        +headItem('Услуги','','form-elements.html',true)
-        +headItem('Вакансии','','cards.html')
-        +headItem('Новости','','header-and-footer.html')
-        +headItem('Соглашения','','',true)
-        if (name)
-          span.head__link.head__link_name=name         
+        -for(let {text,className,href,flag} of list)
+          li(class='head__link '+className)
+            a(href=href)=text
+            if(flag)
+              button.head__link_downBtn 
+        if (nameUser)
+          span.head__link.head__link_name=nameUser
         else
           li.head__link
-            +btnWithBorder('войти','btnWithBorder_head')
+            +buttons('войти','withBorder','btnWithBorder_head')
           li.head__link
-            +btnForm('зарегистрироваться','btnForm_head',true) 
+            +buttons('зарегистрироваться','btnForm','btnForm_head','registration.html') 

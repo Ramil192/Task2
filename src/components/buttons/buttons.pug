@@ -1,11 +1,6 @@
-mixin btnWithBackColor(name)
-  button.btnWithBackColor=name
-mixin btnWithBorder(name,className)
-  a(class='btnWithBorder '+className href='main-sign-in.html')=name
-mixin btnJustName(name)
-  button.btnJustName=name
-mixin btnForm(name,className,flag)
-  if(flag)
-    a(class='btnForm '+className  href='registration.html')=name
-  else 
-    a(class='btnForm '+className href='search-room.html' )=name
+mixin buttons(text,btnSwitch,className,href)
+  case btnSwitch
+    when 'withBackColor': button.btnWithBackColor=text
+    when 'withBorder': a(class='btnWithBorder '+className href='main-sign-in.html')=text
+    when 'justBtn':  button.btnJustName=text
+    when 'btnForm':  a(class='btnForm '+className  href=href)=text

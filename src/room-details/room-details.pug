@@ -4,7 +4,7 @@ html
     meta(charset = 'utf-8')
     script(src="https://code.jquery.com/jquery-1.12.4.min.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
@@ -20,19 +20,23 @@ html
     div.room-details
       div.room-details__imgs
         div.room-details__img-left
-          img(src="./img/roomDetail/image.png", alt="")
+          img(src="./img/roomDetail/image.png" alt="")
         div.room-details__img-right
-          img(src="./img/roomDetail/image2.png", alt="")
-          img(src="./img/roomDetail/image3.png", alt="")
+          img(src="./img/roomDetail/image2.png" alt="")
+          img(src="./img/roomDetail/image3.png" alt="")
       div.room-details__description
         div.room-details__description-left
           div.room-details__description-status
             div.room-details__description-status-left
               div.room-details__description-left-title.room-details_title Сведения о номере
               include ../components/text-list/text-list.pug
-              +smile()
-              +city()
-              +comfort()
+              +comfortList({
+                list : [
+                {className:'text-list_smile', title:'Комфорт', subTitle:'Шумопоглощающие стены'},
+                {className:'text-list_city', title:'Удобство', subTitle:'Окно в каждой из спален'},
+                {className:'text-list_comfort', title:'Уют', subTitle:'Номер оснащен камином '},
+              ]
+              })
             div.room-details__description-status-right
               div.room-details__description-right-title.room-details_title Впечатления от номера
               div.room-details__description-vote
@@ -66,7 +70,13 @@ html
           div.room-details__regulations
             div.room-details__regulations-item
               include ../components/bullet-list/bullet-list.pug
-              +bullet-list('Правила')
+              +bullet-list({   
+                title:"Правила",
+                list: [
+                "Нельзя с питомцами",
+                "Без вечеринок и мероприятий",
+                "Время прибытия — после 13:00,</br>а выезд до 12:00",
+            ],})
             div.room-details__regulations-item
               div.room-details__regulations-cancel
                 div.room-details__regulations-cancel-title Отмена
@@ -75,5 +85,4 @@ html
           include ../components/form-to-book/form-to-book.pug
           +form-to-book()
       include ../components/footer/footer.pug
-      +footer()
-   
+

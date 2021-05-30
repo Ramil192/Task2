@@ -25,22 +25,45 @@ html
             +data-drop-down-filter('даты пребывания в отеле')
           div.search-room__row-left-item
             include ../components/drop-down/drop-down.pug
-            +drop-down('','гости')
+            +drop-down({
+              title : 'гости',
+              list : [
+                "взрослые",
+                "дети",
+                "младенцы",
+              ], 
+            })
           div.search-room__row-left-item
             include ../components/range-slider/range-slider.pug
             +range-slider('диапазон цены','Стоимость за сутки пребывания в номере')
           div.search-room__row-left-item
             include ../components/checkbox-list/checkbox-list.pug
-            +checkboxButtons('правила дома')
+            +checkbox-list({
+                isList:false,
+                title:'правила дома',
+                items : [
+                  {text:'Можно курить',flag:false},
+                  {text:'Можно с питомцами',flag:true},
+                  {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
+                ]})
           div.search-room__row-left-item
             include ../components/rich-checkbox-btn/rich-checkbox-btn.pug
-            +rich-checkbox-btn('доступность')
+            +rich-checkbox-btn({title:'доступность'})
           div.search-room__row-left-item
             include ../components/drop-down-bed/drop-down-bed.pug
-            +drop-down-bed('','удобства номера')
+            +drop-down-bed({title : 'удобства номера'})
           div.search-room__row-left-item
             include ../components/checkbox-list/checkbox-list.pug
-            +checkbox-list('','','дополнительные удобства')
+            +checkbox-list({
+                title:'дополнительные удобства',
+                items : [
+                  {text:'Завтрак',flag:false},
+                  {text:'Письменный стол',flag:false},
+                  {text:'Стул для кормления',flag:true},
+                  {text:'Кроватка',flag:true},
+                  {text:'Телевизор',flag:false},
+                  {text:'Шампунь',flag:false},
+                ]})
         div.search-room__row-right
           div.search-room__row-right-title Номера, которые мы для вас подобрали
           div.search-room__row-right-items
@@ -180,4 +203,3 @@ html
             include ../components/pagination/pagination.pug
             +pagination()
       include ../components/footer/footer.pug
-      +footer()

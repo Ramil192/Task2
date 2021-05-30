@@ -6,7 +6,14 @@ mixin room-search(title)
       +two-input-range()
     div.room-search__item 
       include ../drop-down/drop-down.pug
-      +drop-down('','гости')
+      +drop-down({
+        title : 'гости',
+        list : [
+          "взрослые",
+          "дети",
+          "младенцы",
+        ], 
+      })
     div.room-search__item 
      include ../buttons/buttons.pug
-     +btnForm('подобрать номер','')
+     +buttons('подобрать номер','btnForm','','search-room.html')

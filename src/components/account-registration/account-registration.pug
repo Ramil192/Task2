@@ -10,7 +10,7 @@ mixin account-registration(title)
       +input-form('','','Фамилия')
     div.account-registration__item
       include ../radio-buttons/radio-buttons.pug
-      +radio-buttons('')
+      +radio-buttons()
     div.account-registration__item
       include ../input-form-mask/input-form-mask.pug
       +input-form-mask('дата рождения')
@@ -26,10 +26,10 @@ mixin account-registration(title)
       +toggle('Получать спецпредложения',false)
     div.account-registration__item
       include ../buttons/buttons.pug
-      +btnForm('перейти к оплате')
+      +buttons('перейти к оплате','btnForm')
     div.account-registration__item
       div.account-registration__footer
         span Уже есть аккаунт на Toxin
         include ../buttons/buttons.pug
-        +btnWithBorder('войти')
+        +buttons('войти','withBorder')
       

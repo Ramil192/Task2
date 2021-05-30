@@ -1,6 +1,15 @@
-mixin input-form(className,value,placeholder)
-  input(class='input-form '+className type="text" value=value placeholder=placeholder)
-mixin input-formEmail()
-  form(action="#" class='input-formEmail') 
-    input(class='input-form input-form_email' type="text" placeholder="Email")
-    button(class='input-form__email-btn' type="submit")
+mixin input-form(options = {})
+  - 
+    const { 
+      className = '',
+      value = '',
+      placeholder = '',
+      isForm = false,
+    } = options;
+    
+  if(isForm)
+    form(action="#" class='input-formEmail') 
+      input(class='input-form input-form_email' type="text" placeholder="Email")
+      button(class='input-form__email-btn' type="submit")
+  else
+    input(class='input-form '+className type="text" value=value placeholder=placeholder)
