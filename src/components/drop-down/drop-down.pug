@@ -10,19 +10,19 @@ mixin drop-down(options={})
       ], 
     } = options;
 
-  section.drop-down
+  section.drop-down.js-drop-down
     div.drop-down__title=title 
     div.drop-down__header
-      button.drop-down__titleBtn Сколько гостей
-    div(class='drop-down__body ' + className)
+      button.drop-down__titleBtn.js-drop-down__titleBtn Сколько гостей
+    div(class='drop-down__body  js-drop-down__body ' + className)
       -for(let item of list )
         div.drop-down__bodyItem
           div.drop-down__bodyItem-title=item
           div.drop-down__bodyItem-btns 
-            button.drop-down__bodyItem-btns-inc -
-            div.drop-down__bodyItem-btns-count 0
-            button.drop-down__bodyItem-btns-dec +
+            button.drop-down__bodyItem-btns-inc.js-drop-down__bodyItem-btns-inc#inc -
+            div.drop-down__bodyItem-btns-count.js-drop-down__bodyItem-btns-count 0
+            button.drop-down__bodyItem-btns-dec#dec +
       div.drop-down__bodyItem
         div.drop-down__bodyItem-btns-control 
-            button.drop-down__bodyItem-btns-control-clean очистить
-            button.drop-down__bodyItem-btns-control-ok применить
+            button.drop-down__bodyItem-btns-control-clean.js-drop-down__bodyItem-btns-control-clean очистить
+            button.drop-down__bodyItem-btns-control-ok.js-drop-down__bodyItem-btns-control-ok применить

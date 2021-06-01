@@ -4,21 +4,21 @@ mixin drop-down-bed(options = {})
       className = '', 
       title = '',
       list = [
-       {text : 'спальни' , count: 2},
-       {text : 'кровати' , count: 2},
+       {text : 'спальни' , count: 0},
+       {text : 'кровати' , count: 0},
        {text : 'ванные комнаты' , count: 0},
       ], 
     } = options;
     
-  section.drop-down-bed
+  section.drop-down-bed.js-drop-down-bed
     div.drop-down-bed__title=title
     div.drop-down-bed__header
-      button.drop-down-bed__titleBtn 2 спальни, 2 кровати...
-    div(class='drop-down-bed__body ' + className)
+      button.drop-down-bed__titleBtn.js-drop-down-bed__titleBtn Сколько комнат
+    div(class='drop-down-bed__body js-drop-down-bed__body ' + className)
       -for(let {text,count} of list)
         div.drop-down-bed__bodyItem
           div.drop-down-bed__bodyItem-title=text
           div.drop-down-bed__bodyItem-btns 
-            button(class='drop-down-bed__bodyItem-btns-inc '+className) -
-            div.drop-down-bed__bodyItem-btns-count=count
-            button.drop-down-bed__bodyItem-btns-dec +
+            button(class='drop-down-bed__bodyItem-btns-inc js-drop-down-bed__bodyItem-btns-inc '+className)#inc -
+            div.drop-down-bed__bodyItem-btns-count.js-drop-down-bed__bodyItem-btns-count=count
+            button.drop-down-bed__bodyItem-btns-dec#dec +
