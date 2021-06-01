@@ -71,14 +71,14 @@ class DropDown {
     this.btnClean.addEventListener('click', () => this.handleBtnCleanClick());
     this.btnOk.addEventListener('click', () => this.handleBtnOkClick());
   }
-  render(){
+  render() {
     this.initialize();
     this.setEventHandlers();
   }
 }
 
 $(function () {
-  if(document.querySelector('.js-drop-down')){
+  if (document.querySelector('.js-drop-down')) {
     document.querySelectorAll('.js-drop-down').forEach(e => new DropDown(e));
   }
 })

@@ -1,10 +1,10 @@
 class Checkbox {
-  constructor(outerContainerElement){
+  constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
     this.render();
   }
 
-  initialize() { 
+  initialize() {
     this.checkboxBtn = this.outerContainerElement.querySelector('.js-checkbox-list__titleBtn');
     this.checkboxItems = this.outerContainerElement.querySelector('.js-checkbox-list__items');
   }
@@ -26,8 +26,8 @@ class Checkbox {
 
 
 $(function () {
-  if(document.querySelector('.js-checkbox-list')){
-    document.querySelectorAll('.js-checkbox-list').forEach(element=>new Checkbox(element));
+  if (document.querySelector('.js-checkbox-list')) {
+    document.querySelectorAll('.js-checkbox-list').forEach(element => new Checkbox(element));
   }
 })
 

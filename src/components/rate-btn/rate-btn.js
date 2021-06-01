@@ -27,7 +27,7 @@ class RateBtn {
 }
 
 $(function () {
-  if(document.querySelector('.js-rating')){
-    document.querySelectorAll('.js-rating').forEach(element=>new RateBtn(element));
+  if (document.querySelector('.js-rating')) {
+    document.querySelectorAll('.js-rating').forEach(element => new RateBtn(element));
   }
 })
