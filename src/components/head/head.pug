@@ -14,7 +14,7 @@ mixin head(options = {})
       ], 
     } = options;
 
-  - var className=nameUser ? 'head__item_name':''
+  - const className=nameUser ? 'head__item_name':''
 
   header.head
     div(class='head__item '+className)
@@ -30,6 +30,6 @@ mixin head(options = {})
           span.head__link.head__link_name=nameUser
         else
           li.head__link
-            +buttons('войти','withBorder','btnWithBorder_head')
+            +buttons('войти','withBorder','btn-with-border_head')
           li.head__link
-            +buttons('зарегистрироваться','btnForm','btnForm_head','registration.html') 
+            +buttons('зарегистрироваться','btn-Form','btn-Form_head','registration.html') 

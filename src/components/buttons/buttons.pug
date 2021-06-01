@@ -1,6 +1,6 @@
 mixin buttons(text,btnSwitch,className,href)
   case btnSwitch
     when 'withBackColor': button.btnWithBackColor=text
-    when 'withBorder': a(class='btnWithBorder '+className href='main-sign-in.html')=text
+    when 'withBorder': a(class='btn-with-border '+className href='main-sign-in.html')=text
     when 'justBtn':  button.btnJustName=text
-    when 'btnForm':  a(class='btnForm '+className  href=href)=text
+    when 'btn-Form':  a(class='btn-Form '+className  href=href)=text

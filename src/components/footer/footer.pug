@@ -2,7 +2,7 @@ include ../input-form/input-form.pug
 
 mixin footerList(name,text,flag)
    ul.footer__list=name
-    -for(var i=0;i<text.length;i++)
+    -for(let i=0;i<text.length;i++)
       li.footer__list-item
         a(href="#")!=text[i]
     if(flag)

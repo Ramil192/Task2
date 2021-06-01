@@ -1,13 +1,12 @@
 $(function(){
-  var now = new Date();
-  var endDate = new Date(now.getTime() + 365*24*60*60*1000)
-  var $start = $('#start'),
+ let now = new Date();
+ let endDate = new Date(now.getTime() + 365*24*60*60*1000)
+ let $start = $('#start'),
       $end = $('#end');
-  var $datepickers = $('.datepickers');
+ let $datepickers = $('.datepickers');
   
   $datepickers.datepicker({
       language: 'ru',
-      // offset: ,
       navTitles: {
         days: '<i>yyyy</i> MM',
         months: 'yyyy',
@@ -20,8 +19,8 @@ $(function(){
         onSelect: function (fd, date) {
           $end.data('datepicker')
                   .update('selectedDates', $start.data('datepicker').selectedDates);
-          var start = fd.split('-')[0]
-          var end = fd.split('-')[1];
+         let start = fd.split('-')[0]
+         let end = fd.split('-')[1];
           if (end) {
             $start.val(start);
             $end.val(end);

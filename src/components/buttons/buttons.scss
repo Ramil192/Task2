@@ -10,7 +10,7 @@
     opacity: 0.5;
   }
 }
-.btnWithBorder {
+.btn-with-border {
   color: #bc9cff;
   border-radius: 22px;
   font-weight: bold;
@@ -25,7 +25,7 @@
     opacity: 0.5;
   }
 }
-.btnWithBorder_head {
+.btn-with-border_head {
   width: 87px;
   padding: 10px 15px 6px 22px;
   border-width: 2px;
@@ -39,7 +39,7 @@
     color: rgba(31, 32, 65, 0.5);
   }
 }
-.btnForm {
+.btn-Form {
 
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   text-transform: uppercase;
@@ -60,7 +60,7 @@
   }
 }
 
-.btnForm_head {
+.btn-Form_head {
   padding: 9px 19px 7px 19px;
   &::before{
     background: url('');
