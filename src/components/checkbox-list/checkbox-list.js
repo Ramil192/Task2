@@ -9,13 +9,13 @@ class Checkbox {
     this.checkboxItems = this.outerContainerElement.querySelector('.js-checkbox-list__items');
   }
 
-  handleCheckboxClick() {
+  handleCheckboxClick = () => {
     this.checkboxItems.classList.toggle('checkbox-list__items_show');
     this.checkboxBtn.classList.toggle('checkbox-list__titleBtn_rotate');
   }
 
   setEventHandlers() {
-    this.checkboxBtn.addEventListener('click', () => this.handleCheckboxClick());
+    this.checkboxBtn.addEventListener('click', this.handleCheckboxClick);
   }
 
   render() {
@@ -24,11 +24,10 @@ class Checkbox {
   }
 }
 
-
-$(function () {
+$(() => {
   if (document.querySelector('.js-checkbox-list')) {
-    document.querySelectorAll('.js-checkbox-list').forEach(element => new Checkbox(element));
+    document.querySelectorAll('.js-checkbox-list').forEach((element) => new Checkbox(element));
   }
-})
+});
 
 export default Checkbox;

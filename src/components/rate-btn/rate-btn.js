@@ -15,9 +15,7 @@ class RateBtn {
   }
 
   setEventHandlers() {
-    this.ratingItemsArray.forEach(item =>
-      item.addEventListener('click', () => this.handleRateBtnClick(item))
-    );
+    this.ratingItemsArray.forEach((item) => item.addEventListener('click', () => this.handleRateBtnClick(item)));
   }
 
   render() {
@@ -26,8 +24,8 @@ class RateBtn {
   }
 }
 
-$(function () {
+$(() => {
   if (document.querySelector('.js-rating')) {
-    document.querySelectorAll('.js-rating').forEach(element => new RateBtn(element));
+    document.querySelectorAll('.js-rating').forEach((element) => new RateBtn(element));
   }
-})
+});

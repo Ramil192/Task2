@@ -1,7 +1,7 @@
 function importAll(resolve) {
-    resolve.keys().forEach(resolve);
+  resolve.keys().forEach(resolve);
 }
 
 importAll(
-    require.context('../', true, /\.(js|scss)$/)
+  require.context('../', true, /\.(js|scss)$/),
 );
