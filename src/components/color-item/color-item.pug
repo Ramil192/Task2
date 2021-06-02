@@ -1,6 +1,15 @@
-mixin color-item(className,title,subTitle)
+mixin color-item(options={})
+  -
+    const {
+      colorName = 'Dark Shade',
+      colorCode = '#1F2041',
+      backgroundColor = '',
+    } = options;
+
+    const colorClass = `color-item__boxColor_${backgroundColor}`;
+  
   section.color-item 
-    div(class='color-item__boxColor ' + className)  
+    div(class='color-item__boxColor ' + colorClass)  
     div.color-item__boxText 
-      div.color-item__title=title
-      div.color-item__subTitle=subTitle
+      div.color-item__title=colorName
+      div.color-item__subTitle=colorCode

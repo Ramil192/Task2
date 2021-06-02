@@ -1,4 +1,17 @@
-mixin buttons(text,btnSwitch,className,href)
+mixin buttons(options = {})
+  -
+    const {
+      text = 'CLICK ME',
+      btnSwitch = 'withBackColor',
+      href = '#',
+      isWithBorderHead = false,
+      isFormHead = false,
+    } = options;
+    let className = ' ';
+
+    if(isWithBorderHead) className = 'btn-with-border_head';
+    if(isFormHead) className = 'btn-Form_head';
+
   case btnSwitch
     when 'withBackColor': button.btnWithBackColor=text
     when 'withBorder': a(class='btn-with-border '+className href='main-sign-in.html')=text

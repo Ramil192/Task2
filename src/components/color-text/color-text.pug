@@ -1,4 +1,11 @@
-mixin color-text(className,title,subTitle)
-  section(class='color-text ' + className)
+mixin color-text(options = { })
+  -
+    const {
+      title = '',
+      text = '',
+      size =''
+    } = options 
+    const sizeClass = `color-text_${size}`
+  section(class='color-text ' + sizeClass)
     div.color-text__title=title 
-    div.color-text__subTitle!=subTitle 
+    div.color-text__subTitle!=text 

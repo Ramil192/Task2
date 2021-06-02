@@ -1,7 +1,7 @@
 mixin drop-down(options={})
   - 
     const {
-      className = '', 
+      isOpen  = false,
       title = 'drop-down',
       list = [
         "взрослые",
@@ -9,12 +9,13 @@ mixin drop-down(options={})
         "младенцы",
       ], 
     } = options;
+    const classOpen = isOpen ? 'drop-down__body_show' : ''
 
   section.drop-down.js-drop-down
     div.drop-down__title=title 
     div.drop-down__header
       button.drop-down__titleBtn.js-drop-down__titleBtn Сколько гостей
-    div(class='drop-down__body  js-drop-down__body ' + className)
+    div(class='drop-down__body  js-drop-down__body ' + classOpen)
       -for(let item of list )
         div.drop-down__bodyItem
           div.drop-down__bodyItem-title=item

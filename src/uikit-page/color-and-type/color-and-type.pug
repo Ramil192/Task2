@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
@@ -16,21 +16,21 @@ html
     section.colorsAndType
       div.colorsAndType__rowColor
         include ../../components/color-item/color-item.pug  
-        +color-item('color-item__boxColor_darkShade100','Dark Shade 100%','#1F2041')
-        +color-item('color-item__boxColor_darkShade75','Dark Shade 75%','#1F2041')
-        +color-item('color-item__boxColor_darkShade50','Dark Shade 50%','#1F2041')
-        +color-item('color-item__boxColor_darkShade25','Dark Shade 25%','#1F2041')
-        +color-item('color-item__boxColor_darkShade5','Dark Shade 5%','#1F2041')
-        +color-item('color-item__boxColor_purple','Purple','#BC9CFF')
-        +color-item('color-item__boxColor_green','Green','#6FCF97')
+        +color-item({clorName : 'Dark Shade 100%', backgroundColor : 'darkShade100'})
+        +color-item({clorName : 'Dark Shade 75%', backgroundColor : 'darkShade75'})
+        +color-item({clorName : 'Dark Shade 50%', backgroundColor : 'darkShade50'})
+        +color-item({clorName : 'Dark Shade 25%', backgroundColor : 'darkShade25'})
+        +color-item({clorName : 'Dark Shade 5%', backgroundColor : 'darkShade5'})
+        +color-item({clorName : 'Purple', backgroundColor : 'purple', colorCode : '#BC9CFF'})
+        +color-item({clorName : 'Green', backgroundColor : 'green', colorCode : '#6FCF97'})
       div.colorsAndType__rowText
         include ../../components/color-text/color-text.pug 
-        +color-text('color-text_h1','H1','This one is the sub-section or</br> widget title')   
-        +color-text('color-text_h2','H2','Next one is the item title inside</br> widgets')   
-        +color-text('color-text_h3','H3','This is a label or CTA text')   
-        +color-text('color-text_body','Body','This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.') 
-  
-           
+        +color-text({title : 'H1', text : 'This one is the sub-section or</br> widget title', size : 'h1'})
+        +color-text({title : 'H2', text : 'Next one is the item title inside</br> widgets', size : 'h2'})
+        +color-text({title : 'H3', text : 'This is a label or CTA text', size : 'h3'})
+        +color-text({title : 'Body', text : 'This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.', size : 'body'})
 
-                            
-                            
+
+
+
+

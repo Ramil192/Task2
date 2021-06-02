@@ -15,5 +15,9 @@ mixin room-search(title)
         ], 
       })
     div.room-search__item 
-     include ../buttons/buttons.pug
-     +buttons('подобрать номер','btn-Form','','search-room.html')
+      include ../buttons/buttons.pug
+      +buttons({
+        btnSwitch:'btn-Form',
+        text:'подобрать номер',
+        href:'search-room.html'
+      })

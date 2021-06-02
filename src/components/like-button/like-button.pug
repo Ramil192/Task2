@@ -1,3 +1,10 @@
-mixin like-button(count,className)
-  section(class='like-button js-like-button ' + className)
-    div.like-button__count.js-like-button__count=count
+mixin like-button(options)
+  -
+    const {
+      likeCount = 0,
+      isClick = false,
+    } = options;
+    const classClick = isClick ? 'like-button_action' : ''
+
+  section(class='like-button js-like-button ' + classClick)
+    div.like-button__count.js-like-button__count=likeCount

@@ -4,10 +4,10 @@ mixin account-registration(title)
     div.account-registration__title=title
     div.account-registration__item
       include ../input-form/input-form.pug
-      +input-form('','','Имя')
+      +input-form({placeholder:'Имя'})
     div.account-registration__item
       include ../input-form/input-form.pug
-      +input-form('','','Фамилия')
+      +input-form({placeholder:'Фамилия'})
     div.account-registration__item
       include ../radio-buttons/radio-buttons.pug
       +radio-buttons()
@@ -17,10 +17,10 @@ mixin account-registration(title)
     div.account-registration__item
       div.account-registration__item-title данные для входа в сервис
       include ../input-form/input-form.pug
-      +input-form('','','Email')
+      +input-form({placeholder:'Email'})
     div.account-registration__item
       include ../input-form/input-form.pug
-      +input-form('','','Пароль')
+      +input-form({placeholder:'Пароль'})
     div.account-registration__item
       include ../toggle/toggle.pug
       +toggle('Получать спецпредложения',false)

@@ -1,15 +1,16 @@
 mixin input-form(options = {})
   - 
     const { 
-      className = '',
+      isActive = false,
       value = '',
       placeholder = '',
       isForm = false,
     } = options;
-    
+    const classActive = isActive ? 'input-form_active' : ''
+
   if(isForm)
     form(action="#" class='input-formEmail') 
       input(class='input-form input-form_email' type="text" placeholder="Email")
       button(class='input-form__email-btn' type="submit")
   else
-    input(class='input-form '+className type="text" value=value placeholder=placeholder)
+    input(class='input-form '+classActive type="text" value=value placeholder=placeholder)

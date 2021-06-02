@@ -4,7 +4,7 @@ html
     script(src="https://code.jquery.com/jquery-1.12.4.min.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
@@ -29,7 +29,7 @@ html
               span.form-elements__row-input-title Text Field
               span.form-elements__row-input-subTitle Hover&nbsp;/&nbsp;Focus
             include ../../components/input-form/input-form.pug
-            +input-form({className:'input-form_active',value:'This is pretty awesome'})
+            +input-form({isActive : true, value : 'This is pretty awesome'})
           div.form-elements__row-input-item
             include ../../components/drop-down/drop-down.pug
             +drop-down({ 
@@ -68,35 +68,35 @@ html
               span.form-elements__row-input-title drop-down
               span.form-elements__row-input-subTitle expanded
             include ../../components/drop-down-bed/drop-down-bed.pug
-            +drop-down-bed({className : 'drop-down-bed__body_show'})
+            +drop-down-bed({isOpen : true})
           div.form-elements__row-input-item
             include ../../components/checkbox-list/checkbox-list.pug
             +checkbox-list()
           div.form-elements__row-input-item
             +checkbox-list({show:'checkbox-list__items_show',
-                            rotate:'checkbox-list__titleBtn_rotate',
-                            title:'',
-                            items : [
-                              {text:'Завтрак',flag:false},
-                              {text:'Письменный стол',flag:false},
-                              {text:'Стул для кормления',flag:true},
-                              {text:'Кроватка',flag:true},
-                              {text:'Телевизор',flag:false},
-                              {text:'Шампунь',flag:false},
-                            ]})
+              rotate:'checkbox-list__titleBtn_rotate',
+              title:'',
+              items : [
+                {text:'Завтрак',flag:false},
+                {text:'Письменный стол',flag:false},
+                {text:'Стул для кормления',flag:true},
+                {text:'Кроватка',flag:true},
+                {text:'Телевизор',flag:false},
+                {text:'Шампунь',flag:false},
+              ]})
           div.form-elements__row-input-item
             include ../../components/text-list/text-list.pug
             +comfortList()
         div.form-elements__row-checkbox
           div.form-elements__row-checkbox-item
             +checkbox-list({
-                isList:false,
-                title:'Checkbox Buttons',
-                items : [
-                  {text:'Можно курить',flag:false},
-                  {text:'Можно с питомцами',flag:true},
-                  {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
-                ]})
+              isList:false,
+              title:'Checkbox Buttons',
+              items : [
+                {text:'Можно курить',flag:false},
+                {text:'Можно с питомцами',flag:true},
+                {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
+              ]})
           div.form-elements__row-checkbox-item
             include ../../components/radio-buttons/radio-buttons.pug
             +radio-buttons({title : 'Radio Buttons'})
@@ -108,7 +108,7 @@ html
           div.form-elements__row-checkbox-item
             div.form-elements__row-checkbox-item-title like button
             include ../../components/like-button/like-button.pug
-            +like-button(2,'')
+            +like-button({likeCount : 2 })
           div.form-elements__row-checkbox-item
             div.form-elements__row-checkbox-item-title rate button
             include ../../components/rate-btn/rate-btn.pug
@@ -116,8 +116,8 @@ html
           div.form-elements__row-checkbox-item
             include ../../components/drop-down/drop-down.pug
             +drop-down({
-              className : 'drop-down__body_show', 
-              title : 'drop-down',
+              isOpen : true, 
+              title : 'drop-down11',
               list : [
                 "взрослые",
                 "дети",
@@ -137,16 +137,16 @@ html
           div.form-elements__row-btn-item
             div.form-elements__row-btn-item-title buttons
             include ../../components/buttons/buttons.pug
-            +buttons('CLICK ME','withBackColor')
+            +buttons()
           div.form-elements__row-btn-item
             include ../../components/buttons/buttons.pug
-            +buttons('CLICK ME','withBorder')
+            +buttons({btnSwitch:'withBorder'})
           div.form-elements__row-btn-item
             include ../../components/buttons/buttons.pug
-            +buttons('CLICK ME','justBtn')
+            +buttons({btnSwitch:'justBtn'})
           div.form-elements__row-btn-item
             include ../../components/buttons/buttons.pug
-            +buttons('перейти к оплате','btn-Form')
+            +buttons({btnSwitch:'btn-Form',text:'перейти к оплате'})
           div.form-elements__row-btn-item
             div.form-elements__row-btn-item-title pagination
             include ../../components/pagination/pagination.pug
@@ -154,7 +154,7 @@ html
           div.form-elements__row-btn-item
             include ../../components/drop-down/drop-down.pug
             +drop-down({
-              className : 'drop-down__body_show', 
+              isOpen : true,
               title : 'drop-down',
               list : [
                 "взрослые",
@@ -166,4 +166,3 @@ html
             div.form-elements__row-btn-item-title bullet list
             include ../../components/bullet-list/bullet-list.pug
             +bullet-list('') 
-    

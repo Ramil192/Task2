@@ -9,10 +9,10 @@ mixin sign-in()
       +input-form({placeholder:'Пароль'})
     div.sign-in__item
       include ../buttons/buttons.pug
-      +buttons('Войти','btn-Form')
+      +buttons({btnSwitch:'btn-Form',text:'Войти'})
     div.sign-in__item
       span.sign-in__item-text Нет аккаунта на Toxin?
       include ../buttons/buttons.pug
-      +buttons('создать','withBorder')
+      +buttons({btnSwitch:'withBorder',text:'создать'})
 
 

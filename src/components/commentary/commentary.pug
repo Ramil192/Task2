@@ -8,5 +8,5 @@ mixin commentary(name,date,text,img)
           div.commentary__header-date=date
       div.commentary__body
         include ../like-button/like-button.pug
-        +like-button('12','')
+        +like-button({likeCount : 12, isClick : true})
         div.commentary__body-text=text

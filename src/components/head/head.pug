@@ -6,23 +6,23 @@ mixin head(options = {})
       nameUser = '', 
       text = 'Правила',
       list = [
-        {text: 'О нас', className:'head__link_bold', href:'color-and-type.html', flag : false},
-        {text: 'Услуги', className:'', href:'form-elements.html', flag : true},
-        {text: 'Вакансии', className:'', href:'cards.html', flag : false},
-        {text: 'Новости', className:'', href:'header-and-footer.html', flag : false},
-        {text: 'Соглашения', className:'', href:'', flag : true}
+        {text: 'О нас', isBold : true, href:'color-and-type.html', flag : false},
+        {text: 'Услуги', isBold : false , href:'form-elements.html', flag : true},
+        {text: 'Вакансии', isBold : false , href:'cards.html', flag : false},
+        {text: 'Новости', isBold : false , href:'header-and-footer.html', flag : false},
+        {text: 'Соглашения', isBold : false , href:'', flag : true}
       ], 
     } = options;
-
-  - const className=nameUser ? 'head__item_name':''
+    const classBold = 'head__link_bold';
+  - const className = nameUser ? 'head__item_name' : '';
 
   header.head
     div(class='head__item '+className)
       a(href='index.html').head__link
-        img(src="./img/Logo.svg", alt="")
+        img(src="./img/Logo.svg" alt="")
       ul.head__list
-        -for(let {text,className,href,flag} of list)
-          li(class='head__link '+className)
+        -for(let {text,href,flag,isBold} of list)
+          li(class=`head__link ${isBold && classBold}`)
             a(href=href)=text
             if(flag)
               button.head__link_downBtn 
@@ -30,6 +30,17 @@ mixin head(options = {})
           span.head__link.head__link_name=nameUser
         else
           li.head__link
-            +buttons('войти','withBorder','btn-with-border_head')
+            +buttons({
+              btnSwitch:'withBorder',
+              text:'войти',
+              href:'sign-in.html',
+              isWithBorderHead:true
+            })
           li.head__link
-            +buttons('зарегистрироваться','btn-Form','btn-Form_head','registration.html') 
+            +buttons({
+              btnSwitch:'btn-Form',
+              text:'зарегистрироваться',
+              href:'registration.html',
+              className:'btn-Form_head',
+              isFormHead: true
+            }) 
