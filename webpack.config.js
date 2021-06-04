@@ -3,18 +3,60 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const pages = [
+  { pageName: 'header-and-footer', pageType: 'ui-kit' },
+  { pageName: 'form-elements', pageType: 'ui-kit' },
+  { pageName: 'color-and-type', pageType: 'ui-kit' },
+  { pageName: 'cards', pageType: 'ui-kit' },
+  { pageName: 'search-room', pageType: 'web' },
+  { pageName: 'registration', pageType: 'web' },
+  { pageName: 'main-sign-in', pageType: 'web' },
+  { pageName: 'room-details', pageType: 'web' },
+];
+
+const pluginsOptions = [];
+
+pages.forEach((e) => {
+  pluginsOptions.push(
+    new HtmlWebpackPlugin({
+      filename: `./${e.pageName}.html`,
+      template: `./src/pages/${e.pageType}/${e.pageName}/${e.pageName}.pug`,
+      inject: true,
+      chunks: [e.pageName],
+    }),
+  );
+});
+
+const entries = pages.reduce((obj, curEntry) => {
+  obj[curEntry.pageName] = `./src/pages/${curEntry.pageType}/${curEntry.pageName}/${curEntry.pageName}.js`;
+  return obj;
+}, {});
+entries.favicon = './src/img/favicons/favicons.js';
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  filename: './index.html',
+  template: './src/pages/index/index.pug',
+  inject: true,
+  chunks: ['index'],
+}));
+entries.index = './src/pages/index/index.js';
+
+pluginsOptions.push(new MiniCssExtractPlugin({
+  filename: 'style.css',
+}));
+pluginsOptions.push(new CopyWebpackPlugin([{
+  from: './src/fonts',
+  to: './fonts'
+},
+{
+  from: './src/img',
+  to: './img'
+}
+]));
+
 module.exports = {
-  entry: {
-    index: './src/index/index.js',
-    roomDetails: './src/room-details/room-details.js',
-    searchRoom: './src/search-room/search-room.js',
-    mainSignIn: './src/main-sign-in/main-sign-in.js',
-    registration: './src/registration/registration.js',
-    colorAndType: './src/uikit-page/color-and-type/color-and-type.js',
-    formElements: './src/uikit-page/form-elements/form-elements.js',
-    cards: './src/uikit-page/cards/cards.js',
-    headerAndFooter: './src/uikit-page/header-and-footer/header-and-footer.js',
-  },
+  entry:entries,
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
@@ -70,73 +112,5 @@ module.exports = {
   devServer: {
     stats: 'errors-only'
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-    new CopyWebpackPlugin([{
-      from: './src/fonts',
-      to: './fonts'
-    },
-    {
-      from: './src/img',
-      to: './img'
-    }
-    ]),
-
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/index/index.pug',
-      filename: 'index.html',
-      chunks: ['index']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/room-details/room-details.pug',
-      filename: 'room-details.html',
-      chunks: ['roomDetails']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/search-room/search-room.pug',
-      filename: 'search-room.html',
-      chunks: ['searchRoom']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/main-sign-in/main-sign-in.pug',
-      filename: 'main-sign-in.html',
-      chunks: ['mainSignIn']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/registration/registration.pug',
-      filename: 'registration.html',
-      chunks: ['registration']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/uikit-page/color-and-type/color-and-type.pug',
-      filename: 'color-and-type.html',
-      chunks: ['colorAndType']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/uikit-page/form-elements/form-elements.pug',
-      filename: 'form-elements.html',
-      chunks: ['formElements']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/uikit-page/cards/cards.pug',
-      filename: 'cards.html',
-      chunks: ['cards']
-    }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      template: './src/uikit-page/header-and-footer/header-and-footer.pug',
-      filename: 'header-and-footer.html',
-      chunks: ['headerAndFooter']
-    }),
-  ]
+  plugins: pluginsOptions,
 };

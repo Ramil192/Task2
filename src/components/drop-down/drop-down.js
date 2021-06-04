@@ -83,9 +83,5 @@ class DropDown {
     this.setEventHandlers();
   }
 }
+export default DropDown;
 
-$(() => {
-  if (document.querySelector('.js-drop-down')) {
-    document.querySelectorAll('.js-drop-down').forEach((e) => new DropDown(e));
-  }
-});

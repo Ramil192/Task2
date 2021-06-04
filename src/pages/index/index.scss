@@ -1,0 +1,28 @@
+@import '../../main.scss';
+@import '../../components/head/head.scss';
+@import '../../components/footer/footer.scss';
+@import '../../components/room-search/room-search.scss';
+
+.background {
+  max-width: 1440px;
+  height: 830px;
+  margin: 0px auto;
+  padding: 70px 151px 20px 140px;
+  position: relative;
+  background: url('../../img/index.png')no-repeat;
+  &__text{
+    color: rgba(31, 32, 65, 0.75);
+    position: absolute;
+    right: 135px;
+    bottom: 24px;
+  }
+}
+
+@media(max-width:532px){
+  .background {
+    padding: 70px 0px 20px 0px;
+    &__text{
+      right: 15px;
+    }
+  }
+}
