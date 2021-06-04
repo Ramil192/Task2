@@ -1,3 +1,4 @@
+@import '../buttons/buttons.scss';
 .head{
   max-width: 100%;
   background-color: #fff;
@@ -56,7 +57,7 @@
       width: 21px;
       height: 17px;
       position:absolute;
-      background: url('../../img/headDown.svg') no-repeat 5px 8px;
+      //background: url('../../img/headDown.svg') no-repeat 5px 8px;
       right: 0px;
       top: 0px;
     }
@@ -66,7 +67,7 @@
   .head{
     &__item{
       padding-right: 30px;
-      background: url('../../img/Logo.svg') no-repeat 30px 15px;
+      //background: url('../../img/Logo.svg') no-repeat 30px 15px;
     }
   }
 }

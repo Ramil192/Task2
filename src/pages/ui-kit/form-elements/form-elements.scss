@@ -1,8 +1,26 @@
+@import '../../../main.scss';
+@import '../../../components/input-form/input-form.scss';
+@import '../../../components/input-form-mask/input-form-mask.scss';
+@import '../../../components/drop-down-bed/drop-down-bed.scss';
+@import '../../../components/drop-down/drop-down.scss';
+@import '../../../components/checkbox-list/checkbox-list.scss';
+@import '../../../components/text-list/text-list.scss';
+@import '../../../components/radio-buttons/radio-buttons.scss';
+@import '../../../components/toggle/toggle.scss';
+@import '../../../components/like-button/like-button.scss';
+@import '../../../components/rate-btn/rate-btn.scss';
+@import '../../../components/rich-checkbox-btn/rich-checkbox-btn.scss';
+@import '../../../components/commentary/commentary.scss';
+@import '../../../components/range-slider/range-slider.scss';
+@import '../../../components/buttons/buttons.scss';
+@import '../../../components/pagination/pagination.scss';
+@import '../../../components/bullet-list/bullet-list.scss';
+
 .form-elements {
   max-width: 1440px;
   padding: 174px 141px 146px 140px;
   margin: 0px auto;
-  background: url(../../img/main-logo.svg)no-repeat 30px 62px;
+  background: url(../../../img/main-logo.svg)no-repeat 30px 62px;
   &__row {
     display: flex;
   }

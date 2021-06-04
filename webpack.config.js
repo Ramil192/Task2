@@ -43,7 +43,7 @@ pluginsOptions.push(new HtmlWebpackPlugin({
 entries.index = './src/pages/index/index.js';
 
 pluginsOptions.push(new MiniCssExtractPlugin({
-  filename: 'style.css',
+  filename: '[name].css',
 }));
 pluginsOptions.push(new CopyWebpackPlugin([{
   from: './src/fonts',
@@ -56,7 +56,7 @@ pluginsOptions.push(new CopyWebpackPlugin([{
 ]));
 
 module.exports = {
-  entry:entries,
+  entry: entries,
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
@@ -69,6 +69,32 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                  ],
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,

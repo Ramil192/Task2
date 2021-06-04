@@ -1,7 +1,1 @@
-// function importAll(resolve) {
-//   resolve.keys().forEach(resolve);
-// }
-
-// importAll(
-//   require.context('../../', true, /\.(js|scss)$/),
-// );
+import './header-and-footer.scss'

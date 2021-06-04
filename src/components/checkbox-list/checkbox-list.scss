@@ -16,7 +16,7 @@
       position:absolute;
       right: 7px;
       top: -6px;
-      background: url('../../img/arrow-down.svg')no-repeat 50%;
+      background: url('/img/arrow-down.svg')no-repeat 50%;
     }
   }
   &__title {
@@ -68,7 +68,7 @@
     left: 0px;
   }
   &__item-check-input:checked + &__item-checkbox{
-    background: url('../../img/Vector.svg')no-repeat 50%;
+    background: url('/img/Vector.svg')no-repeat 50%;
     border-color: #BC9CFF;
   }
   &__items_show{
