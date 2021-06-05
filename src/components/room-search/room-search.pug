@@ -2,8 +2,8 @@ mixin room-search(title)
   section.room-search
     div.room-search__title=title 
     div.room-search__item 
-      include ../two-input-range/two-input-range.pug
-      +two-input-range()
+      include ../calendar/calendar.pug
+      +calendar({isDouble:true})
     div.room-search__item 
       include ../drop-down/drop-down.pug
       +drop-down({

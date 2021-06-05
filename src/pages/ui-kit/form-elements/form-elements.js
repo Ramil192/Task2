@@ -1,4 +1,5 @@
 import '../../../fonts/fonts.scss';
+import Calendar from '../../../components/calendar/calendar';
 import './form-elements.scss';
 import DropDown from '../../../components/drop-down/drop-down';
 import DropDownBed from '../../../components/drop-down-bed/drop-down-bed';
@@ -9,3 +10,5 @@ document.querySelectorAll('.js-drop-down').forEach(element => new DropDown(eleme
 document.querySelectorAll('.js-drop-down-bed').forEach(element => new DropDownBed(element));
 document.querySelectorAll('.js-checkbox-list').forEach(element => new Checkbox(element));
 document.querySelectorAll('.js-like-button').forEach(element => new Like(element));
+document.querySelectorAll('.js-calendar').forEach(element => new Calendar(element));
+

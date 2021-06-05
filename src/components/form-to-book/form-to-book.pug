@@ -4,8 +4,8 @@ mixin form-to-book()
       include ../text-pay-and-number/text-pay-and-number.pug
       +text-pay-and-number('888','9 990₽')
     div.form-to-book__item
-      include ../two-input-range/two-input-range.pug
-      +two-input-range()
+      include ../calendar/calendar.pug
+      +calendar({isDouble:true})
     div.form-to-book__item
       include ../drop-down/drop-down.pug
       +drop-down({

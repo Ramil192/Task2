@@ -1,3 +1,13 @@
-mixin calendar()
-  section.calendar
-    div(class="datepicker-here")
+mixin calendar(options = {})
+  -
+    const {
+      isDouble = fasle,
+      isRange = fasle,
+    } = options;
+    const classDouble = isDouble ? ' js-calendar_double':'';
+    const classRange = isRange ? ' js-calendar_range':'';
+  section(class='calendar js-calendar'+classDouble+''+classRange)
+    div.calendar__wraper
+      input(class="calendar__input js-calendar__input"  type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly=true)
+      if(isDouble)
+        input(class="calendar__input js-calendar__input"  type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly=true)

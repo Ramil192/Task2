@@ -42,16 +42,17 @@ html
             })            
           div.form-elements__row-input-item
             div.form-elements__row-input-text
-            include ../../../components/input-form-mask/input-form-mask.pug
-            +input-form-mask('masked text field')
+              span.form-elements__row-input-title date drop-down11
+            include ../../../components/calendar/calendar.pug
+            +calendar()
           div.form-elements__row-input-item
             div.form-elements__row-input-text
-              span.form-elements__row-input-title date drop-down
-            include ../../../components/data-drop-down/data-drop-down.pug
-            +data-drop-down-filter()
+              span.form-elements__row-input-title date drop-downDuble 
+            +calendar({isDouble:true})
           div.form-elements__row-input-item
-            include ../../../components/data-drop-down/data-drop-down.pug
-            +data-drop-down-filter('filter date drop-down')
+            div.form-elements__row-input-text
+              span.form-elements__row-input-title date drop-downRange 
+            +calendar({isRange:true})
           div.form-elements__row-input-item
             div.form-elements__row-input-text
               span.form-elements__row-input-title subscription text field
