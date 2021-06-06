@@ -1,8 +1,6 @@
 doctype html
 html
   head
-    script(src="https://code.jquery.com/jquery-1.12.4.min.js")
-    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     meta(charset = 'utf-8')
     meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
@@ -113,7 +111,10 @@ html
           div.form-elements__row-checkbox-item
             div.form-elements__row-checkbox-item-title rate button
             include ../../../components/rate-btn/rate-btn.pug
-            +rate-btn('4')
+            +rate-btn({
+              blockNumber: 1,
+              checkedStarIndex: 4,
+            })
           div.form-elements__row-checkbox-item
             include ../../../components/drop-down/drop-down.pug
             +drop-down({

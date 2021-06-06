@@ -31,6 +31,7 @@ class Calendar {
   oneDatepicke() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
+      //inline: true,
       onShow: this.handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     })

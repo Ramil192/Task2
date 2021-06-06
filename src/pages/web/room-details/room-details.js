@@ -1,7 +1,3 @@
-// function importAll(resolve) {
-//   resolve.keys().forEach(resolve);
-// }
+import '../../../fonts/fonts.scss';
+import './room-details.scss';
 
-// importAll(
-//   require.context('../', true, /\.(js|scss)$/),
-// );

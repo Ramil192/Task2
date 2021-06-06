@@ -1,3 +1,5 @@
+@import '../calendar/calendar.scss';
+@import '../drop-down/drop-down.scss';
 .footer {
  width: 100%;
   background-color: #fff;
@@ -28,7 +30,7 @@
     line-height: 24px;
     margin-right: 18px;
     padding-top: 53px;
-    //background:url('../../img/Logo.svg')no-repeat 0px -3px
+    background:url('/img/Logo.svg')no-repeat 0px -3px
   }
   &__list {
     font-weight: bold;

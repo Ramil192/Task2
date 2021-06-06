@@ -270,7 +270,7 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
-        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+        background: #fff url(/img/arrow-back.svg) no-repeat 0px 0px ;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -287,9 +287,7 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
-        background: -moz-linear-gradient(bottom, rgba(188, 156, 255, 1) 0%, rgb(139, 164, 249) 100%);
-        background: -webkit-linear-gradient(bottom, rgba(188, 156, 255, 1) 0%, rgb(139, 164, 249) 100%);
-        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+        background: #fff url(/img/arrow-forward.svg) no-repeat 0px 0px ;
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
