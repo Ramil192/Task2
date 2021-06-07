@@ -1,3 +1,12 @@
+@import '../../../main.scss';
+@import '../../../components/head/head.scss';
+@import '../../../components/text-list/text-list.scss';
+@import '../../../components/commentary/commentary.scss';
+@import '../../../components/like-button/like-button.scss';
+@import '../../../components/bullet-list/bullet-list.scss';
+@import '../../../components/form-to-book/form-to-book.scss';
+@import '../../../components/footer/footer.scss';
+
 .room-details {
   max-width: 1440px;
   margin: 0px auto;
@@ -25,7 +34,7 @@
     }
   }
   &__description-left{
-    margin-right: 67px;
+    margin-right: 54px;
   }
   &__description-status {
     display: flex;

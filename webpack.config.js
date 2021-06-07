@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 const pages = [
   { pageName: 'header-and-footer', pageType: 'ui-kit' },
@@ -54,13 +55,21 @@ pluginsOptions.push(new CopyWebpackPlugin([{
   to: './img'
 }
 ]));
+pluginsOptions.push(new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+}));
 
 module.exports = {
   entry: entries,
+  
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
   },
+
+  plugins: pluginsOptions,
+
   module: {
     rules: [
       {
@@ -106,37 +115,17 @@ module.exports = {
         options: {
           pretty: true
         }
-
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        exclude: /img/,
-        include: /fonts/,
-        use: [
-          {
-            loader: 'file-loader?name=./fonts/[name]/[name].[ext]'
-          }
-        ]
+        test: /\.(ttf|eot|woff|woff2|svg|png|jpg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        exclude: /fonts/,
-        use: [
-          {
-            loader: 'file-loader?name=img/[name].[ext]',
-            options: {
-              name: './img/[name].[ext]',
-              context: path.resolve(__dirname, "src/"),
-              useRelativePaths: true,
-              emitFile: false
-            }
-          }]
-      },
-
     ]
   },
   devServer: {
     stats: 'errors-only'
   },
-  plugins: pluginsOptions,
 };

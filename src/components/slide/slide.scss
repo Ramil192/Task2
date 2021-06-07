@@ -1,3 +1,5 @@
+@import '../rate-btn/rate-btn.scss';
+@import '../text-pay-and-number/text-pay-and-number.scss';
 .rev_slide {
   width: 270px;
   background-color: #ffffff;
@@ -30,8 +32,7 @@
   }
 }
 .slick-prev {
-  //background: url(./expand_more.svg) no-repeat 50%;
-  
+  background: url(/img/slider/expand_more.svg) no-repeat 50%;
   width: 44px;
   height: 44px;
   font-size: 0px;
@@ -41,7 +42,7 @@
   z-index: 1;
 }
 .slick-next {
-  //background: url(./expand_more-1.svg) no-repeat 50%;
+  background: url(/img/slider/expand_more-1.svg) no-repeat 50%;
   width: 44px;
   height: 44px;
   font-size: 0px;
