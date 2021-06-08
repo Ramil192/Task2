@@ -112,8 +112,8 @@ html
             div.form-elements__row-checkbox-item-title rate button
             include ../../../components/rate-btn/rate-btn.pug
             +rate-btn({
-              blockNumber: 1,
-              checkedStarIndex: 4,
+              blockNumber: 0,
+              checkedStarIndex: 1,
             })
           div.form-elements__row-checkbox-item
             include ../../../components/drop-down/drop-down.pug
@@ -139,16 +139,16 @@ html
           div.form-elements__row-btn-item
             div.form-elements__row-btn-item-title buttons
             include ../../../components/buttons/buttons.pug
+            +buttons({modifer:'background'})
+          div.form-elements__row-btn-item
+            include ../../../components/buttons/buttons.pug
+            +buttons({modifer:'border'})
+          div.form-elements__row-btn-item
+            include ../../../components/buttons/buttons.pug
             +buttons()
           div.form-elements__row-btn-item
             include ../../../components/buttons/buttons.pug
-            +buttons({btnSwitch:'withBorder'})
-          div.form-elements__row-btn-item
-            include ../../../components/buttons/buttons.pug
-            +buttons({btnSwitch:'justBtn'})
-          div.form-elements__row-btn-item
-            include ../../../components/buttons/buttons.pug
-            +buttons({btnSwitch:'btn-Form',text:'перейти к оплате'})
+            +buttons({modifer:'form',text:'перейти к оплате'})
           div.form-elements__row-btn-item
             div.form-elements__row-btn-item-title pagination
             include ../../../components/pagination/pagination.pug

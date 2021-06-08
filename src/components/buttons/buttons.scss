@@ -1,67 +1,75 @@
-.btnWithBackColor {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 22px;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 13px 20px 14px 18px;
-  font-size: 12px;
-  &:focus,
-  &:active {
-    opacity: 0.5;
-  }
-}
-.btn-with-border {
+.btn {
   color: #bc9cff;
-  border-radius: 22px;
   font-weight: bold;
-  padding: 11px 20px 11px 16px;
   font-size: 12px;
-  border: 1px solid #bc9cff;
   text-transform: uppercase;
-  width: 99px;
-  text-align: center;
+
   &:focus,
+  &:hover,
   &:active {
-    opacity: 0.5;
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  &_border {
+    border-radius: 22px;
+    padding: 11px 20px 11px 16px;
+    border: 1px solid #bc9cff;
+    width: 99px;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: #bc9cff;
+      opacity: 0.5;
+    }
+  }
+
+  &_background {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+    color: #ffffff;
+    padding: 13px 20px 14px 18px;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: #ffffff;
+      opacity: 0.5;
+    }
+  }
+
+  &_form {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px 94px 13px 90px;
+    border-radius: 22px;
+    font-size: 12px;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: '';
+      width: 44px;
+      height: 44px;
+      background: url('./img/arrow_forward.svg')no-repeat 0px 0px;
+      position: absolute;
+      right: -12px;
+    }
   }
 }
+
 .btn-with-border_head {
   width: 87px;
   padding: 10px 15px 6px 22px;
   border-width: 2px;
 }
-.btnJustName {
-  color: #bc9cff;
-  font-weight: bold;
-  font-size: 12px;
-  &:focus,
-  &:active {
-    color: rgba(31, 32, 65, 0.5);
-  }
-}
-.btn-Form {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 14px 94px 13px 90px;
-  border-radius: 22px;
-  font-size: 12px;
-  position: relative;
-  width: 100%;
-  &::before{
-    content: '';
-    width: 44px;
-    height: 44px;
-    //background: url('/img/arrow_forward.svg')no-repeat 0px 0px;
-    position: absolute;
-    right: -12px;
-  }
-}
 
 .btn-Form_head {
   padding: 9px 19px 7px 19px;
-  &::before{
+
+  &::before {
     background: url('');
   }
 }

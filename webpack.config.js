@@ -107,7 +107,33 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        loaders: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: { url: false, sourceMap: true }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                  ],
+                ],
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.pug$/,

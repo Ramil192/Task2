@@ -31,16 +31,13 @@ mixin head(options = {})
         else
           li.head__link
             +buttons({
-              btnSwitch:'withBorder',
+              modifer:'border',
               text:'войти',
-              href:'sign-in.html',
-              isWithBorderHead:true
+              href:'sign-in.html'
             })
           li.head__link
             +buttons({
-              btnSwitch:'btn-Form',
+              modifer:'form',
               text:'зарегистрироваться',
               href:'registration.html',
-              className:'btn-Form_head',
-              isFormHead: true
             }) 

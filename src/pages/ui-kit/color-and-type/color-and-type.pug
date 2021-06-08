@@ -13,8 +13,8 @@ html
     meta(name="msapplication-TileColor" content="#da532c")
     meta(name="theme-color" content="#ffffff")
   body
-    section.colorsAndType
-      div.colorsAndType__rowColor
+    section.colors-and-type
+      div.colors-and-type__row-color
         include ../../../components/color-item/color-item.pug  
         +color-item({clorName : 'Dark Shade 100%', backgroundColor : 'darkShade100'})
         +color-item({clorName : 'Dark Shade 75%', backgroundColor : 'darkShade75'})
@@ -23,12 +23,12 @@ html
         +color-item({clorName : 'Dark Shade 5%', backgroundColor : 'darkShade5'})
         +color-item({clorName : 'Purple', backgroundColor : 'purple', colorCode : '#BC9CFF'})
         +color-item({clorName : 'Green', backgroundColor : 'green', colorCode : '#6FCF97'})
-      div.colorsAndType__rowText
+      div.colors-and-type__row-text
         include ../../../components/color-text/color-text.pug 
-        +color-text({title : 'H1', text : 'This one is the sub-section or</br> widget title', size : 'h1'})
-        +color-text({title : 'H2', text : 'Next one is the item title inside</br> widgets', size : 'h2'})
-        +color-text({title : 'H3', text : 'This is a label or CTA text', size : 'h3'})
-        +color-text({title : 'Body', text : 'This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.', size : 'body'})
+        +color-text({title : 'H1', text : 'This one is the sub-section or</br> widget title', size : '24'})
+        +color-text({title : 'H2', text : 'Next one is the item title inside</br> widgets', size : '19'})
+        +color-text({title : 'H3', text : 'This is a label or CTA text', size : '12'})
+        +color-text({title : 'Body', text : 'This is the body text which is used for most</br> of the design, like paragraphs, lists, etc.'})
 
 
 

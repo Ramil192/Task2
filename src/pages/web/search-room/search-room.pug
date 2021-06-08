@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
@@ -35,13 +35,13 @@ html
           div.search-room__row-left-item
             include ../../../components/checkbox-list/checkbox-list.pug
             +checkbox-list({
-                isList:false,
-                title:'правила дома',
-                items : [
-                  {text:'Можно курить',flag:false},
-                  {text:'Можно с питомцами',flag:true},
-                  {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
-                ]})
+              isList:false,
+              title:'правила дома',
+              items : [
+                {text:'Можно курить',flag:false},
+                {text:'Можно с питомцами',flag:true},
+                {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
+              ]})
           div.search-room__row-left-item
             include ../../../components/rich-checkbox-btn/rich-checkbox-btn.pug
             +rich-checkbox-btn({title:'доступность'})
@@ -51,150 +51,204 @@ html
           div.search-room__row-left-item
             include ../../../components/checkbox-list/checkbox-list.pug
             +checkbox-list({
-                title:'дополнительные удобства',
-                items : [
-                  {text:'Завтрак',flag:false},
-                  {text:'Письменный стол',flag:false},
-                  {text:'Стул для кормления',flag:true},
-                  {text:'Кроватка',flag:true},
-                  {text:'Телевизор',flag:false},
-                  {text:'Шампунь',flag:false},
-                ]})
+              title:'дополнительные удобства',
+              items : [
+                {text:'Завтрак',flag:false},
+                {text:'Письменный стол',flag:false},
+                {text:'Стул для кормления',flag:true},
+                {text:'Кроватка',flag:true},
+                {text:'Телевизор',flag:false},
+                {text:'Шампунь',flag:false},
+              ]})
         div.search-room__row-right
           div.search-room__row-right-title Номера, которые мы для вас подобрали
           div.search-room__row-right-items
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/roomDetail/image.png',
+              +slide({
+                img : ['./img/roomDetail/image.png',
                 './img/photo/image-2.png',
                 './img/photo/image-3.png',
                 './img/photo/image-4.png'],
-                888,
-                '9 990₽',
-                5,
-                145)
+                number : '888',
+                pay : '9 990₽',
+                rating : { 
+                  blockNumber : 1,
+                  checkedStarIndex :5,
+                },
+                review : '145',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-3.png',
+              +slide({
+                img : ['./img/photo/image-3.png',
                 './img/photo/image-4.png',
                 './img/photo/image-5.png',
                 './img/photo/image-6.png'],
-                840,
-                '9 990₽',
-                4,
-                65)
+                number :'840',
+                pay : '9 990₽',
+                rating : {
+                  blockNumber : 2,
+                  checkedStarIndex : 4,
+                },
+                review : '65'
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img :['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                980,
-                '8 500₽',
-                3,
-                35)
+                number :'980',
+                pay : '8 500₽',
+                rating : {
+                  blockNumber : 3,
+                  checkedStarIndex : 3,
+                },
+                review : '35'
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-11.png',
+              +slide({
+                img :['./img/photo/image-11.png',
                 './img/photo/image-12.png',
                 './img/roomDetail/image.png',
                 './img/photo/image-2.png'],
-                856,
-                '7 300₽',
-                5,
-                19)
+                number :'856',
+                pay : '7 300₽',
+                rating : {
+                  blockNumber : 4,
+                  checkedStarIndex : 5,
+                },
+                review : '19',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-3.png',
+              +slide({
+                img :['img/photo/image-3.png',
                 './img/photo/image-4.png',
                 './img/photo/image-5.png',
                 './img/photo/image-6.png'],
-                740,
-                '6 000₽',
-                4,
-                44)
+                number :'740',
+                pay : '6 000₽',
+                rating : {
+                  blockNumber : 5,
+                  checkedStarIndex : 4,
+                }, 
+                review : '44',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img :['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                982,
-                '5 800₽',
-                5,
-                56)
+                number :'982',
+                pay : '5 800₽',
+                blockNumber : 5,
+                rating : {
+                  blockNumber : 6,
+                  checkedStarIndex : 3,
+                },  
+                review : '56',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-11.png',
+              +slide({
+                img : ['./img/photo/image-11.png',
                 './img/photo/image-12.png',
                 './img/roomDetail/image.png',
                 './img/photo/image-2.png'],
-                672,
-                '5 500₽',
-                5,
-                45)
+                number :'672',
+                pay : '5 500₽',
+                blockNumber : 5,
+                rating : {
+                  blockNumber : 7,
+                  checkedStarIndex : 5,
+                },  
+                review : '45',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-3.png',
+              +slide({
+                img :['./img/photo/image-3.png',
                 './img/photo/image-4.png',
                 './img/photo/image-5.png',
                 './img/photo/image-6.png'],
-                450,
-                '5 300₽',
-                4,
-                39)
+                number :'450',
+                pay : '5 300₽',
+                blockNumber : 4,
+                rating : {
+                  blockNumber : 8,
+                  checkedStarIndex : 4,
+                },  
+                review : '39',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img : ['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                350,
-                '5 000₽',
-                3,
-                77)
+                number :'350',
+                pay : '5 000₽',
+                blockNumber : 3,
+                rating : {
+                  blockNumber : 9,
+                  checkedStarIndex : 3,
+                },  
+                review : '77',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img : ['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                666,
-                '5 000₽',
-                5,
-                25)
+                number :'666',
+                pay : '5 000₽',
+                blockNumber : 5,
+                rating : {
+                  blockNumber : 10,
+                  checkedStarIndex : 5,
+                },
+                review : '25',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img : ['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                444,
-                '5 000₽',
-                3,
-                15)
+                number :'444',
+                pay : '5 000₽',
+                blockNumber : 3,
+                rating : {
+                  blockNumber : 11,
+                  checkedStarIndex : 4,
+                }, 
+                review : '15',
+              })
             div.search-room__row-right-item
               include ../../../components/slide/slide.pug
-              +slide(
-                ['./img/photo/image-7.png',
+              +slide({
+                img : ['./img/photo/image-7.png',
                 './img/photo/image-8.png',
                 './img/photo/image-9.png',
                 './img/photo/image-10.png'],
-                352,
-                '5 000₽',
-                3,
-                55)
+                number :'352',
+                pay : '5 000₽',
+                rating : {
+                  blockNumber : 12,
+                  checkedStarIndex : 3,
+                }, 
+                review : '55',
+              })
           div.search-room__row-right-pagination
             include ../../../components/pagination/pagination.pug
             +pagination()

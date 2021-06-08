@@ -1,11 +1,5 @@
-import jQuery from 'jquery';
-
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
-
-const $ = jQuery;
-global.jQuery = $;
-global.$ = $;
 
 class Slider {
   constructor(outerContainerElement) {

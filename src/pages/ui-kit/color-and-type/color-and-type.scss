@@ -2,7 +2,7 @@
 @import '../../../components/color-item/color-item.scss';
 @import '../../../components/color-text/color-text.scss';
 
-.colorsAndType {
+.colors-and-type {
   margin: 145px 158px 145px 150px;
   position: relative;
   display: flex;
@@ -13,7 +13,7 @@
     content: '';
     width: 48px;
     height: 48px;
-    background: url('../../../img/main-logo.svg')no-repeat;
+    background: url('./../../img/main-logo.svg')no-repeat;
     position: absolute;
     top: -117px;
     left: -121px;
@@ -26,7 +26,7 @@
 }
 
 @media(max-width:1036px){
-  .colorsAndType{
+  .colors-and-type{
     justify-content: center;
     margin: 85px 58px 45px 50px;
   }

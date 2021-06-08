@@ -24,10 +24,10 @@ mixin account-registration(title)
       +toggle('Получать спецпредложения',false)
     div.account-registration__item
       include ../buttons/buttons.pug
-      +buttons('перейти к оплате','btn-Form')
+      +buttons({modifer:'form',text:'перейти к оплате'})
     div.account-registration__item
       div.account-registration__footer
         span Уже есть аккаунт на Toxin
         include ../buttons/buttons.pug
-        +buttons('войти','withBorder')
+        +buttons({modifer:'border',text:'войти'})
       

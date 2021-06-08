@@ -1,7 +1,22 @@
-include ../text-pay-and-number/text-pay-and-number.pug
+include ../price-and-number/price-and-number.pug
 include ../rate-btn/rate-btn.pug
 
-mixin slide(img,number,pay,rating,review)
+mixin slide(options = {})
+  -
+    const {
+      img = ['./img/roomDetail/image.png',
+        './img/photo/image-2.png',
+        './img/photo/image-3.png',
+        './img/photo/image-4.png'],
+      number = '888',
+      pay = '9 990₽',
+      rating = { 
+        blockNumber : 0,
+        checkedStarIndex : 0,
+      },
+      review = '145',
+    } = options;
+
   div.rev
     div.rev_slide 
       -for(let i=0;i<img.length;i++)
@@ -9,7 +24,7 @@ mixin slide(img,number,pay,rating,review)
           img(class='rev_slide__img' src=img[i], alt="")
     div.rev_slide__footer
       div.rev_slide__footer-text
-        +text-pay-and-number(number,pay)
+        +price-and-number(number,pay)
       div.rev_slide__footer-rating
         +rate-btn(rating)
         a(href='room-details.html').rev_slide__footer-review=review
