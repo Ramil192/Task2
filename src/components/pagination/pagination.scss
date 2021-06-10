@@ -1,4 +1,10 @@
 .pagination {
+  &__title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
   &__link {
     display: inline-block;
     width: 2.5rem;

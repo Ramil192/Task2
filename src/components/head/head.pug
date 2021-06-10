@@ -14,10 +14,9 @@ mixin head(options = {})
       ], 
     } = options;
     const classBold = 'head__link_bold';
-  - const className = nameUser ? 'head__item_name' : '';
 
   header.head
-    div(class='head__item '+className)
+    div(class='head__item')
       a(href='index.html').head__link
         img(src="./img/Logo.svg" alt="")
       ul.head__list
@@ -31,13 +30,13 @@ mixin head(options = {})
         else
           li.head__link
             +buttons({
-              modifer:'border',
+              modifier:['border','height','width'],
               text:'войти',
               href:'sign-in.html'
             })
           li.head__link
             +buttons({
-              modifer:'form',
+              modifier:['form','height','no-img'],
               text:'зарегистрироваться',
               href:'registration.html',
             }) 

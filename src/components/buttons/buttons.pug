@@ -3,10 +3,10 @@ mixin buttons(options = {})
     const {
       text = 'CLICK ME',
       href = '#',
-      modifer = ''
+      modifier=[], 
     } = options;
 
-    let classModifer = modifer? ' btn_'+modifer : '';
-
-  a(class='btn'+classModifer href=href)=text 
+    const classModifer = modifier.map(item=>' btn__link_'+item);
+  section.btn
+    a(class=['btn__link'].concat(classModifer) href=href)=text 
 

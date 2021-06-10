@@ -6,6 +6,7 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+    margin-bottom: 0px;
   }
   &__header {
   }
@@ -13,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0px 11px 12px;
+    padding: 11px 0px 9px 12px;
     font-size: 14px;
     line-height: 23px;
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -27,7 +28,7 @@
     margin-right: 9px;
   }
   &__body {
-    padding: 3px 7px 4px 15px;
+    padding: 3px 7px 5px 15px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 0px 0px 4px 4px;
     display: none;
@@ -43,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
   &__bodyItem-title {
   }

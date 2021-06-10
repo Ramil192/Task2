@@ -20,31 +20,23 @@
     }
 
     & + .rating__image-of-star::before {
-      content: 'star_border';
+      content: '';
       width: 1.5rem;
       height: 1.5rem;
-      display: flex;
-      align-items: center;
-      text-align: center;
       position: absolute;
       background: url("./img/star_border.svg") no-repeat 1px 1px;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+
       font-family: Material Icons;
       font-size: 1.5rem;
       line-height: 1.25rem;
     }
     &:checked ~ .rating__image-of-star::after {
-      content: 'star';
+      content: '';
       width: 1.5rem;
       height: 1.5rem;
-      display: flex;
-      align-items: center;
-      text-align: center;
+
       position: absolute;
       background: url("./img/star.svg") no-repeat 1px 1px;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
       font-family: Material Icons;
       font-size: 1.5rem;
       line-height: 1.25rem;

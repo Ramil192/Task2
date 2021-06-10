@@ -30,8 +30,7 @@ html
           +sign-in()
       div.cards__right-colum
         div.cards__right-colum-item
-          include ../../../components/calendar/calendar.pug
-          +calendar()
+          div(class="datepicker-here" data-language='en')
         div.cards__right-colum-item
           include ../../../components/slide/slide.pug
           +slide(

@@ -19,6 +19,8 @@ html
       div.search-room__row
         div.search-room__row-left
           div.search-room__row-left-item
+            include ../../../components/calendar/calendar.pug
+            +calendar({title:'ДАТЫ ПРЕБЫВАНИЯ В ОТЕЛЕ',isRange:true})
           div.search-room__row-left-item
             include ../../../components/drop-down/drop-down.pug
             +drop-down({
@@ -31,7 +33,7 @@ html
             })
           div.search-room__row-left-item
             include ../../../components/range-slider/range-slider.pug
-            +range-slider('диапазон цены','Стоимость за сутки пребывания в номере')
+            +range-slider('диапазон цены')
           div.search-room__row-left-item
             include ../../../components/checkbox-list/checkbox-list.pug
             +checkbox-list({

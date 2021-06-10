@@ -19,9 +19,11 @@
     }
   }
   &__description {
-    padding: 71px 140px 68px 140px;
+    padding: 71px 140px 64px 140px;
     position: relative;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     &::before{
       content: '';
       width: 100%;
@@ -120,19 +122,16 @@
       }
     }
   }
-  &__description {
-    display: flex;
-  }
   &__regulations {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 32px;
   }
   &__regulations-cancel-title {
     font-weight: bold;
     font-size: 19px;
     line-height: 23px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
   &__regulations-cancel-text{
     font-size: 14px;

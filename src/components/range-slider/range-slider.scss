@@ -4,7 +4,6 @@
   text-align: right;
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
-  margin: 0 0 1.25rem 0;
 }
 
 .ui-slider {
@@ -117,16 +116,17 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .range-slider {
-  margin-top: -3px;
   width: 266px;
   &__label {
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+    line-height: 20px;
   }
   &__item {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
   &__text {
     font-size: 12px;

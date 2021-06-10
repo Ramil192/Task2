@@ -4,12 +4,13 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 47px 30px 30px 30px;
+  padding: 45px 30px 30px 29px;
   background:#ffffff url('/img/Rectangle2.svg')no-repeat 90px 412px;
+  max-width: 380px;
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
   &__header-number {
     font-weight: bold;
@@ -55,17 +56,22 @@
     }
   }
   &__item {
-    margin-top: 20px;
+    margin-top: 19px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     &:nth-child(4){
-      margin-top: 17px;
+      margin-top: 20px;
     }
     &:nth-child(5){
       margin-top: 13px;
     }
     &:nth-child(6){
       margin-top: 13px;
+    }
+    &:nth-child(8){
+      margin-top: 22px;
+      display: block;
     }
   }
 

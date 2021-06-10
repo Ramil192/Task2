@@ -259,37 +259,28 @@
       }
 
       &:first-child::after {
-        content: 'arrow_back';
+        content: '';
         width: 1.5rem;
         height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: absolute;
         font-family: Material Icons;
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
         background: #fff url(/img/arrow-back.svg) no-repeat 0px 0px ;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+
       }
 
       &:last-child::after {
-        content: 'arrow_forward';
+        content: '';
         width: 1.5rem;
         height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: absolute;
         font-family: Material Icons;
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
         background: #fff url(/img/arrow-forward.svg) no-repeat 0px 0px ;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
     }
   }

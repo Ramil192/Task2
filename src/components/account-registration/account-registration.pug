@@ -12,6 +12,8 @@ mixin account-registration(title)
       include ../radio-buttons/radio-buttons.pug
       +radio-buttons()
     div.account-registration__item
+      include ../calendar/calendar.pug
+      +calendar({title:'Дата рождения',isRange:true})
     div.account-registration__item
       div.account-registration__item-title данные для входа в сервис
       include ../input-form/input-form.pug
@@ -24,10 +26,9 @@ mixin account-registration(title)
       +toggle('Получать спецпредложения',false)
     div.account-registration__item
       include ../buttons/buttons.pug
-      +buttons({modifer:'form',text:'перейти к оплате'})
+      +buttons({modifier:['form'],text:'перейти к оплате'})
     div.account-registration__item
       div.account-registration__footer
         span Уже есть аккаунт на Toxin
         include ../buttons/buttons.pug
-        +buttons({modifer:'border',text:'войти'})
-      
+        +buttons({modifier:['border'],text:'войти'})

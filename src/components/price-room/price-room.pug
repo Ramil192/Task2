@@ -5,7 +5,7 @@ mixin price-room()
       +price-and-number('888','9 990₽')
     div.price-room__item
       include ../calendar/calendar.pug
-      +calendar({isDouble:true})
+      +calendar({titleFrom:'прибытие', titleTo:'выезд', isDouble:true})
     div.price-room__item
       include ../drop-down/drop-down.pug
       +drop-down({
@@ -30,6 +30,6 @@ mixin price-room()
       span.price-room__text-total 38 081₽ 
     div.price-room__item
       include ../buttons/buttons.pug
-      +buttons({modifer:'form',text:'забронировать'}) 
+      +buttons({modifier:['form'],text:'забронировать'}) 
 
 
