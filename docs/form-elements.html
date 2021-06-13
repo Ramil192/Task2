@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Toxin Hotel</title>
@@ -14,7 +12,7 @@
     <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="formElements.js"></script></head>
+  <link href="form-elements.css" rel="stylesheet"></head>
   <body>
     <section class="form-elements">
       <div class="form-elements__row">
@@ -24,12 +22,12 @@
                         <input class="input-form " type="text" value="" placeholder="">
           </div>
           <div class="form-elements__row-input-item">
-            <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">Text Field</span><span class="form-elements__row-input-subTitle">Hover&nbsp;/&nbsp;Focus</span></div>
+            <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">Text Field</span><span class="form-elements__row-input-subTitle">нover / focus</span></div>
                         <input class="input-form input-form_active" type="text" value="This is pretty awesome" placeholder="">
           </div>
           <div class="form-elements__row-input-item">
                         <section class="drop-down js-drop-down">
-                          <div class="drop-down__title">drop-down</div>
+                          <div class="drop-down__title">dropdown</div>
                           <div class="drop-down__header">
                             <button class="drop-down__titleBtn js-drop-down__titleBtn">Сколько гостей</button>
                           </div>
@@ -68,19 +66,36 @@
                         </section>
           </div>
           <div class="form-elements__row-input-item">
-            <div class="form-elements__row-input-text"></div>
-                        <section class="input-form-mask js-input-form-mask">
-                          <div class="input-form-mask__title">masked text field</div>
-                          <input class="input-form-masked__input js-input-form-masked__input" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="10">
+                        <section class="calendar js-calendar">
+                          <div class="calendar__wraper">
+                            <div class="calendar__title">masked text filed</div>
+                            <input class="calendar__input js-calendar__input" type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly>
+                          </div>
                         </section>
           </div>
           <div class="form-elements__row-input-item">
-            <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">date drop-down</span></div>
-                        <input class="datepicker-here data-drop-down__input" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+                        <section class="calendar js-calendar js-calendar_double">
+                          <div class="calendar__wraper">
+                            <div class="calendar__items">
+                              <div class="calendar__item">
+                                <div class="calendar__title">date drop dowe</div>
+                                <input class="calendar__input js-calendar__input" type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly>
+                              </div>
+                              <div class="calendar__item">
+                                <div class="calendar__title">date drop dowe</div>
+                                <input class="calendar__input js-calendar__input" type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
           </div>
           <div class="form-elements__row-input-item">
-                        <div class="data-drop-down-filter__title">filter date drop-down</div>
-                        <input class="datepicker-here datepicker-filter" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true" dateFormat="dd">
+                        <section class="calendar js-calendar js-calendar_range">
+                          <div class="calendar__wraper">
+                            <div class="calendar__title">filter date dropdown</div>
+                            <input class="calendar__input js-calendar__input" type="text" name="date_from" placeholder="ДД.ММ.ГГГГ" readonly>
+                          </div>
+                        </section>
           </div>
           <div class="form-elements__row-input-item">
             <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">subscription text field</span></div>
@@ -90,9 +105,11 @@
                         </form>
           </div>
           <div class="form-elements__row-input-item">
-            <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">drop-down</span><span class="form-elements__row-input-subTitle">Default</span></div>
                         <section class="drop-down-bed js-drop-down-bed">
-                          <div class="drop-down-bed__title"></div>
+                          <div class="drop-down-bed__titles">
+                            <div class="drop-down-bed__title">dropdown</div>
+                            <div class="drop-down-bed__subTitle">default</div>
+                          </div>
                           <div class="drop-down-bed__header">
                             <button class="drop-down-bed__titleBtn js-drop-down-bed__titleBtn">Сколько комнат</button>
                           </div>
@@ -125,9 +142,11 @@
                         </section>
           </div>
           <div class="form-elements__row-input-item">
-            <div class="form-elements__row-input-text"><span class="form-elements__row-input-title">drop-down</span><span class="form-elements__row-input-subTitle">expanded</span></div>
                         <section class="drop-down-bed js-drop-down-bed">
-                          <div class="drop-down-bed__title"></div>
+                          <div class="drop-down-bed__titles">
+                            <div class="drop-down-bed__title">dropdown</div>
+                            <div class="drop-down-bed__subTitle">expanded</div>
+                          </div>
                           <div class="drop-down-bed__header">
                             <button class="drop-down-bed__titleBtn js-drop-down-bed__titleBtn">Сколько комнат</button>
                           </div>
@@ -161,7 +180,7 @@
           </div>
           <div class="form-elements__row-input-item">
                         <section class="checkbox-list js-checkbox-list">
-                          <button class="checkbox-list__titleBtn js-checkbox-list__titleBtn "></button>
+                          <button class="checkbox-list__titleBtn js-checkbox-list__titleBtn ">expandable checkbox list</button>
                           <ul class="checkbox-list__items js-checkbox-list__items ">
                             <li class="checkbox-list__item"> 
                               <label class="checkbox-list__item-check"> 
@@ -204,7 +223,7 @@
           </div>
           <div class="form-elements__row-input-item">
                         <section class="checkbox-list js-checkbox-list">
-                          <button class="checkbox-list__titleBtn js-checkbox-list__titleBtn checkbox-list__titleBtn_rotate"></button>
+                          <button class="checkbox-list__titleBtn js-checkbox-list__titleBtn checkbox-list__titleBtn_rotate">expandable checkbox list</button>
                           <ul class="checkbox-list__items js-checkbox-list__items checkbox-list__items_show">
                             <li class="checkbox-list__item"> 
                               <label class="checkbox-list__item-check"> 
@@ -256,133 +275,248 @@
                         </section>
           </div>
         </div>
-        <div class="form-elements__row-checkbox">
-          <div class="form-elements__row-checkbox-item">
-                        <section class="checkbox-list">
-                          <div class="checkbox-list__title">Checkbox Buttons</div>
-                          <ul class="checkbox-list__items checkbox-list__items_show">
-                            <li class="checkbox-list__item"> 
-                              <label class="checkbox-list__item-check"> 
-                                <input class="checkbox-list__item-check-input" type="checkbox"><span class="checkbox-list__item-checkbox"></span>
-                                <div class="checkbox-list__item-title">Можно курить</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-list__item"> 
-                              <label class="checkbox-list__item-check"> 
-                                <input class="checkbox-list__item-check-input" type="checkbox" checked><span class="checkbox-list__item-checkbox"></span>
-                                <div class="checkbox-list__item-title">Можно с питомцами</div>
-                              </label>
-                            </li>
-                            <li class="checkbox-list__item"> 
-                              <label class="checkbox-list__item-check"> 
-                                <input class="checkbox-list__item-check-input" type="checkbox" checked><span class="checkbox-list__item-checkbox"></span>
-                                <div class="checkbox-list__item-title">Можно пригласить гостей</br> (до 10 человек)</div>
-                              </label>
-                            </li>
-                          </ul>
-                        </section>
-          </div>
-          <div class="form-elements__row-checkbox-item">
-                        <section class="radio-buttons">
-                          <div class="radio-buttons__title">Radio Buttons</div>
-                          <div class="radio-buttons__items">
-                            <label class="radio-buttons__radio">
-                              <input class="radio-buttons__radio-input" type="radio" name="gender" checked><span class="radio-buttons__radio-name">Мужчина</span>
-                            </label>
-                            <label class="radio-buttons__radio">
-                              <input class="radio-buttons__radio-input" type="radio" name="gender" checked><span class="radio-buttons__radio-name">Женчина</span>
-                            </label>
-                          </div>
-                        </section>
-          </div>
-          <div class="form-elements__row-checkbox-item">
-            <div class="form-elements__row-checkbox-item-title">Toggle</div>
-                        <div class="toggle">
-                          <label class="toggle__label">
-                            <input class="toggle__checkbox" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
-                          </label>
-                        </div>
-                        <div class="toggle">
-                          <label class="toggle__label">
-                            <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
-                          </label>
-                        </div>
-          </div>
-          <div class="form-elements__row-checkbox-item">
-            <div class="form-elements__row-checkbox-item-title">like button</div>
-                        <section class="like-button js-like-button ">
-                          <div class="like-button__count js-like-button__count">2</div>
-                        </section>
-          </div>
-          <div class="form-elements__row-checkbox-item">
-            <div class="form-elements__row-checkbox-item-title">rate button</div>
-                        <div class="rating js-rating" data-total-value="4">
-                          <div class="rating__item js-rating__item" data-item-value="5"> </div>
-                          <div class="rating__item js-rating__item" data-item-value="4"> </div>
-                          <div class="rating__item js-rating__item" data-item-value="3"> </div>
-                          <div class="rating__item js-rating__item" data-item-value="2"> </div>
-                          <div class="rating__item js-rating__item" data-item-value="1"> </div>
-                        </div>
-          </div>
-          <div class="form-elements__row-checkbox-item">
-                        <section class="drop-down js-drop-down">
-                          <div class="drop-down__title">drop-down11</div>
-                          <div class="drop-down__header">
-                            <button class="drop-down__titleBtn js-drop-down__titleBtn">Сколько гостей</button>
-                          </div>
-                          <div class="drop-down__body  js-drop-down__body drop-down__body_show">
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">взрослые</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+        <div class="form-elements__row-general">
+          <div class="form-elements__row-double">
+            <div class="form-elements__row-checkbox">
+              <div class="form-elements__row-checkbox-item">
+                            <section class="checkbox-list">
+                              <div class="checkbox-list__title">Checkbox Buttons</div>
+                              <ul class="checkbox-list__items checkbox-list__items_show">
+                                <li class="checkbox-list__item"> 
+                                  <label class="checkbox-list__item-check"> 
+                                    <input class="checkbox-list__item-check-input" type="checkbox"><span class="checkbox-list__item-checkbox"></span>
+                                    <div class="checkbox-list__item-title">Можно курить</div>
+                                  </label>
+                                </li>
+                                <li class="checkbox-list__item"> 
+                                  <label class="checkbox-list__item-check"> 
+                                    <input class="checkbox-list__item-check-input" type="checkbox" checked><span class="checkbox-list__item-checkbox"></span>
+                                    <div class="checkbox-list__item-title">Можно с питомцами</div>
+                                  </label>
+                                </li>
+                                <li class="checkbox-list__item"> 
+                                  <label class="checkbox-list__item-check"> 
+                                    <input class="checkbox-list__item-check-input" type="checkbox" checked><span class="checkbox-list__item-checkbox"></span>
+                                    <div class="checkbox-list__item-title">Можно пригласить гостей</br> (до 10 человек)</div>
+                                  </label>
+                                </li>
+                              </ul>
+                            </section>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                                <section class="radio-buttons">
+                                  <div class="radio-buttons__title">Radio Buttons</div>
+                                  <div class="radio-buttons__items">
+                                    <label class="radio-buttons__radio">
+                                      <input class="radio-buttons__radio-input" type="radio" name="gender" checked><span class="radio-buttons__radio-name">Мужчина</span>
+                                    </label>
+                                    <label class="radio-buttons__radio">
+                                      <input class="radio-buttons__radio-input" type="radio" name="gender"><span class="radio-buttons__radio-name">Женчина</span>
+                                    </label>
+                                  </div>
+                                </section>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                <div class="form-elements__row-checkbox-item-title">Toggle</div>
+                                <div class="toggle">
+                                  <label class="toggle__label">
+                                    <input class="toggle__checkbox" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
+                                  </label>
+                                </div>
+                                <div class="toggle">
+                                  <label class="toggle__label">
+                                    <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+                                  </label>
+                                </div>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                <div class="form-elements__row-checkbox-item-title">like button</div>
+                <div class="form-elements__row-checkbox-item-like-btn">
+                  <div class="form-elements__row-checkbox-item-like-btn-left">
+                                        <section class="like-button js-like-button ">
+                                          <div class="like-button__count js-like-button__count">2</div>
+                                        </section>
+                  </div>
+                  <div class="form-elements__row-checkbox-item-like-btn-left">
+                                        <section class="like-button js-like-button like-button_action">
+                                          <div class="like-button__count js-like-button__count">13</div>
+                                        </section>
+                  </div>
+                </div>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                <div class="form-elements__row-checkbox-item-title">rate button</div>
+                <div class="form-elements__row-checkbox-item-rate-button">
+                  <div class="form-elements__row-checkbox-item-rate-button-left">
+                                    <div class="rating">
+                                      <input class="rating__input" type="radio" name="rating-0" value="5">
+                                      <p class="rating__image-of-star" title="Оценка «5»"></p>
+                                      <input class="rating__input" type="radio" name="rating-0" value="4" checked>
+                                      <p class="rating__image-of-star" title="Оценка «4»"></p>
+                                      <input class="rating__input" type="radio" name="rating-0" value="3">
+                                      <p class="rating__image-of-star" title="Оценка «3»"></p>
+                                      <input class="rating__input" type="radio" name="rating-0" value="2">
+                                      <p class="rating__image-of-star" title="Оценка «2»"></p>
+                                      <input class="rating__input" type="radio" name="rating-0" value="1">
+                                      <p class="rating__image-of-star" title="Оценка «1»"></p>
+                                    </div>
+                  </div>
+                  <div class="form-elements__row-checkbox-item-rate-button-right">
+                                    <div class="rating">
+                                      <input class="rating__input" type="radio" name="rating-1" value="5" checked>
+                                      <p class="rating__image-of-star" title="Оценка «5»"></p>
+                                      <input class="rating__input" type="radio" name="rating-1" value="4">
+                                      <p class="rating__image-of-star" title="Оценка «4»"></p>
+                                      <input class="rating__input" type="radio" name="rating-1" value="3">
+                                      <p class="rating__image-of-star" title="Оценка «3»"></p>
+                                      <input class="rating__input" type="radio" name="rating-1" value="2">
+                                      <p class="rating__image-of-star" title="Оценка «2»"></p>
+                                      <input class="rating__input" type="radio" name="rating-1" value="1">
+                                      <p class="rating__image-of-star" title="Оценка «1»"></p>
+                                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                                <section class="drop-down js-drop-down">
+                                  <div class="drop-down__title">drop-down</div>
+                                  <div class="drop-down__header">
+                                    <button class="drop-down__titleBtn js-drop-down__titleBtn">Сколько гостей</button>
+                                  </div>
+                                  <div class="drop-down__body  js-drop-down__body drop-down__body_show">
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">взрослые</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">дети</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">младенцы</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-btns-control"> 
+                                        <button class="drop-down__bodyItem-btns-control-clean js-drop-down__bodyItem-btns-control-clean">очистить</button>
+                                        <button class="drop-down__bodyItem-btns-control-ok js-drop-down__bodyItem-btns-control-ok">применить</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+              </div>
+              <div class="form-elements__row-checkbox-item">
+                                <section class="rich-checkbox-btn">RICH CHECKBOX BUTTONS</section>
+                                <div class="div rich-checkbox-btn__wrapper">
+                                  <div class="rich-checkbox-btn__item"></div>
+                                  <div class="rich-checkbox-btn__item">
+                                    <label class="rich-checkbox-btn__check">
+                                      <input class="rich-checkbox-btn__checkbox" type="checkbox"><span class="rich-checkbox-btn__sub-title">Широкий коридор</span>
+                                    </label>
+                                    <div class="rich-checkbox-btn__text">Ширина коридоров в номере</br> не менее 91 см.</div>
+                                  </div>
+                                  <div class="rich-checkbox-btn__item">
+                                    <label class="rich-checkbox-btn__check">
+                                      <input class="rich-checkbox-btn__checkbox" type="checkbox"><span class="rich-checkbox-btn__sub-title">Помощник для инвалидов</span>
+                                    </label>
+                                    <div class="rich-checkbox-btn__text">На 1 этаже вас встретит специалист</br>  и проводит до номера.</div>
+                                  </div>
+                                </div>
+              </div>
+            </div>
+            <div class="form-elements__row-btn">
+              <div class="form-elements__row-btn-item">
+                                <div class="range-slider js-range-slider">
+                                  <div class="range-slider__item">
+                                    <label class="range-slider__label" for="amount">Range Slider</label>
+                                    <input class="range-slider__input" type="text" disabled id="amount" readonly>
+                                  </div>
+                                  <div class="js-slider-range"></div>
+                                </div>
+              </div>
+              <div class="form-elements__row-btn-item">
+                <div class="form-elements__row-btn-item-title">buttons             </div>
+                                <section class="btn"><a class="btn__link  btn__link_background" href="#">CLICK ME</a></section>
+              </div>
+              <div class="form-elements__row-btn-item">            
+                                <section class="btn"><a class="btn__link  btn__link_border" href="#">CLICK ME</a></section>
+              </div>
+              <div class="form-elements__row-btn-item">            
+                                <section class="btn"><a class="btn__link" href="#">CLICK ME</a></section>
+              </div>
+              <div class="form-elements__row-btn-item">            
+                                <section class="btn"><a class="btn__link  btn__link_form" href="#">перейти к оплате</a></section>
+              </div>
+              <div class="form-elements__row-btn-item">
+                                <div class="pagination">
+                                  <div class="pagination__title">pagination</div><a class="pagination__link pagination__link_active" href="./change-later">1</a><a class="pagination__link" href="./change-later">2</a><a class="pagination__link" href="./change-later">3</a><span class="pagination__link">&hellip;</span><a class="pagination__link" href="./change-later">5</a><a class="pagination__link pagination__link_next" href="./change-later">next</a>
+                                  <p class="pagination__content">1 – 12 из 100+ вариантов аренды</p>
+                                </div>
+              </div>
+              <div class="form-elements__row-btn-item">
+                                <section class="drop-down js-drop-down">
+                                  <div class="drop-down__title">dropdown</div>
+                                  <div class="drop-down__header">
+                                    <button class="drop-down__titleBtn js-drop-down__titleBtn">Сколько гостей</button>
+                                  </div>
+                                  <div class="drop-down__body  js-drop-down__body drop-down__body_show">
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">взрослые</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">дети</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-title">младенцы</div>
+                                      <div class="drop-down__bodyItem-btns"> 
+                                        <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
+                                        <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
+                                        <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
+                                      </div>
+                                    </div>
+                                    <div class="drop-down__bodyItem">
+                                      <div class="drop-down__bodyItem-btns-control"> 
+                                        <button class="drop-down__bodyItem-btns-control-clean js-drop-down__bodyItem-btns-control-clean">очистить</button>
+                                        <button class="drop-down__bodyItem-btns-control-ok js-drop-down__bodyItem-btns-control-ok">применить</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+              </div>
+              <div class="form-elements__row-btn-item"></div>
+                            <section class="bullet-list"> 
+                              <div class="bullet-list__title">bullet list </div>
+                              <div class="bullet-list__items">
+                                <div class="bullet-list__item">Нельзя с питомцами</div>
+                                <div class="bullet-list__item">Без вечеринок и мероприятий</div>
+                                <div class="bullet-list__item">Время прибытия — после 13:00,</br>а выезд до 12:00</div>
                               </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">дети</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
-                              </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">младенцы</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
-                              </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-btns-control"> 
-                                <button class="drop-down__bodyItem-btns-control-clean js-drop-down__bodyItem-btns-control-clean">очистить</button>
-                                <button class="drop-down__bodyItem-btns-control-ok js-drop-down__bodyItem-btns-control-ok">применить</button>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
+                            </section>
+            </div>
           </div>
-          <div class="form-elements__row-checkbox-item">
-                        <section class="rich-checkbox-btn">RICH CHECKBOX BUTTONS</section>
-                        <div class="div rich-checkbox-btn__wrapper">
-                          <div class="rich-checkbox-btn__item"></div>
-                          <div class="rich-checkbox-btn__item">
-                            <label class="rich-checkbox-btn__check">
-                              <input class="rich-checkbox-btn__checkbox" type="checkbox"><span class="rich-checkbox-btn__subTitle">Широкий коридор</span>
-                            </label>
-                            <div class="rich-checkbox-btn__text">Ширина коридоров в номере</br> не менее 91 см.</div>
-                          </div>
-                          <div class="rich-checkbox-btn__item">
-                            <label class="rich-checkbox-btn__check">
-                              <input class="rich-checkbox-btn__checkbox" type="checkbox"><span class="rich-checkbox-btn__subTitle">Помощник для инвалидов</span>
-                            </label>
-                            <div class="rich-checkbox-btn__text">На 1 этаже вас встретит специалист</br>  и проводит до номера.</div>
-                          </div>
-                        </div>
-          </div>
-          <div class="form-elements__row-checkbox-item">
+          <div class="form-elements__row-footer">
                         <section class="commentary">
                           <div class="commentary__item">
                             <div class="commentary__header"><img class="commentary__img" src="./img/man.png" alt="avatar">
@@ -401,84 +535,7 @@
                         </section>
           </div>
         </div>
-        <div class="form-elements__row-btn">
-          <div class="form-elements__row-btn-item">
-                        <div class="range-slider">
-                          <div class="range-slider__item">
-                            <label class="range-slider__label" for="amount">Range Slider</label>
-                            <input class="range-slider__input" type="text" disabled id="amount" readonly>
-                          </div>
-                          <div class="js-slider-range"></div>
-                        </div>
-          </div>
-          <div class="form-elements__row-btn-item">
-            <div class="form-elements__row-btn-item-title">buttons</div>
-                        <button class="btnWithBackColor">CLICK ME</button>
-          </div>
-          <div class="form-elements__row-btn-item"><a class="btn-with-border  " href="main-sign-in.html">CLICK ME</a>
-          </div>
-          <div class="form-elements__row-btn-item">
-                        <button class="btnJustName">CLICK ME</button>
-          </div>
-          <div class="form-elements__row-btn-item"><a class="btn-Form  " href="#">перейти к оплате</a>
-          </div>
-          <div class="form-elements__row-btn-item">
-            <div class="form-elements__row-btn-item-title">pagination</div>
-                        <div class="pagination"><a class="pagination__link pagination__link_active" href="./change-later">1</a><a class="pagination__link" href="./change-later">2</a><a class="pagination__link" href="./change-later">3</a><span class="pagination__link">&hellip;</span><a class="pagination__link" href="./change-later">5</a><a class="pagination__link pagination__link_next" href="./change-later">next</a>
-                          <p class="pagination__content">1 – 12 из 100+ вариантов аренды</p>
-                        </div>
-          </div>
-          <div class="form-elements__row-btn-item">
-                        <section class="drop-down js-drop-down">
-                          <div class="drop-down__title">drop-down</div>
-                          <div class="drop-down__header">
-                            <button class="drop-down__titleBtn js-drop-down__titleBtn">Сколько гостей</button>
-                          </div>
-                          <div class="drop-down__body  js-drop-down__body drop-down__body_show">
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">взрослые</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
-                              </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">дети</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
-                              </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-title">младенцы</div>
-                              <div class="drop-down__bodyItem-btns"> 
-                                <button class="drop-down__bodyItem-btns-inc js-drop-down__bodyItem-btns-inc" id="inc">-</button>
-                                <div class="drop-down__bodyItem-btns-count js-drop-down__bodyItem-btns-count">0</div>
-                                <button class="drop-down__bodyItem-btns-dec" id="dec">+</button>
-                              </div>
-                            </div>
-                            <div class="drop-down__bodyItem">
-                              <div class="drop-down__bodyItem-btns-control"> 
-                                <button class="drop-down__bodyItem-btns-control-clean js-drop-down__bodyItem-btns-control-clean">очистить</button>
-                                <button class="drop-down__bodyItem-btns-control-ok js-drop-down__bodyItem-btns-control-ok">применить</button>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-          </div>
-          <div class="form-elements__row-btn-item">
-            <div class="form-elements__row-btn-item-title">bullet list</div>
-                        <div class="bullet-list__title">Правила
-                          <div class="bullet-list__items"></div>
-                          <div class="bullet-list__item">Нельзя с питомцами</div>
-                          <div class="bullet-list__item">Без вечеринок и мероприятий</div>
-                          <div class="bullet-list__item">Время прибытия — после 13:00,</br>а выезд до 12:00</div>
-                        </div>
-          </div>
-        </div>
       </div>
     </section>
-  </body>
+  <script type="text/javascript" src="form-elements.js"></script></body>
 </html>
