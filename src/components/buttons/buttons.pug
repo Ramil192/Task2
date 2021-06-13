@@ -2,18 +2,11 @@ mixin buttons(options = {})
   -
     const {
       text = 'CLICK ME',
-      btnSwitch = 'withBackColor',
       href = '#',
-      isWithBorderHead = false,
-      isFormHead = false,
+      modifier=[], 
     } = options;
-    let className = ' ';
 
-    if(isWithBorderHead) className = 'btn-with-border_head';
-    if(isFormHead) className = 'btn-Form_head';
+    const classModifer = modifier.map(item=>' btn__link_'+item);
+  section.btn
+    a(class=['btn__link'].concat(classModifer) href=href)=text 
 
-  case btnSwitch
-    when 'withBackColor': button.btnWithBackColor=text
-    when 'withBorder': a(class='btn-with-border '+className href='main-sign-in.html')=text
-    when 'justBtn':  button.btnJustName=text
-    when 'btn-Form':  a(class='btn-Form '+className  href=href)=text

@@ -69,8 +69,4 @@ class DropDownBed {
   }
 }
 
-$(() => {
-  if (document.querySelectorAll('.js-drop-down-bed')) {
-    document.querySelectorAll('.js-drop-down-bed').forEach((e) => new DropDownBed(e));
-  }
-});
+export default DropDownBed

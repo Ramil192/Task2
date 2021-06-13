@@ -1,12 +1,20 @@
 .drop-down-bed {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
   width: 266px;
+  &__titles{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subTitle {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+  }
   &__title {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase;
     margin-bottom: 5px;
   }
   &__header {
@@ -22,7 +30,7 @@
     color: rgba(31, 32, 65, 0.75);
     border-radius: 4px 4px 0px 0px;
     width: 100%;
-    background: url("../../img/arrow-down.svg") no-repeat 285px 9px;
+    background: url('./img/arrow-down.svg') no-repeat 232px 6px;
   }
   &__titleBtn-img {
     margin-right: 9px;
@@ -37,7 +45,6 @@
     display: block;
   }
   &__bodyItem {
-    text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -74,29 +81,11 @@
     color: rgba(31, 32, 65, 0.5);
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
-  &__bodyItem-btns-control-clean {
-    text-transform: uppercase;
-    color: #bc9cff;
-    font-weight: bold;
-    font-size: 13px;
-    visibility: hidden;
-  }
+
   &__bodyItem-btns-control-clean_show {
     visibility: visible;
   }
-  &__bodyItem-btns-control-ok {
-    text-transform: uppercase;
-    color: #bc9cff;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-  }
-  &__bodyItem-btns-control {
-    margin-top: 11px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+
   &__bodyItem-btns-inc_active {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }

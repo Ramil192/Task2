@@ -1,10 +1,12 @@
+@import '../rate-btn/rate-btn.scss';
+@import '../price-and-number/price-and-number.scss';
 .rev_slide {
   width: 270px;
   background-color: #ffffff;
   &__footer {
     background-color: #ffffff;
     width: 270px;
-    padding: 23px 20px 17px 20px;
+    padding: 16px 20px 17px 22px;
   }
   &__footer-text {
     margin-bottom: 23px;
@@ -30,7 +32,7 @@
   }
 }
 .slick-prev {
-  background: url(./expand_more.svg) no-repeat 50%;
+  background: url('./img/slider/expand_more.svg') no-repeat 50%;
   width: 44px;
   height: 44px;
   font-size: 0px;
@@ -40,7 +42,7 @@
   z-index: 1;
 }
 .slick-next {
-  background: url(./expand_more-1.svg) no-repeat 50%;
+  background: url('./img/slider/expand_more-1.svg') no-repeat 50%;
   width: 44px;
   height: 44px;
   font-size: 0px;
@@ -53,7 +55,7 @@
   display: flex;
   position: absolute;
   top: 130px;
-  right: 12px;
+  right: 7px;
   margin: 0px;
   & li {
     width: 8px;

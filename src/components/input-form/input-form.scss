@@ -6,21 +6,27 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   width: 100%;
+
   &::placeholder {
     color: rgba(31, 32, 65, 0.25);
     font-size: 14px;
     line-height: 18px;
   }
+
   &:active,&:focus,&:hover {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
+
   &__email-btn{
     width: 44px;
     height: 44px;
-    background: url('../../img/arrow-forward.svg')no-repeat 50%;
+    background: url('./img/arrow-forward.svg')no-repeat 50%;
     position: absolute;
     z-index: 3;
     right: 0px;
+  }
+  &_width-260{
+    max-width: 260px;
   } 
 }
 .input-form_email{

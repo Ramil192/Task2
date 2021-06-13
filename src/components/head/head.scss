@@ -1,18 +1,16 @@
+@import '../buttons/buttons.scss';
 .head{
   max-width: 100%;
   background-color: #fff;
   &__item{
     display: flex;
     justify-content: flex-end;
-    padding: 17px 121px 14px 140px;
+    padding: 17px 141px 14px 140px;
     max-width: 1440px;
     margin: 0px auto;
     position: relative;
     z-index: 2;
     justify-content: space-between;
-  }
-  &__item_name{
-    padding:15px 25px 16px 140px;
   }
   &__list{
     display: flex;
@@ -23,13 +21,8 @@
   
   &__link{
     margin-right: 20px;
-    color: rgba(31, 32, 65, 0.5);
-    position: relative;
     &:last-child{
-      width: 196px;
-    }
-    &:nth-child(5){
-      margin-right: 22px;
+      margin-right: 0px;
     }
   }
   &__link_name{
@@ -51,22 +44,15 @@
   &__link_downBtn{
     width: 21px;
     height: 11px;
-    &::before{
-      content: '';
-      width: 21px;
-      height: 17px;
-      position:absolute;
-      background: url('../../img/headDown.svg') no-repeat 5px 8px;
-      right: 0px;
-      top: 0px;
-    }
+    background: url('./../img/headDown.svg') no-repeat 3px 0px;
+    margin-left: 0px;
   }
 }
 @media(max-width:1154px){
   .head{
     &__item{
       padding-right: 30px;
-      background: url('../../img/Logo.svg') no-repeat 30px 15px;
+      background: url('./../img/Logo.svg') no-repeat 30px 15px;
     }
   }
 }

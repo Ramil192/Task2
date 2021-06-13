@@ -1,0 +1,85 @@
+.calendar {
+  font-size: 12px;
+  &__wraper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1F2041;
+    margin-bottom: 3px;
+  }
+  &__items{
+    display: flex;
+  }
+  &__item{
+    &:nth-child(1){
+      margin-right: 20px;
+    }
+  }
+  &__input {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    padding: 8px 0 10px 16px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+
+    &::placeholder {
+      color: rgba(31, 32, 65, 0.25);
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 16.875px 18.75px 0px 18.75px;
+  }
+
+  &__clear-button {
+    cursor: pointer;
+    display: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: rgba(188, 156, 255, 1);
+    max-width: 10rem;
+    word-break: break-all;
+
+    &:hover,
+    &:focus {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &__apply-button {
+    cursor: pointer;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: rgba(188, 156, 255, 1);
+    max-width: 10rem;
+    word-break: break-all;
+
+    &:hover,
+    &:focus {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}
+
+@import './datepicker.scss';

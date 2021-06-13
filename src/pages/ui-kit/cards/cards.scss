@@ -1,0 +1,39 @@
+@import '../../../main.scss';
+@import '../../../components/room-search/room-search.scss';
+@import '../../../components/account-registration/account-registration.scss';
+@import '../../../components/price-room/price-room.scss';
+@import '../../../components/sign-in/sign-in.scss';
+@import '../../../components/slide/slide.scss';
+@import '../../../components/calendar/calendar.scss';
+
+body{
+  background: #e5e5e5 url("../../../img/main-logo.svg") no-repeat 30px 30px;
+
+}
+.cards {
+  max-width: 1440px;
+  padding: 152px 140px 140px 140px;
+  display: flex;
+  &__left-colum {
+    display: flex;
+    flex-direction: column;
+  }
+  &__left-colum-item{
+    margin-bottom: 41px;
+  }
+
+  &__centre-colum {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  &__centre-colum-item {
+    margin-bottom: 38px;
+  }
+  &__right-colum-item {
+    margin-bottom: 70px;
+    &:nth-child(2){
+      margin-bottom: 41px;
+    }
+  }
+}
+

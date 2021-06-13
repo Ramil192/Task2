@@ -28,8 +28,4 @@ class Like {
   }
 }
 
-$(() => {
-  if (document.querySelectorAll('.js-like-button')) {
-    document.querySelectorAll('.js-like-button').forEach((element) => new Like(element));
-  }
-});
+export default Like

@@ -1,9 +1,16 @@
 .bullet-list {
+  font-size: 12px;
   &__title {
     font-weight: bold;
+    margin-left: 1px;
+    margin-bottom: 14px;
+  }
+  &__title_room-details{
+    text-transform: none;
     font-size: 19px;
-    margin-left: 21px;
-    margin-bottom: 16px;
+    margin-left: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
   }
   &__items {
   }

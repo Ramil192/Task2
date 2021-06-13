@@ -3,6 +3,7 @@ mixin drop-down-bed(options = {})
     const {
       isOpen = fasle, 
       title = '',
+      subTitle = '',
       list = [
        {text : 'спальни' , count: 0},
        {text : 'кровати' , count: 0},
@@ -12,7 +13,9 @@ mixin drop-down-bed(options = {})
     const classOpen = isOpen ? 'drop-down-bed__body_show' : '';
 
   section.drop-down-bed.js-drop-down-bed
-    div.drop-down-bed__title=title
+    div.drop-down-bed__titles
+      div.drop-down-bed__title=title
+      div.drop-down-bed__subTitle=subTitle
     div.drop-down-bed__header
       button.drop-down-bed__titleBtn.js-drop-down-bed__titleBtn Сколько комнат
     div(class='drop-down-bed__body js-drop-down-bed__body ' + classOpen)

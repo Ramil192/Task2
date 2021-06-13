@@ -10,7 +10,7 @@
   &__check {
     font-weight: bold;
     text-transform: none;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 5px;
   }
 
@@ -32,7 +32,7 @@
     }
     &:checked {
       &::before {
-        background: url("../../img/Vector.svg") no-repeat 50%;
+        background: url("./img/Vector.svg") no-repeat 50%;
         border-color: #bc9cff;
       }
     }
