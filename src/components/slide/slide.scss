@@ -3,34 +3,43 @@
 .rev_slide {
   width: 270px;
   background-color: #ffffff;
+
   &__footer {
     background-color: #ffffff;
     width: 270px;
     padding: 16px 20px 17px 22px;
   }
+
   &__footer-text {
     margin-bottom: 23px;
   }
+
   &__img {
     width: 270px;
     height: 151px;
   }
+
   &__footer-review {
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
+
     &::after {
       content: " Отзывов";
       font-weight: normal;
     }
+
   }
+
   &__footer-rating {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+  
 }
+
 .slick-prev {
   background: url('./img/slider/expand_more.svg') no-repeat 50%;
   width: 44px;
@@ -41,6 +50,7 @@
   left: 0;
   z-index: 1;
 }
+
 .slick-next {
   background: url('./img/slider/expand_more-1.svg') no-repeat 50%;
   width: 44px;
@@ -51,12 +61,14 @@
   right: 0px;
   z-index: 1;
 }
+
 .slick-dots {
   display: flex;
   position: absolute;
   top: 130px;
   right: 7px;
   margin: 0px;
+
   & li {
     width: 8px;
     height: 8px;
@@ -65,10 +77,12 @@
     font-size: 0px;
     margin-right: 4px;
   }
+
   & li.slick-active {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: #ffffff;
   }
+  
 }

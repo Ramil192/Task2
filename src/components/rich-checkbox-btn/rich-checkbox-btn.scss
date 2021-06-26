@@ -4,9 +4,11 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
+
   &__wrapper {
     margin-top: 12px;
   }
+
   &__check {
     font-weight: bold;
     text-transform: none;
@@ -20,6 +22,7 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
     margin-left: 30px;
+
     &::before {
       content: "";
       width: 20px;
@@ -30,17 +33,23 @@
       border-radius: 4px;
       position: absolute;
     }
+
     &:checked {
+
       &::before {
         background: url("./img/Vector.svg") no-repeat 50%;
         border-color: #bc9cff;
       }
+
     }
+
   }
-  &__subTitle {
+  
+  &__sub-title {
     position: relative;
     font-size: 14px;
   }
+
   &__text {
     margin-top: 5px;
     text-transform: none;
@@ -50,7 +59,9 @@
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
   }
+
   &__item{
     margin-bottom: 8px;
   }
+  
 }

@@ -9,7 +9,7 @@ class DropDownBed {
   }
 
   initialize() {
-    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down-bed__titleBtn');
+    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down-bed__title-btn');
     this.body = this.outerContainerElement.querySelector('.js-drop-down-bed__body');
   }
 

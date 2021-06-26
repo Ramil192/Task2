@@ -4,41 +4,48 @@
   line-height: 28px;
   align-items: center;
   margin-bottom: 20px;
-  &__boxColor {
+
+  &__box-color {
     width: 70px;
     height: 70px;
     margin-right: 40px;
     border-radius: 6px;
   }
-  &__boxColor_darkShade100 {
+
+  &__box-color_darkShade-100 {
     background-color: #1f2041;
   }
-  &__boxColor_darkShade75 {
+
+  &__box-color_darkShade-75 {
     background-color: rgba(31, 32, 65, 0.75);
   }
-  &__boxColor_darkShade50 {
+
+  &__box-color_darkShade-50 {
     background-color: rgba(31, 32, 65, 0.5);
   }
-  &__boxColor_darkShade25 {
+
+  &__box-color_darkShade-25 {
     background-color: rgba(31, 32, 65, 0.25);
   }
-  &__boxColor_darkShade5 {
+
+  &__box-color_darkShade-5 {
     background-color: rgba(31, 32, 65, 0.05);
   }
-  &__boxColor_purple {
+
+  &__box-color_purple {
     background-color: #bc9cff;
   }
-  &__boxColor_green {
+
+  &__box-color_green {
     background-color: #6fcf97;
   }
 
-  &__boxText {
-  }
   &__title {
-
     font-weight: 700;
   }
-  &__subTitle {
+
+  &__sub-title {
     font-weight: normal;
   }
+
 }

@@ -1,3 +1,8 @@
+.input-formEmail{
+  position: relative;
+  width: 267px;
+}
+
 .input-form {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -25,17 +30,18 @@
     z-index: 3;
     right: 0px;
   }
+
   &_width-260{
     max-width: 260px;
   } 
+
+  &_email{
+    width: 100%;
+  }
+
+  &_active{
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  }
+
 }
-.input-form_email{
-  width: 100%;
-}
-.input-formEmail{
-  position: relative;
-  width: 267px;
-}
-.input-form_active{
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
+

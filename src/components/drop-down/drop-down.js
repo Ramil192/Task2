@@ -8,7 +8,7 @@ class DropDown {
   }
 
   initialize() {
-    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__titleBtn');
+    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__title-btn');
     this.body = this.outerContainerElement.querySelector('.js-drop-down__body');
     this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-clean');
     this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-ok');

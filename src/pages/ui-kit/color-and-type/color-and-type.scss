@@ -1,6 +1,6 @@
-@import '../../../main.scss';
-@import '../../../components/color-item/color-item.scss';
-@import '../../../components/color-text/color-text.scss';
+@import "../../../main.scss";
+@import "../../../components/color-item/color-item.scss";
+@import "../../../components/color-text/color-text.scss";
 
 .colors-and-type {
   margin: 145px 158px 145px 150px;
@@ -9,30 +9,33 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1132px;
-  &::before{
-    content: '';
+
+  &::before {
+    content: "";
     width: 48px;
     height: 48px;
-    background: url('./../../img/main-logo.svg')no-repeat;
+    background: url("./../../img/main-logo.svg") no-repeat;
     position: absolute;
     top: -117px;
     left: -121px;
   }
-}
-.uiKitiIcon{
-  position: absolute;
-  top: -114px;
-  left: -121px; 
-}
 
-@media(max-width:1036px){
-  .colors-and-type{
+  @media (max-width: 1036px) {
     justify-content: center;
     margin: 85px 58px 45px 50px;
   }
-  .uiKitiIcon{
+}
+
+.uiKitiIcon {
+  position: absolute;
+  top: -114px;
+  left: -121px;
+
+  @media (max-width: 1036px) {
     position: absolute;
     top: -48px;
-    left: -38px;  
+    left: -38px;
   }
+
 }
+

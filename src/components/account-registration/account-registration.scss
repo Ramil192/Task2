@@ -19,21 +19,27 @@
 
   &__item {
     margin-bottom: 10px;
+
     &:nth-child(3) {
       margin-bottom: -3px;
     }
+
     &:nth-child(4) {
       margin-bottom: 21px;
     }
+
     &:nth-child(5) {
       margin-bottom: 18px;
     }
+
     &:nth-child(7) {
       margin-bottom: -3px;
     }
+
     &:nth-child(8) {
       margin-bottom: 24px;
     }
+    
   }
 
   &__item-title {
@@ -43,17 +49,16 @@
     text-transform: uppercase;
     margin-bottom: 4px;
   }
-  
+
   &__footer {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-}
 
-@media (max-width: 380px) {
-  .account-registration {
+  @media (max-width: 380px) {
     padding: 5px;
   }
+  
 }

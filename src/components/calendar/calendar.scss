@@ -1,5 +1,6 @@
 .calendar {
   font-size: 12px;
+
   &__wraper {
     display: flex;
     flex-direction: column;
@@ -11,14 +12,19 @@
     color: #1F2041;
     margin-bottom: 3px;
   }
+
   &__items{
     display: flex;
   }
+
   &__item{
+
     &:nth-child(1){
       margin-right: 20px;
     }
+
   }
+
   &__input {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
@@ -39,6 +45,7 @@
     &:hover {
       border: 1px solid rgba(31, 32, 65, 0.5);
     }
+
   }
 
   &__buttons {
@@ -62,6 +69,7 @@
     &:focus {
       color: rgba(31, 32, 65, 0.5);
     }
+
   }
 
   &__apply-button {
@@ -79,7 +87,9 @@
     &:focus {
       color: rgba(31, 32, 65, 0.5);
     }
+
   }
+  
 }
 
 @import './datepicker.scss';

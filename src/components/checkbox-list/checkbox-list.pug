@@ -17,7 +17,7 @@ mixin checkbox-list(options={})
 
   if(isList)  
     section.checkbox-list.js-checkbox-list
-      button(class='checkbox-list__titleBtn js-checkbox-list__titleBtn '+ rotate )=title
+      button(class='checkbox-list__title-btn js-checkbox-list__title-btn '+ rotate )=title
       ul(class='checkbox-list__items js-checkbox-list__items '+ show)
         -for(let {text,flag} of items)
           li.checkbox-list__item 

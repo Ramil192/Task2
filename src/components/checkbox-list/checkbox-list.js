@@ -5,13 +5,13 @@ class Checkbox {
   }
 
   initialize() {
-    this.checkboxBtn = this.outerContainerElement.querySelector('.js-checkbox-list__titleBtn');
+    this.checkboxBtn = this.outerContainerElement.querySelector('.js-checkbox-list__title-btn');
     this.checkboxItems = this.outerContainerElement.querySelector('.js-checkbox-list__items');
   }
 
   handleCheckboxClick = () => {
     this.checkboxItems.classList.toggle('checkbox-list__items_show');
-    this.checkboxBtn.classList.toggle('checkbox-list__titleBtn_rotate');
+    this.checkboxBtn.classList.toggle('checkbox-list__title-btn_rotate');
   }
 
   setEventHandlers() {

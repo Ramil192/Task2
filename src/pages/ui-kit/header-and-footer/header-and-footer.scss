@@ -5,6 +5,7 @@
 
 .header-and-footer {
   background-color: #e5e5e5;
+
   &__wrap{
     padding: 139px 0px;
     background:#e5e5e5 url("../../../img/main-logo.svg") no-repeat 30px 30px;
@@ -13,4 +14,5 @@
   &__item{
     margin-bottom: 40px;
   }
+  
 }
