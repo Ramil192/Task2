@@ -1,3 +1,6 @@
+include ../../../components/color-item/color-item.pug  
+include ../../../components/color-text/color-text.pug 
+
 doctype html
 html
   head
@@ -15,7 +18,6 @@ html
   body
     section.colors-and-type
       div.colors-and-type__row-color
-        include ../../../components/color-item/color-item.pug  
         +color-item({colorName : 'Dark Shade 100%', backgroundColor : 'darkShade-100'})
         +color-item({colorName : 'Dark Shade 75%', backgroundColor : 'darkShade-75'})
         +color-item({colorName : 'Dark Shade 50%', backgroundColor : 'darkShade-50'})
@@ -23,8 +25,8 @@ html
         +color-item({colorName : 'Dark Shade 5%', backgroundColor : 'darkShade-5'})
         +color-item({colorName : 'Purple', backgroundColor : 'purple', colorCode : '#BC9CFF'})
         +color-item({colorName : 'Green', backgroundColor : 'green', colorCode : '#6FCF97'})
+      
       div.colors-and-type__row-text
-        include ../../../components/color-text/color-text.pug 
         +color-text({title : 'H1', text : 'This one is the sub-section or</br> widget title', size : '24'})
         +color-text({title : 'H2', text : 'Next one is the item title inside</br> widgets', size : '19'})
         +color-text({title : 'H3', text : 'This is a label or CTA text', size : '12'})

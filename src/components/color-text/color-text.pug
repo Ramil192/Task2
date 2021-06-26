@@ -4,8 +4,10 @@ mixin color-text(options = { })
       title = '',
       text = '',
       size ='14'
-    } = options 
+    } = options;
+
     const sizeClass = `color-text_size-${size}`
+ 
   section(class='color-text ' + sizeClass)
     div.color-text__title=title 
     div.color-text__sub-title!=text 

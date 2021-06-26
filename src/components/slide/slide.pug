@@ -22,6 +22,7 @@ mixin slide(options = {})
       -for(let i=0;i<img.length;i++)
         div.rev_slide__item
           img(class='rev_slide__img' src=img[i], alt="")
+          
     div.rev_slide__footer
       div.rev_slide__footer-text
         +price-and-number(number,pay)

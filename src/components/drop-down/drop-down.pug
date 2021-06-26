@@ -15,6 +15,7 @@ mixin drop-down(options={})
     div.drop-down__title=title 
     div.drop-down__header
       button.drop-down__title-btn.js-drop-down__title-btn Сколько гостей
+
     div(class='drop-down__body  js-drop-down__body ' + classOpen)
       -for(let item of list )
         div.drop-down__bodyItem
@@ -23,6 +24,7 @@ mixin drop-down(options={})
             button.drop-down__bodyItem-btns-inc.js-drop-down__bodyItem-btns-inc#inc -
             div.drop-down__bodyItem-btns-count.js-drop-down__bodyItem-btns-count 0
             button.drop-down__bodyItem-btns-dec#dec +
+            
       div.drop-down__bodyItem
         div.drop-down__bodyItem-btns-control 
             button.drop-down__bodyItem-btns-control-clean.js-drop-down__bodyItem-btns-control-clean очистить

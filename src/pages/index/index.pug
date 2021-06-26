@@ -1,3 +1,6 @@
+include ../../components/head/head.pug
+include ../../components/room-search/room-search.pug
+
 doctype html
 html
   head
@@ -13,11 +16,11 @@ html
     meta(name="msapplication-TileColor" content="#da532c")
     meta(name="theme-color" content="#ffffff")
   body
-    include ../../components/head/head.pug
     +head()
+    
     div.background
-      include ../../components/room-search/room-search.pug
       +room-search('Найдём номера под ваши пожелания')
       div.background__text Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+    
     include ../../components/footer/footer.pug
     

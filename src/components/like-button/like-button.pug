@@ -4,6 +4,7 @@ mixin like-button(options)
       likeCount = 0,
       isClick = false,
     } = options;
+    
     const classClick = isClick ? 'like-button_action' : ''
 
   section(class='like-button js-like-button ' + classClick)

@@ -16,8 +16,10 @@ mixin drop-down-bed(options = {})
     div.drop-down-bed__titles
       div.drop-down-bed__title=title
       div.drop-down-bed__sub-title=subTitle
+
     div.drop-down-bed__header
       button.drop-down-bed__title-btn.js-drop-down-bed__title-btn Сколько комнат
+      
     div(class='drop-down-bed__body js-drop-down-bed__body ' + classOpen)
       -for(let {text,count} of list)
         div.drop-down-bed__bodyItem

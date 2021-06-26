@@ -1,3 +1,23 @@
+include ../../../components/input-form/input-form.pug
+include ../../../components/drop-down/drop-down.pug
+include ../../../components/calendar/calendar.pug
+include ../../../components/input-form/input-form.pug
+include ../../../components/drop-down-bed/drop-down-bed.pug
+include ../../../components/checkbox-list/checkbox-list.pug
+include ../../../components/text-list/text-list.pug
+include ../../../components/radio-buttons/radio-buttons.pug
+include ../../../components/toggle/toggle.pug
+include ../../../components/like-button/like-button.pug
+include ../../../components/rate-btn/rate-btn.pug
+include ../../../components/drop-down/drop-down.pug
+include ../../../components/rich-checkbox-btn/rich-checkbox-btn.pug
+include ../../../components/range-slider/range-slider.pug
+include ../../../components/buttons/buttons.pug
+include ../../../components/pagination/pagination.pug
+include ../../../components/drop-down/drop-down.pug
+include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/commentary/commentary.pug
+
 doctype html
 html
   head
@@ -20,16 +40,15 @@ html
             div.form-elements__row-input-text
               span.form-elements__row-input-title Text Field
               span.form-elements__row-input-subTitle Default
-            include ../../../components/input-form/input-form.pug
             +input-form()
+          
           div.form-elements__row-input-item
             div.form-elements__row-input-text
               span.form-elements__row-input-title Text Field
               span.form-elements__row-input-subTitle='нover / focus'
-            include ../../../components/input-form/input-form.pug
             +input-form({isActive : true, value : 'This is pretty awesome'})
+          
           div.form-elements__row-input-item
-            include ../../../components/drop-down/drop-down.pug
             +drop-down({ 
               title : 'dropdown',
               list : [
@@ -38,27 +57,31 @@ html
                 "младенцы",
               ], 
             })            
+          
           div.form-elements__row-input-item
-            include ../../../components/calendar/calendar.pug
             +calendar({title:'masked text filed'})
+          
           div.form-elements__row-input-item
             +calendar({isDouble:true,title:'date dropdown'})
+          
           div.form-elements__row-input-item
             +calendar({isRange:true,title:'filter date dropdown'})
+          
+          
           div.form-elements__row-input-item
             div.form-elements__row-input-text
               span.form-elements__row-input-title subscription text field
-            include ../../../components/input-form/input-form.pug
             +input-form({isForm : true})
+          
           div.form-elements__row-input-item
-            include ../../../components/drop-down-bed/drop-down-bed.pug
             +drop-down-bed({title:'dropdown',subTitle:'default'})
+          
           div.form-elements__row-input-item
-            include ../../../components/drop-down-bed/drop-down-bed.pug
             +drop-down-bed({isOpen:true,title:'dropdown',subTitle:'expanded'})
+          
           div.form-elements__row-input-item
-            include ../../../components/checkbox-list/checkbox-list.pug
             +checkbox-list({title:'expandable checkbox list'})
+          
           div.form-elements__row-input-item
             +checkbox-list({
               title:'expandable checkbox list',
@@ -72,9 +95,10 @@ html
                 {text:'Телевизор',flag:false},
                 {text:'Шампунь',flag:false},
               ]})
+          
           div.form-elements__row-input-item
-            include ../../../components/text-list/text-list.pug
             +comfortList()
+            
         div.form-elements__row-general
           div.form-elements__row-double
             div.form-elements__row-checkbox
@@ -87,26 +111,25 @@ html
                     {text:'Можно с питомцами',flag:true},
                     {text:'Можно пригласить гостей</br> (до 10 человек)',flag:true},
                   ]})
+              
               div.form-elements__row-checkbox-item
-                include ../../../components/radio-buttons/radio-buttons.pug
                 +radio-buttons({title : 'Radio Buttons'})
+              
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title Toggle
-                include ../../../components/toggle/toggle.pug
                 +toggle('Получать спецпредложения',true)
                 +toggle('Получать спецпредложения',false)
+              
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title like button
                 div.form-elements__row-checkbox-item-like-btn
                   div.form-elements__row-checkbox-item-like-btn-left
-                    include ../../../components/like-button/like-button.pug
                     +like-button({likeCount : 2 })
                   div.form-elements__row-checkbox-item-like-btn-left
-                    include ../../../components/like-button/like-button.pug
                     +like-button({likeCount:13, isClick:true})
+              
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title rate button
-                include ../../../components/rate-btn/rate-btn.pug
                 div.form-elements__row-checkbox-item-rate-button
                   div.form-elements__row-checkbox-item-rate-button-left
                     +rate-btn({
@@ -118,8 +141,8 @@ html
                       blockNumber: 1,
                       checkedStarIndex: 5,
                     })
+              
               div.form-elements__row-checkbox-item
-                include ../../../components/drop-down/drop-down.pug
                 +drop-down({
                   isOpen : true, 
                   title : 'drop-down',
@@ -129,31 +152,32 @@ html
                     "младенцы",
                   ], 
                 }) 
+              
               div.form-elements__row-checkbox-item
-                include ../../../components/rich-checkbox-btn/rich-checkbox-btn.pug
                 +rich-checkbox-btn({title:'RICH CHECKBOX BUTTONS'})               
+            
             div.form-elements__row-btn
+              
               div.form-elements__row-btn-item
-                include ../../../components/range-slider/range-slider.pug
                 +range-slider('Range Slider')
+              
               div.form-elements__row-btn-item
                 div.form-elements__row-btn-item-title buttons             
-                include ../../../components/buttons/buttons.pug
                 +buttons({modifier:['background']})
+              
               div.form-elements__row-btn-item             
-                include ../../../components/buttons/buttons.pug
                 +buttons({modifier:['border']})
+              
               div.form-elements__row-btn-item             
-                include ../../../components/buttons/buttons.pug
                 +buttons()
+              
               div.form-elements__row-btn-item             
-                include ../../../components/buttons/buttons.pug
                 +buttons({modifier:['form'],text:'перейти к оплате'})
+              
               div.form-elements__row-btn-item
-                include ../../../components/pagination/pagination.pug
                 +pagination({title:'pagination'})
+              
               div.form-elements__row-btn-item
-                include ../../../components/drop-down/drop-down.pug
                 +drop-down({
                   isOpen : true,
                   title : 'dropdown',
@@ -163,9 +187,9 @@ html
                     "младенцы",
                   ], 
                 }) 
+              
               div.form-elements__row-btn-item
-              include ../../../components/bullet-list/bullet-list.pug
               +bullet-list({title:'bullet list '}) 
+          
           div.form-elements__row-footer
-             include ../../../components/commentary/commentary.pug
-             +commentary('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.','./img/man.png')
+            +commentary('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.','./img/man.png')
