@@ -17,15 +17,15 @@ mixin slide(options = {})
       review = '145',
     } = options;
 
-  div.rev
-    div.rev_slide 
+  div.slick
+    div.slick_slide 
       -for(let i=0;i<img.length;i++)
-        div.rev_slide__item
-          img(class='rev_slide__img' src=img[i], alt="")
+        div.slick_slide__item
+          img(class='slick_slide__img' src=img[i], alt="")
           
-    div.rev_slide__footer
-      div.rev_slide__footer-text
+    div.slick_slide__footer
+      div.slick_slide__footer-text
         +price-and-number(number,pay)
-      div.rev_slide__footer-rating
+      div.slick_slide__footer-rating
         +rate-btn(rating)
-        a(href='room-details.html').rev_slide__footer-review=review
+        a(href='room-details.html').slick_slide__footer-review=review

@@ -7,7 +7,7 @@ import RangeSlider from '../../../components/range-slider/range-slider';
 import CheckboxList from '../../../components/checkbox-list/checkbox-list';
 import './search-room.scss';
 
-document.querySelectorAll('.rev').forEach(element => new Slider(element));
+document.querySelectorAll('.slick').forEach(element => new Slider(element));
 document.querySelectorAll('.drop-down').forEach(element => new DropDown(element));
 document.querySelectorAll('.drop-down-bed').forEach(element => new DropDownBed(element));
 document.querySelectorAll('.range-slider').forEach(element => new RangeSlider(element));

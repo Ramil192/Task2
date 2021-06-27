@@ -9,7 +9,7 @@ class Slider {
 
   initialize() {
     const $outerContainerElement = $('html').find(this.outerContainerElement);
-    this.$element = $outerContainerElement.find('.rev_slide')
+    this.$element = $outerContainerElement.find('.slick_slide')
   }
   initializeSlick() {
     this.$element.slick({ dots: true });
