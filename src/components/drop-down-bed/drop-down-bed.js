@@ -2,7 +2,7 @@ class DropDownBed {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
     this.countBed = 0;
-    this.countBedRoomes = 0;
+    this.countBedRooms = 0;
     this.countBathrooms = 0;
     this.title = 'Сколько комнат';
     this.render();
@@ -18,7 +18,7 @@ class DropDownBed {
   }
 
   isCount() {
-    return (this.countBedRoomes > 0) || (this.countBed > 0) || (this.countBathrooms > 0);
+    return (this.countBedRooms > 0) || (this.countBed > 0) || (this.countBathrooms > 0);
   }
 
   handleBodyClick = (e) => {
@@ -32,21 +32,21 @@ class DropDownBed {
 
       let bedRoomsWord = 'спален';
       let bedWord = 'кроватей';
-      const bathoomsWord = '...';
+      const bathroomsWord  = '...';
 
       if (element.id === 'dec') {
         count.innerHTML = +count.innerHTML + 1;
-        guestName === 'спальни' ? this.countBedRoomes += 1 : (guestName === 'кровати') ? this.countBed += 1 : this.countBathrooms += 1;
+        guestName === 'спальни' ? this.countBedRooms += 1 : (guestName === 'кровати') ? this.countBed += 1 : this.countBathrooms += 1;
       } else if (count.innerHTML >= '1') {
         count.innerHTML = +count.innerHTML - 1;
-        guestName === 'спальни' ? this.countBedRoomes -= 1 : (guestName === 'кровати') ? this.countBed -= 1 : this.countBathrooms -= 1;
+        guestName === 'спальни' ? this.countBedRooms -= 1 : (guestName === 'кровати') ? this.countBed -= 1 : this.countBathrooms -= 1;
       }
 
-      bedRoomsWord = (this.countBedRoomes === 1) ? 'спальня' : (this.countBedRoomes > 1 && this.countBedRoomes < 4) ? 'спальни' : bedRoomsWord;
+      bedRoomsWord = (this.countBedRooms === 1) ? 'спальня' : (this.countBedRooms > 1 && this.countBedRooms < 4) ? 'спальни' : bedRoomsWord;
       bedWord = (this.countBed === 1) ? 'кровать ' : (this.countBed > 1 && this.countBed < 4) ? 'кровати' : bedWord;
 
       if (this.isCount()) {
-        newTitle = `${this.countBedRoomes} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathoomsWord}`;
+        newTitle = `${this.countBedRooms} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathroomsWord }`;
       }
 
       if (count.innerHTML > 0) {

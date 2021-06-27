@@ -7,7 +7,7 @@ class Calendar {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
     this.initialize();
-    this.slectDatepicker();
+    this.selectDatepicker();
   }
 
   initialize() {
@@ -18,17 +18,17 @@ class Calendar {
     this.isWithRange = this.$containerElement.hasClass('js-calendar_range');
   }
 
-  slectDatepicker() {
+  selectDatepicker() {
     if (this.isDouble) {
       this.doubleDatepicker();
     } else if (this.isWithRange) {
-      this.oneDatepickeWithRange();
+      this.oneDatepickerWithRange();
     } else {
-      this.oneDatepicke();
+      this.oneDatepicker();
     }
   }
 
-  oneDatepicke() {
+  oneDatepicker() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
       //inline: true,
@@ -51,7 +51,7 @@ class Calendar {
     this.datepickerInstance.hide();
   }
 
-  oneDatepickeWithRange() {
+  oneDatepickerWithRange() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
       range: true,

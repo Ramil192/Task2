@@ -39,7 +39,7 @@ class DropDown {
       let newTitle = this.title;
 
       let adultWord = 'гостей';
-      let babytWord = 'младенец';
+      let babyWord = 'младенец';
 
       if (element.id === 'dec') {
         count.innerHTML = +count.innerHTML + 1;
@@ -51,12 +51,12 @@ class DropDown {
 
       adultWord = (this.countAdult === 1) ? 'гость' : (this.countAdult > 1 && this.countAdult < 4) ? 'гостья' : adultWord;
 
-      babytWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенецa' : (this.countBaby > 4) ? 'младенецв' : babytWord;
+      babyWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенца' : (this.countBaby > 4) ? 'младенцев' : babyWord;
 
       if (this.countAdult > 0 || this.countBaby > 0) {
         newTitle = `${this.countAdult} ${adultWord}`;
         if (this.countBaby > 0) {
-          newTitle += `, ${this.countBaby} ${babytWord}`;
+          newTitle += `, ${this.countBaby} ${babyWord}`;
         }
       }
 

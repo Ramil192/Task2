@@ -2,14 +2,14 @@ import 'jquery';
 import 'jquery-ui/ui/widgets/slider'
 
 class RangeSlider {
-  constructor(outerCountainerElement) {
-    this.outerCountainerElement = outerCountainerElement;
+  constructor(outerContainerElement) {
+    this.outerContainerElement = outerContainerElement;
     this.render();
   }
   
   initialize() {
-    const $outerCountainerElement = $('html').find(this.outerCountainerElement);
-    this.$element = $outerCountainerElement.find('.js-slider-range')
+    const $outerContainerElement = $('html').find(this.outerContainerElement);
+    this.$element = $outerContainerElement.find('.js-slider-range')
   }
   
   initializeSlider() {

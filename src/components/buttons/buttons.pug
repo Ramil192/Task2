@@ -6,8 +6,8 @@ mixin buttons(options = {})
       modifier=[], 
     } = options;
     
-    const classModifer = modifier.map(item=>' btn__link_'+item);
+    const classModifier = modifier.map(item=>' btn__link_'+item);
 
   section.btn
-    a(class=['btn__link'].concat(classModifer) href=href)=text 
+    a(class=['btn__link'].concat(classModifier) href=href)=text 
 
