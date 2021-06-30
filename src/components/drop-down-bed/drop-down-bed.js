@@ -35,10 +35,10 @@ class DropDownBed {
       const bathroomsWord  = '...';
 
       if (element.id === 'dec') {
-        count.innerHTML = +count.innerHTML + 1;
+        count.innerHTML = parseInt(count.innerHTML, 10) + 1;
         guestName === 'спальни' ? this.countBedRooms += 1 : (guestName === 'кровати') ? this.countBed += 1 : this.countBathrooms += 1;
       } else if (count.innerHTML >= '1') {
-        count.innerHTML = +count.innerHTML - 1;
+        count.innerHTML = parseInt(count.innerHTML, 10) - 1;
         guestName === 'спальни' ? this.countBedRooms -= 1 : (guestName === 'кровати') ? this.countBed -= 1 : this.countBathrooms -= 1;
       }
 

@@ -42,10 +42,10 @@ class DropDown {
       let babyWord = 'младенец';
 
       if (element.id === 'dec') {
-        count.innerHTML = +count.innerHTML + 1;
+        count.innerHTML = parseInt(count.innerHTML, 10) + 1;
         guestName === 'младенцы' ? this.countBaby += 1 : this.countAdult += 1;
       } else if (count.innerHTML >= '1') {
-        count.innerHTML = +count.innerHTML - 1;
+        count.innerHTML = parseInt(count.innerHTML, 10) - 1;
         guestName === 'младенцы' ? this.countBaby -= 1 : this.countAdult -= 1;
       }
 

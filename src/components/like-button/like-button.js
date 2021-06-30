@@ -10,10 +10,10 @@ class Like {
 
   handleBtnClick = () => {
     if (this.likeBtn.classList.contains('like-button_action')) {
-      this.count.innerHTML = +this.count.innerHTML - 1;
+      this.count.innerHTML = parseInt(this.count.innerHTML, 10) - 1;
       this.likeBtn.classList.remove('like-button_action');
     } else {
-      this.count.innerHTML = +this.count.innerHTML + 1;
+      this.count.innerHTML = parseInt(this.count.innerHTML, 10) + 1;
       this.likeBtn.classList.add('like-button_action');
     }
   }
