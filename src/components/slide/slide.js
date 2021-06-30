@@ -9,15 +9,17 @@ class Slider {
 
   initialize() {
     const $outerContainerElement = $('html').find(this.outerContainerElement);
-    this.$element = $outerContainerElement.find('.slick_slide')
+    this.$element = $outerContainerElement.find('.slick_slide');
   }
+
   initializeSlick() {
     this.$element.slick({ dots: true });
   }
-  render(){
+
+  render() {
     this.initialize();
     this.initializeSlick();
   }
 }
 
-document.querySelectorAll('.slick').forEach(element => new Slider(element));
+document.querySelectorAll('.slick').forEach((element) => new Slider(element));

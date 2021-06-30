@@ -84,8 +84,4 @@ class DropDown {
   }
 }
 
-
-document.querySelectorAll('.js-drop-down').forEach(element => new DropDown(element));
-
-
-
+document.querySelectorAll('.js-drop-down').forEach((element) => new DropDown(element));

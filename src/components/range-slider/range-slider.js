@@ -1,5 +1,5 @@
 import 'jquery';
-import 'jquery-ui/ui/widgets/slider'
+import 'jquery-ui/ui/widgets/slider';
 
 class RangeSlider {
   constructor(outerContainerElement) {
@@ -33,4 +33,4 @@ class RangeSlider {
   }
 }
 
-document.querySelectorAll('.js-range-slider').forEach(element => new RangeSlider(element));
+document.querySelectorAll('.js-range-slider').forEach((element) => new RangeSlider(element));

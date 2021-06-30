@@ -24,4 +24,4 @@ class Checkbox {
   }
 }
 
-document.querySelectorAll('.js-checkbox-list').forEach(element => new Checkbox(element));
+document.querySelectorAll('.js-checkbox-list').forEach((element) => new Checkbox(element));

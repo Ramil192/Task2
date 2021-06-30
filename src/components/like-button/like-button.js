@@ -28,4 +28,4 @@ class Like {
   }
 }
 
-document.querySelectorAll('.js-like-button').forEach(element => new Like(element));
+document.querySelectorAll('.js-like-button').forEach((element) => new Like(element));

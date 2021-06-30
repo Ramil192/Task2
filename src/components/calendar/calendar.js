@@ -1,9 +1,7 @@
 import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
-
 class Calendar {
-
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
     this.initialize();
@@ -31,10 +29,10 @@ class Calendar {
   oneDatepicker() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
-      //inline: true,
+      // inline: true,
       onShow: this.handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
-    })
+    });
   }
 
   doubleDatepicker() {
@@ -59,12 +57,10 @@ class Calendar {
       multipleDatesSeparator: ' - ',
       onShow: this.handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
-    })
+    });
   }
 
-
   handleDatepickerShow = (inst, animationCompleted) => {
-
     if (!animationCompleted && !inst.$datepicker.find('.calendar__buttons').html()) {
       inst.$datepicker.append(
         `<div class="calendar__buttons">
@@ -79,12 +75,10 @@ class Calendar {
       this.applyButton.click(this.handleApplyButtonClick.bind(this, inst));
 
       if (this.$twoInput) {
-        this.$twoInput.bind('click', inst.show.bind(inst))
-      };
+        this.$twoInput.bind('click', inst.show.bind(inst));
+      }
     }
   }
-
-
 
   _handleDoubleInputSelectRange = (formattedDate) => {
     this.clearButton.show();
@@ -101,9 +95,9 @@ class Calendar {
 
   handleClearButtonClick(inst) {
     inst.clear();
-    this.$dateInputs.each((_, element) => element.value = '');
+    this.$dateInputs.each((_, element) => { element.value = ''; });
     this.clearButton.hide();
   }
 }
 
-document.querySelectorAll('.js-calendar').forEach(element => new Calendar(element));
+document.querySelectorAll('.js-calendar').forEach((element) => new Calendar(element));

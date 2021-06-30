@@ -94,40 +94,40 @@
     font-size: 14px;
     line-height: 24px;
     margin-top: 47px;
+  }
 
-    & ul {
-      & li {
-        margin-left: 15px;
-        &::before {
-          margin-left: -15px;
-          margin-top: 6px;
-          content: "";
-          width: 10px;
-          height: 10px;
-          position: absolute;
-          background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-          border-radius: 50%;
-        }
+  &__description-vote-right-list-item{
+    margin-left: 15px;
+    
+    &::before {
+      margin-left: -15px;
+      margin-top: 6px;
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+      border-radius: 50%;
+    }
 
-        &:nth-child(2) {
-          &::before {
-            background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-          }
-        }
-
-        &:nth-child(3) {
-          &::before {
-            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-          }
-        }
-
-        &:nth-child(4) {
-          &::before {
-            background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-          }
-        }
+    &:nth-child(2) {
+      &::before {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
       }
     }
+
+    &:nth-child(3) {
+      &::before {
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+      }
+    }
+
   }
 
   &__regulations {

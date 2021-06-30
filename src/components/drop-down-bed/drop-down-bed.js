@@ -32,7 +32,7 @@ class DropDownBed {
 
       let bedRoomsWord = 'спален';
       let bedWord = 'кроватей';
-      const bathroomsWord  = '...';
+      const bathroomsWord = '...';
 
       if (element.id === 'dec') {
         count.innerHTML = parseInt(count.innerHTML, 10) + 1;
@@ -46,7 +46,7 @@ class DropDownBed {
       bedWord = (this.countBed === 1) ? 'кровать ' : (this.countBed > 1 && this.countBed < 4) ? 'кровати' : bedWord;
 
       if (this.isCount()) {
-        newTitle = `${this.countBedRooms} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathroomsWord }`;
+        newTitle = `${this.countBedRooms} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathroomsWord}`;
       }
 
       if (count.innerHTML > 0) {
@@ -69,4 +69,4 @@ class DropDownBed {
   }
 }
 
-document.querySelectorAll('.js-drop-down-bed').forEach(element => new DropDownBed(element));
+document.querySelectorAll('.js-drop-down-bed').forEach((element) => new DropDownBed(element));
