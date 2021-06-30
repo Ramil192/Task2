@@ -12,6 +12,7 @@ html
     link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
     link(rel="manifest" href="./favicons/site.webmanifest")
     link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
+    link(rel="stylesheet" href="./style.css")
     meta(name="msapplication-TileColor" content="#da532c")
     meta(name="theme-color" content="#ffffff")
   body
@@ -22,4 +23,6 @@ html
         div.header-and-footer__item
           +head({nameUser:'Юлий Цезарь'})
         div.header-and-footer__item
-          include ../../../components/footer/footer.pug   
+          include ../../../components/footer/footer.pug
+    
+    script(src = "index.js")

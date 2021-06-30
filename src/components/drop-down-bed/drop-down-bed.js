@@ -69,4 +69,4 @@ class DropDownBed {
   }
 }
 
-export default DropDownBed
+document.querySelectorAll('.js-drop-down-bed').forEach(element => new DropDownBed(element));

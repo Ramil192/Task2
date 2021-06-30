@@ -83,5 +83,9 @@ class DropDown {
     this.setEventHandlers();
   }
 }
-export default DropDown;
+
+
+document.querySelectorAll('.js-drop-down').forEach(element => new DropDown(element));
+
+
 

@@ -106,4 +106,4 @@ class Calendar {
   }
 }
 
-export default Calendar
+document.querySelectorAll('.js-calendar').forEach(element => new Calendar(element));

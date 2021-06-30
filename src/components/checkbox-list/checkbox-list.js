@@ -24,4 +24,4 @@ class Checkbox {
   }
 }
 
-export default Checkbox;
+document.querySelectorAll('.js-checkbox-list').forEach(element => new Checkbox(element));

@@ -33,4 +33,4 @@ class RangeSlider {
   }
 }
 
-export default RangeSlider;
+document.querySelectorAll('.js-range-slider').forEach(element => new RangeSlider(element));
