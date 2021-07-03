@@ -4,32 +4,32 @@ class DropDown {
     this.countAdult = 0;
     this.countBaby = 0;
     this.title = 'Сколько гостей';
-    this.render();
+    this._render();
   }
 
-  initialize() {
+  _initialize() {
     this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__title-btn');
     this.body = this.outerContainerElement.querySelector('.js-drop-down__body');
     this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-clean');
     this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-ok');
   }
 
-  handleBtnTitleClick = () => {
+  _handleBtnTitleClick = () => {
     this.body.classList.toggle('drop-down__body_show');
   }
 
-  handleBtnCleanClick = () => {
+  _handleBtnCleanClick = () => {
     this.body.querySelectorAll('.js-drop-down__bodyItem-btns-count').forEach((element) => { element.innerHTML = 0; });
     this.body.querySelectorAll('.js-drop-down__bodyItem-btns-inc').forEach((element) => element.classList.remove('drop-down__bodyItem-btns-inc_active'));
     this.btnClean.classList.remove('drop-down__bodyItem-btns-control-clean_show');
     this.titleBtn.innerHTML = this.title;
   }
 
-  handleBtnOkClick = () => {
+  _handleBtnOkClick = () => {
     this.body.classList.remove('drop-down__body_show');
   }
 
-  handleBodyClick = (e) => {
+  _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
       const count = element.parentElement.querySelector('.js-drop-down__bodyItem-btns-count');
@@ -71,17 +71,17 @@ class DropDown {
     }
   }
 
-  setEventHandlers() {
-    this.titleBtn.addEventListener('click', this.handleBtnTitleClick);
-    this.body.addEventListener('click', this.handleBodyClick);
-    this.btnClean.addEventListener('click', this.handleBtnCleanClick);
+  _setEventHandlers() {
+    this.titleBtn.addEventListener('click', this._handleBtnTitleClick);
+    this.body.addEventListener('click', this._handleBodyClick);
+    this.btnClean.addEventListener('click', this._handleBtnCleanClick);
     this.btnOk.addEventListener('click', this.handleBtnOkClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
 
-document.querySelectorAll('.js-drop-down').forEach((element) => new DropDown(element));
+export default DropDown;

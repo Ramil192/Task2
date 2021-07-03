@@ -4,11 +4,11 @@ import 'air-datepicker/dist/css/datepicker.css';
 class Calendar {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
-    this.initialize();
-    this.selectDatepicker();
+    this._initialize();
+    this._selectDatepicker();
   }
 
-  initialize() {
+  _initialize() {
     const $outerContainerElement = $('html').find(this.outerContainerElement);
     this.$containerElement = $outerContainerElement;
     this.$dateInputs = this.$containerElement.find('.js-calendar__input');
@@ -16,51 +16,51 @@ class Calendar {
     this.isWithRange = this.$containerElement.hasClass('js-calendar_range');
   }
 
-  selectDatepicker() {
+  _selectDatepicker() {
     if (this.isDouble) {
-      this.doubleDatepicker();
+      this._doubleDatepicker();
     } else if (this.isWithRange) {
-      this.oneDatepickerWithRange();
+      this._oneDatepickerWithRange();
     } else {
-      this.oneDatepicker();
+      this._oneDatepicker();
     }
   }
 
-  oneDatepicker() {
+  _oneDatepicker() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
       // inline: true,
-      onShow: this.handleDatepickerShow,
+      onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     });
   }
 
-  doubleDatepicker() {
+  _doubleDatepicker() {
     this.$oneInput = this.$dateInputs.eq(0);
     this.$twoInput = this.$dateInputs.eq(1);
 
     this.datepickerInstance = this.$oneInput.datepicker({
       range: true,
       minDate: new Date(),
-      onShow: this.handleDatepickerShow,
+      onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     }).data('datepicker');
     this.datepickerInstance.show();
     this.datepickerInstance.hide();
   }
 
-  oneDatepickerWithRange() {
+  _oneDatepickerWithRange() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
       range: true,
       dateFormat: 'dd M',
       multipleDatesSeparator: ' - ',
-      onShow: this.handleDatepickerShow,
+      onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     });
   }
 
-  handleDatepickerShow = (inst, animationCompleted) => {
+  _handleDatepickerShow = (inst, animationCompleted) => {
     if (!animationCompleted && !inst.$datepicker.find('.calendar__buttons').html()) {
       inst.$datepicker.append(
         `<div class="calendar__buttons">
@@ -69,10 +69,10 @@ class Calendar {
           </div>`,
       );
       this.clearButton = inst.$datepicker.find('.js-calendar__clear-button');
-      this.clearButton.click(this.handleClearButtonClick.bind(this, inst));
+      this.clearButton.click(this._handleClearButtonClick.bind(this, inst));
 
       this.applyButton = inst.$datepicker.find('.js-calendar__apply-button');
-      this.applyButton.click(this.handleApplyButtonClick.bind(this, inst));
+      this.applyButton.click(this._handleApplyButtonClick.bind(this, inst));
 
       if (this.$twoInput) {
         this.$twoInput.bind('click', inst.show.bind(inst));
@@ -89,15 +89,15 @@ class Calendar {
     }
   }
 
-  handleApplyButtonClick(inst) {
+  _handleApplyButtonClick(inst) {
     inst.hide();
   }
 
-  handleClearButtonClick(inst) {
+  _handleClearButtonClick(inst) {
     inst.clear();
     this.$dateInputs.each((_, element) => { element.value = ''; });
     this.clearButton.hide();
   }
 }
 
-document.querySelectorAll('.js-calendar').forEach((element) => new Calendar(element));
+export default Calendar;

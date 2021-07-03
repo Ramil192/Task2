@@ -4,16 +4,16 @@ import 'jquery-ui/ui/widgets/slider';
 class RangeSlider {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
-    this.render();
+    this._render();
   }
 
-  initialize() {
+  _initialize() {
     const $outerContainerElement = $('html').find(this.outerContainerElement);
     this.$element = $outerContainerElement.find('.js-slider-range');
     this.$amount = $outerContainerElement.find('#amount');
   }
-
-  initializeSlider() {
+  
+  _initializeSlider() {
     this.$element.slider({
       range: true,
       min: 1000,
@@ -24,13 +24,13 @@ class RangeSlider {
       },
     });
     this.$amount.val(`${this.$element.slider('values', 0)} ₽`
-      + ` - ${this.$element.slider('values', 1)} ₽`);
+    + ` - ${this.$element.slider('values', 1)} ₽`);
   }
-
-  render() {
-    this.initialize();
-    this.initializeSlider();
+  
+  _render() {
+    this._initialize();
+    this._initializeSlider();
   }
 }
 
-document.querySelectorAll('.js-range-slider').forEach((element) => new RangeSlider(element));
+export default RangeSlider;

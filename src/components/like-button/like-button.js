@@ -1,14 +1,14 @@
 class Like {
   constructor(likeBtn) {
     this.likeBtn = likeBtn;
-    this.render();
+    this._render();
   }
 
-  initialize() {
+  _initialize() {
     this.count = this.likeBtn.querySelector('.js-like-button__count');
   }
 
-  handleBtnClick = () => {
+  _handleBtnClick = () => {
     if (this.likeBtn.classList.contains('like-button_action')) {
       this.count.innerHTML = parseInt(this.count.innerHTML, 10) - 1;
       this.likeBtn.classList.remove('like-button_action');
@@ -18,14 +18,14 @@ class Like {
     }
   }
 
-  setEventHandlers() {
-    this.likeBtn.addEventListener('click', this.handleBtnClick);
+  _setEventHandlers() {
+    this.likeBtn.addEventListener('click', this._handleBtnClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
 
-document.querySelectorAll('.js-like-button').forEach((element) => new Like(element));
+export default Like;

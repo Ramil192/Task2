@@ -5,23 +5,23 @@ class DropDownBed {
     this.countBedRooms = 0;
     this.countBathrooms = 0;
     this.title = 'Сколько комнат';
-    this.render();
+    this._render();
   }
 
-  initialize() {
+  _initialize() {
     this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down-bed__title-btn');
     this.body = this.outerContainerElement.querySelector('.js-drop-down-bed__body');
   }
 
-  handleBtnTitleClick = () => {
+  _handleBtnTitleClick = () => {
     this.body.classList.toggle('drop-down-bed__body_show');
   }
 
-  isCount() {
+  _isCount() {
     return (this.countBedRooms > 0) || (this.countBed > 0) || (this.countBathrooms > 0);
   }
 
-  handleBodyClick = (e) => {
+  _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
       const count = element.parentElement.querySelector('.js-drop-down-bed__bodyItem-btns-count');
@@ -45,7 +45,7 @@ class DropDownBed {
       bedRoomsWord = (this.countBedRooms === 1) ? 'спальня' : (this.countBedRooms > 1 && this.countBedRooms < 4) ? 'спальни' : bedRoomsWord;
       bedWord = (this.countBed === 1) ? 'кровать ' : (this.countBed > 1 && this.countBed < 4) ? 'кровати' : bedWord;
 
-      if (this.isCount()) {
+      if (this._isCount()) {
         newTitle = `${this.countBedRooms} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathroomsWord}`;
       }
 
@@ -58,15 +58,15 @@ class DropDownBed {
     }
   }
 
-  setEventHandlers() {
-    this.titleBtn.addEventListener('click', this.handleBtnTitleClick);
-    this.body.addEventListener('click', this.handleBodyClick);
+  _setEventHandlers() {
+    this.titleBtn.addEventListener('click', this._handleBtnTitleClick);
+    this.body.addEventListener('click', this._handleBodyClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
 
-document.querySelectorAll('.js-drop-down-bed').forEach((element) => new DropDownBed(element));
+export default DropDownBed;

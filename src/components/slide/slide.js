@@ -4,22 +4,22 @@ import 'slick-carousel/slick/slick.css';
 class Slider {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
-    this.render();
+    this._render();
   }
 
-  initialize() {
+  _initialize() {
     const $outerContainerElement = $('html').find(this.outerContainerElement);
     this.$element = $outerContainerElement.find('.slick_slide');
   }
 
-  initializeSlick() {
+  _initializeSlick() {
     this.$element.slick({ dots: true });
   }
 
-  render() {
-    this.initialize();
-    this.initializeSlick();
+  _render() {
+    this._initialize();
+    this._initializeSlick();
   }
 }
 
-document.querySelectorAll('.slick').forEach((element) => new Slider(element));
+export default Slider;
