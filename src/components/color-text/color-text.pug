@@ -6,8 +6,8 @@ mixin color-text(options = { })
       size ='14'
     } = options;
 
-    const sizeClass = `color-text_size-${size}`
+    const classModifier = `color-text_size-${size}`
  
-  section(class='color-text ' + sizeClass)
+  section(class=`color-text ${classModifier}`)
     div.color-text__title=title 
     div.color-text__sub-title!=text 

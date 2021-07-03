@@ -7,13 +7,20 @@ mixin input-form(options = {})
       isForm = false,
       isFooter = false,
     } = options;
+
+    let classModification = '';
     
-    const classActive = isActive ? 'input-form_active' : '';
-    const classModification = isFooter ? ' input-form_width-260' : '';
+    if(isActive){
+      classModification = "input-form_active";
+    }
+
+    if(isFooter){
+      classModification = "input-form_width-260";
+    }
 
   if(isForm)
-    form(action="#" class='input-formEmail'+classModification) 
+    form(action="#" class=`form-email ${classModification}`) 
       input(class='input-form input-form_email' type="text" placeholder="Email")
       button(class='input-form__email-btn' type="submit")
   else
-    input(class='input-form '+classActive type="text" value=value placeholder=placeholder)
+    input(class=`input-form ${classModification}` type="text" value=value placeholder=placeholder)

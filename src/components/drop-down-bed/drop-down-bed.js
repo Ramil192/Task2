@@ -10,11 +10,11 @@ class DropDownBed {
 
   _initialize() {
     this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down-bed__title-btn');
-    this.body = this.outerContainerElement.querySelector('.js-drop-down-bed__body');
+    this.items = this.outerContainerElement.querySelector('.js-drop-down-bed__items');
   }
 
   _handleBtnTitleClick = () => {
-    this.body.classList.toggle('drop-down-bed__body_show');
+    this.items.classList.toggle('drop-down-bed__body_show');
   }
 
   _isCount() {
@@ -24,8 +24,8 @@ class DropDownBed {
   _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
-      const count = element.parentElement.querySelector('.js-drop-down-bed__bodyItem-btns-count');
-      const btnInc = element.parentElement.querySelector('.js-drop-down-bed__bodyItem-btns-inc');
+      const count = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-count');
+      const btnInc = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-inc');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
       let newTitle = this.title;
@@ -50,9 +50,9 @@ class DropDownBed {
       }
 
       if (count.innerHTML > 0) {
-        btnInc.classList.add('drop-down-bed__bodyItem-btns-inc_active');
+        btnInc.classList.add('drop-down-bed__item-buttons-inc_active');
       } else {
-        btnInc.classList.remove('drop-down-bed__bodyItem-btns-inc_active');
+        btnInc.classList.remove('drop-down-bed__item-buttons-inc_active');
       }
       this.titleBtn.innerHTML = newTitle;
     }
@@ -60,7 +60,7 @@ class DropDownBed {
 
   _setEventHandlers() {
     this.titleBtn.addEventListener('click', this._handleBtnTitleClick);
-    this.body.addEventListener('click', this._handleBodyClick);
+    this.items.addEventListener('click', this._handleBodyClick);
   }
 
   _render() {

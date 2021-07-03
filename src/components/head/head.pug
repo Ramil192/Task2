@@ -14,7 +14,7 @@ mixin head(options = {})
       ], 
     } = options;
     
-    const classBold = 'head__link_bold';
+    const classModifier = 'head__link_bold';
 
   header.head
     div(class='head__item')
@@ -22,7 +22,7 @@ mixin head(options = {})
         img(src="./img/Logo.svg" alt="")
       ul.head__list
         -for(let {text,href,flag,isBold} of list)
-          li(class=`head__link ${isBold && classBold}`)
+          li(class=`head__link ${isBold && classModifier}`)
             a(href=href)=text
             if(flag)
               button.head__link_downBtn 

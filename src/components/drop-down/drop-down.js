@@ -9,19 +9,19 @@ class DropDown {
 
   _initialize() {
     this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__title-btn');
-    this.body = this.outerContainerElement.querySelector('.js-drop-down__body');
-    this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-clean');
-    this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-ok');
+    this.body = this.outerContainerElement.querySelector('.js-drop-down__items');
+    this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-clean');
+    this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-ok');
   }
 
   _handleBtnTitleClick = () => {
-    this.body.classList.toggle('drop-down__body_show');
+    this.body.classList.toggle('drop-down__items_show');
   }
 
   _handleBtnCleanClick = () => {
-    this.body.querySelectorAll('.js-drop-down__bodyItem-btns-count').forEach((element) => { element.innerHTML = 0; });
-    this.body.querySelectorAll('.js-drop-down__bodyItem-btns-inc').forEach((element) => element.classList.remove('drop-down__bodyItem-btns-inc_active'));
-    this.btnClean.classList.remove('drop-down__bodyItem-btns-control-clean_show');
+    this.body.querySelectorAll('.js-drop-down__item-buttons-count').forEach((element) => { element.innerHTML = 0; });
+    this.body.querySelectorAll('.js-drop-down__item-buttons-inc').forEach((element) => element.classList.remove('drop-down__item-buttons-inc_active'));
+    this.btnClean.classList.remove('drop-down__item-buttons-control-clean_show');
     this.titleBtn.innerHTML = this.title;
   }
 
@@ -32,8 +32,8 @@ class DropDown {
   _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
-      const count = element.parentElement.querySelector('.js-drop-down__bodyItem-btns-count');
-      const btnInc = element.parentElement.querySelector('.js-drop-down__bodyItem-btns-inc');
+      const count = element.parentElement.querySelector('.js-drop-down__item-buttons-count');
+      const btnInc = element.parentElement.querySelector('.js-drop-down__item-buttons-inc');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
       let newTitle = this.title;
@@ -61,11 +61,11 @@ class DropDown {
       }
 
       if (count.innerHTML > 0) {
-        btnInc.classList.add('drop-down__bodyItem-btns-inc_active');
-        this.btnClean.classList.add('drop-down__bodyItem-btns-control-clean_show');
+        btnInc.classList.add('drop-down__item-buttons-inc_active');
+        this.btnClean.classList.add('drop-down__item-buttons-control-clean_show');
       } else {
-        btnInc.classList.remove('drop-down__bodyItem-btns-inc_active');
-        this.btnClean.classList.remove('drop-down__bodyItem-btns-control-clean_show');
+        btnInc.classList.remove('drop-down__item-buttons-inc_active');
+        this.btnClean.classList.remove('drop-down__item-buttons-control-clean_show');
       }
       this.titleBtn.innerHTML = newTitle;
     }

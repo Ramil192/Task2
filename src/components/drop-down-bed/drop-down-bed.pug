@@ -10,7 +10,8 @@ mixin drop-down-bed(options = {})
        {text : 'ванные комнаты' , count: 0},
       ], 
     } = options;
-    const classOpen = isOpen ? 'drop-down-bed__body_show' : '';
+    
+    const classModifier = isOpen ? 'drop-down-bed__body_show' : '';
 
   section.drop-down-bed.js-drop-down-bed
     div.drop-down-bed__titles
@@ -20,11 +21,11 @@ mixin drop-down-bed(options = {})
     div.drop-down-bed__header
       button.drop-down-bed__title-btn.js-drop-down-bed__title-btn Сколько комнат
       
-    div(class='drop-down-bed__body js-drop-down-bed__body ' + classOpen)
+    div(class=`drop-down-bed__items js-drop-down-bed__items ${classModifier}`)
       -for(let {text,count} of list)
-        div.drop-down-bed__bodyItem
-          div.drop-down-bed__bodyItem-title=text
-          div.drop-down-bed__bodyItem-btns 
-            button(class='drop-down-bed__bodyItem-btns-inc js-drop-down-bed__bodyItem-btns-inc ')#inc -
-            div.drop-down-bed__bodyItem-btns-count.js-drop-down-bed__bodyItem-btns-count=count
-            button.drop-down-bed__bodyItem-btns-dec#dec +
+        div.drop-down-bed__item
+          div.drop-down-bed__item-title=text
+          div.drop-down-bed__item-buttons 
+            button(class='drop-down-bed__item-buttons-inc js-drop-down-bed__item-buttons-inc ')#inc -
+            div.drop-down-bed__item-buttons-count.js-drop-down-bed__item-buttons-count=count
+            button.drop-down-bed__item-buttons-dec#dec +
