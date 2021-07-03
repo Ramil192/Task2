@@ -1,123 +1,65 @@
-/* montserrat-300 - cyrillic-ext_cyrillic_latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.woff2") format("woff2"),
+    url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.woff") format("woff");
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Montserrat Light'), local('Montserrat-Light'),
-    url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.eot?#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.woff2')
-      format('woff2'),
-    /* Super Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.woff')
-      format('woff'),
-    /* Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.ttf')
-      format('truetype'),
-    /* Safari, Android, iOS */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-300.svg#Montserrat')
-      format('svg'); /* Legacy iOS */
 }
-/* montserrat-regular - cyrillic-ext_cyrillic_latin */
+
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.woff2") format("woff2"),
+    url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Montserrat Regular'), local('Montserrat-Regular'),
-    url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.eot?#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.woff2')
-      format('woff2'),
-    /* Super Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.woff')
-      format('woff'),
-    /* Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.ttf')
-      format('truetype'),
-    /* Safari, Android, iOS */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-regular.svg#Montserrat')
-      format('svg'); /* Legacy iOS */
 }
-/* montserrat-700 - cyrillic-ext_cyrillic_latin */
+
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.woff2") format("woff2"),
+    url("../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.woff") format("woff");
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.eot'); /* IE9 Compat Modes */
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-    url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.eot?#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.woff2')
-      format('woff2'),
-    /* Super Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.woff')
-      format('woff'),
-    /* Modern Browsers */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.ttf')
-      format('truetype'),
-    /* Safari, Android, iOS */
-      url('../fonts/Montserrat/montserrat-v14-cyrillic-ext_cyrillic_latin-700.svg#Montserrat')
-      format('svg'); /* Legacy iOS */
 }
 
-
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Light'), local('Quicksand-Light'),
-    url('../fonts/quicksand/quicksandlight.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksandlight.woff') format('woff'),
-    url('../fonts/quicksand/quicksandlight.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksandlight.woff2") format("woff2"),
+    url("../fonts/quicksand/quicksandlight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Light Italic'), local('Quicksand-LightItalic'),
-    url('../fonts/quicksand/quicksandlightitalic.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksandlightitalic.woff') format('woff'),
-    url('../fonts/quicksand/quicksandlightitalic.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksandlightitalic.woff2") format("woff2"),
+    url("../fonts/quicksand/quicksandlightitalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Regular'), local('Quicksand-Regular'),
-    url('../fonts/quicksand/quicksandregular.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksandregular.woff') format('woff'),
-    url('../fonts/quicksand/quicksandregular.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksandregular.woff2") format("woff2"),
+    url("../fonts/quicksand/quicksandregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Italic'), local('Quicksand-Italic'),
-    url('../fonts/quicksand/quicksanditalic.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksanditalic.woff') format('woff'),
-    url('../fonts/quicksand/quicksanditalic.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksanditalic.woff2") format("woff2"),
+    url("../fonts/quicksand/quicksanditalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Bold'), local('Quicksand-Bold'),
-    url('../fonts/quicksand/quicksandbold.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksandbold.woff') format('woff'),
-    url('../fonts/quicksand/quicksandbold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksandbold.woff") format("woff"),
+    url("../fonts/quicksand/quicksandbold.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
-  font-family: 'Quicksand';
-  src: local('Quicksand Bold Italic'), local('Quicksand-BoldItalic'),
-    url('../fonts/quicksand/quicksandbolditalic.woff2') format('woff2'),
-    url('../fonts/quicksand/quicksandbolditalic.woff') format('woff'),
-    url('../fonts/quicksand/quicksandbolditalic.ttf') format('truetype');
+  font-family: "Quicksand";
+  src: url("../fonts/quicksand/quicksandbolditalic.woff2") format("woff2"),
+    url("../fonts/quicksand/quicksandbolditalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
 }
-
