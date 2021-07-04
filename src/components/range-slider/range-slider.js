@@ -12,7 +12,7 @@ class RangeSlider {
     this.$element = $outerContainerElement.find('.js-slider-range');
     this.$amount = $outerContainerElement.find('#amount');
   }
-  
+
   _initializeSlider() {
     this.$element.slider({
       range: true,
@@ -26,7 +26,7 @@ class RangeSlider {
     this.$amount.val(`${this.$element.slider('values', 0)} ₽`
     + ` - ${this.$element.slider('values', 1)} ₽`);
   }
-  
+
   _render() {
     this._initialize();
     this._initializeSlider();

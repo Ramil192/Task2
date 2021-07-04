@@ -76,14 +76,64 @@ pluginsOptions.push(new MiniCssExtractPlugin({
   filename: "style.css",
 }));
 
-pluginsOptions.push(new CopyWebpackPlugin([{
-  from: './src/fonts',
-  to: './fonts'
-},
-{
-  from: './src/img',
-  to: './img'
-}
+pluginsOptions.push(new CopyWebpackPlugin([
+  {
+    from: './src/fonts',
+    to: './fonts',
+  },
+  {
+    from: './src/img',
+    to: './img'
+  },
+  {
+    from: './src/components/footer/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/slide/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/like-button/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/rate-btn/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/text-list/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/buttons/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/calendar/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/pagination/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/index/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/room-details/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/room-details/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/search-room/images/',
+    to: './images'
+  },
+
 ]));
 
 pluginsOptions.push(new webpack.ProvidePlugin({
@@ -95,7 +145,7 @@ module.exports = {
   entry: {
     index: './src/pages/index/index.js',
   },
-  
+
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
