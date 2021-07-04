@@ -2,14 +2,9 @@
   max-width: 1440px;
   margin: 0px auto;
 
-  &__imgs {
+  &__images {
     display: flex;
-  }
-
-  &__img-right {
-    & img {
-      margin-bottom: -1px;
-    }
+    height: 486px;
   }
 
   &__description {
@@ -96,16 +91,16 @@
     margin-top: 47px;
   }
 
-  &__description-vote-right-list-item{
-    margin-left: 15px;
-    
+  &__description-vote-right-list-item {
+    padding-left: 15px;
+    position: relative;
     &::before {
-      margin-left: -15px;
       margin-top: 6px;
       content: "";
       width: 10px;
       height: 10px;
       position: absolute;
+      left: 0;
       background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
       border-radius: 50%;
     }
@@ -127,7 +122,6 @@
         background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
       }
     }
-
   }
 
   &__regulations {
@@ -201,6 +195,5 @@
     &__description-status {
       flex-wrap: wrap;
     }
-    
   }
 }

@@ -17,23 +17,7 @@
     }
   }
 
-  &.-bottom-right-,
-  &.-bottom-right-.active {
-    margin-left: -1.75rem;
 
-    @media screen and (max-width: 20rem) {
-      margin-left: -3.625rem;
-    }
-  }
-
-  &.-bottom-left-,
-  &.-bottom-left-.active {
-    margin-left: -0.125rem;
-
-    @media screen and (max-width: 20rem) {
-      margin-left: -2rem;
-    }
-  }
 
   &.active {
     width: max-content;
