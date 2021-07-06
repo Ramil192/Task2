@@ -19,13 +19,13 @@ mixin drop-down-bed(options = {})
       div.drop-down-bed__sub-title=subTitle
 
     div.drop-down-bed__header
-      button.drop-down-bed__title-btn.js-drop-down-bed__title-btn Сколько комнат
+      button.drop-down-bed__title-button.js-drop-down-bed__title-button Сколько комнат
       
     div(class=`drop-down-bed__items js-drop-down-bed__items ${classModifier}`)
       -for(let {text,count} of list)
         div.drop-down-bed__item
           div.drop-down-bed__item-title=text
           div.drop-down-bed__item-buttons 
-            button(class='drop-down-bed__item-buttons-inc js-drop-down-bed__item-buttons-inc ')#inc -
+            button(class='drop-down-bed__item-buttons-increment js-drop-down-bed__item-buttons-increment ')#increment -
             div.drop-down-bed__item-buttons-count.js-drop-down-bed__item-buttons-count=count
-            button.drop-down-bed__item-buttons-dec#dec +
+            button.drop-down-bed__item-buttons-decrement#decrement +

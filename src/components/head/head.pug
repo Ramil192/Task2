@@ -20,14 +20,17 @@ mixin head(options = {})
     div(class='head__item')
       a(href='index.html').head__link
         img(src="./img/logo.svg" alt="")
+
       ul.head__list
         -for(let {text,href,flag,isBold} of list)
           li(class=`head__link ${isBold && classModifier}`)
             a(href=href)=text
             if(flag)
-              button.head__link_downBtn 
+              button.head__link_down-button 
+
         if (nameUser)
           span.head__link.head__link_name=nameUser
+
         else
           li.head__link
             +buttons({
@@ -35,6 +38,7 @@ mixin head(options = {})
               text:'войти',
               href:'sign-in.html'
             })
+
           li.head__link
             +buttons({
               modifier:['form','height-34','delete-img'],

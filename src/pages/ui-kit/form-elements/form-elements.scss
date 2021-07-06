@@ -135,11 +135,11 @@
 
   }
 
-  &__row-checkbox-item-like-btn{
+  &__row-checkbox-item-like-button{
     display: flex;
   }
 
-  &__row-checkbox-item-like-btn-left{
+  &__row-checkbox-item-like-button-left{
     margin-right: 10px;
   }
 
@@ -151,12 +151,12 @@
    margin-right: 20px;
   }
 
-  &__row-btn {
+  &__row-button {
     margin-left: 73px;
     width: 320px;
   }
 
-  &__row-btn-item{
+  &__row-button-item{
     margin-bottom: 43px;
 
     &:nth-child(2){
@@ -185,7 +185,7 @@
 
   }
 
-  &__row-btn-item-title{
+  &__row-button-item-title{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;

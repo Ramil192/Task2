@@ -1,50 +1,50 @@
-.color-item {
+.color-box {
   display: flex;
   font-size: 19px;
   line-height: 28px;
   align-items: center;
   margin-bottom: 20px;
 
-  &__box-color {
+  &__color {
     width: 70px;
     height: 70px;
     margin-right: 40px;
     border-radius: 6px;
   }
 
-  &__box-color_darkShade-100 {
+  &__color_darkShade-100 {
     background-color: #1f2041;
   }
 
-  &__box-color_darkShade-75 {
+  &__color_darkShade-75 {
     background-color: rgba(31, 32, 65, 0.75);
   }
 
-  &__box-color_darkShade-50 {
+  &__color_darkShade-50 {
     background-color: rgba(31, 32, 65, 0.5);
   }
 
-  &__box-color_darkShade-25 {
+  &__color_darkShade-25 {
     background-color: rgba(31, 32, 65, 0.25);
   }
 
-  &__box-color_darkShade-5 {
+  &__color_darkShade-5 {
     background-color: rgba(31, 32, 65, 0.05);
   }
 
-  &__box-color_purple {
+  &__color_purple {
     background-color: #bc9cff;
   }
 
-  &__box-color_green {
+  &__color_green {
     background-color: #6fcf97;
   }
 
-  &__title {
+  &__text-title {
     font-weight: 700;
   }
 
-  &__sub-title {
+  &__text-sub-title {
     font-weight: normal;
   }
 

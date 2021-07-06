@@ -15,11 +15,11 @@ mixin checkbox-list(options={})
       ]
     } = options;
 
-    const classModifier = rotate? 'checkbox-list__title-btn_rotate':'' 
+    const classModifier = rotate? 'checkbox-list__title-button_rotate':'' 
 
   if(isList)
     section.checkbox-list.js-checkbox-list
-      button(class=`checkbox-list__title-btn js-checkbox-list__title-btn ${classModifier}`)=title
+      button(class=`checkbox-list__title-button js-checkbox-list__title-button ${classModifier}`)=title
       ul(class=`checkbox-list__items js-checkbox-list__items ${show && 'checkbox-list__items_show'}`)
         -for(let {text,flag} of items)
           li.checkbox-list__item

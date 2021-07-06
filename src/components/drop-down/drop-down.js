@@ -8,24 +8,24 @@ class DropDown {
   }
 
   _initialize() {
-    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__title-btn');
+    this.titleButton = this.outerContainerElement.querySelector('.js-drop-down__title-button');
     this.body = this.outerContainerElement.querySelector('.js-drop-down__items');
-    this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-clean');
-    this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-ok');
+    this.buttonClean = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-clean');
+    this.buttonOk = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-ok');
   }
 
-  _handleBtnTitleClick = () => {
+  _handleButtonTitleClick = () => {
     this.body.classList.toggle('drop-down__items_show');
   }
 
-  _handleBtnCleanClick = () => {
+  _handleButtonCleanClick = () => {
     this.body.querySelectorAll('.js-drop-down__item-buttons-count').forEach((element) => { element.innerHTML = 0; });
-    this.body.querySelectorAll('.js-drop-down__item-buttons-inc').forEach((element) => element.classList.remove('drop-down__item-buttons-inc_active'));
-    this.btnClean.classList.remove('drop-down__item-buttons-control-clean_show');
-    this.titleBtn.innerHTML = this.title;
+    this.body.querySelectorAll('.js-drop-down__item-buttons-increment').forEach((element) => element.classList.remove('drop-down__item-buttons-increment_active'));
+    this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
+    this.titleButton.innerHTML = this.title;
   }
 
-  _handleBtnOkClick = () => {
+  _handleButtonOkClick = () => {
     this.body.classList.remove('drop-down__body_show');
   }
 
@@ -33,7 +33,7 @@ class DropDown {
     const element = e.target;
     if (element.id) {
       const count = element.parentElement.querySelector('.js-drop-down__item-buttons-count');
-      const btnInc = element.parentElement.querySelector('.js-drop-down__item-buttons-inc');
+      const buttonIncrement = element.parentElement.querySelector('.js-drop-down__item-buttons-increment');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
       let newTitle = this.title;
@@ -41,7 +41,7 @@ class DropDown {
       let adultWord = 'гостей';
       let babyWord = 'младенец';
 
-      if (element.id === 'dec') {
+      if (element.id === 'decrement') {
         count.innerHTML = parseInt(count.innerHTML, 10) + 1;
         guestName === 'младенцы' ? this.countBaby += 1 : this.countAdult += 1;
       } else if (count.innerHTML >= '1') {
@@ -61,21 +61,21 @@ class DropDown {
       }
 
       if (count.innerHTML > 0) {
-        btnInc.classList.add('drop-down__item-buttons-inc_active');
-        this.btnClean.classList.add('drop-down__item-buttons-control-clean_show');
+        buttonIncrement.classList.add('drop-down__item-buttons-increment_active');
+        this.buttonClean.classList.add('drop-down__item-buttons-control-clean_show');
       } else {
-        btnInc.classList.remove('drop-down__item-buttons-inc_active');
-        this.btnClean.classList.remove('drop-down__item-buttons-control-clean_show');
+        buttonIncrement.classList.remove('drop-down__item-buttons-increment_active');
+        this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
       }
-      this.titleBtn.innerHTML = newTitle;
+      this.titleButton.innerHTML = newTitle;
     }
   }
 
   _setEventHandlers() {
-    this.titleBtn.addEventListener('click', this._handleBtnTitleClick);
+    this.titleButton.addEventListener('click', this._handleButtonTitleClick);
     this.body.addEventListener('click', this._handleBodyClick);
-    this.btnClean.addEventListener('click', this._handleBtnCleanClick);
-    this.btnOk.addEventListener('click', this.handleBtnOkClick);
+    this.buttonClean.addEventListener('click', this._handleButtonCleanClick);
+    this.buttonOk.addEventListener('click', this.handleButtonOkClick);
   }
 
   _render() {

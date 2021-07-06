@@ -1,5 +1,5 @@
 include ../price-and-number/price-and-number.pug
-include ../rate-btn/rate-btn.pug
+include ../rate-button/rate-button.pug
 
 mixin slide(options = {})
   -
@@ -27,5 +27,5 @@ mixin slide(options = {})
       div.slick_slide__footer-text
         +price-and-number(number,pay)
       div.slick_slide__footer-rating
-        +rate-btn(rating)
+        +rate-button(rating)
         a(href='room-details.html').slick_slide__footer-review=review

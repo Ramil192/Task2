@@ -98,7 +98,7 @@ pluginsOptions.push(new CopyWebpackPlugin([
     to: './images'
   },
   {
-    from: './src/components/rate-btn/images/',
+    from: './src/components/rate-button/images/',
     to: './images'
   },
   {

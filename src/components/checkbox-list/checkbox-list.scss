@@ -1,7 +1,7 @@
 .checkbox-list {
   width: 266px;
 
-  &__title-btn {
+  &__title-button {
     width: 100%;
     text-align: left;
     font-size: 12px;
@@ -34,7 +34,7 @@
     margin-bottom: 17px;
   }
 
-  &__title-btn_rotate{
+  &__title-button_rotate{
 
     &::before{
       transform: rotate(180deg);

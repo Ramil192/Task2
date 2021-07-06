@@ -10,7 +10,7 @@
     margin-bottom: 0px;
   }
 
-  &__title-btn {
+  &__title-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
     background: url(./img/arrow-down.svg) no-repeat 97% 40%;
   }
 
-  &__title-btn-img {
+  &__title-button-img {
     margin-right: 9px;
   }
 
@@ -57,7 +57,7 @@
     width: 92px;
   }
 
-  &__item-buttons-inc {
+  &__item-buttons-increment {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -70,7 +70,7 @@
     line-height: 16px;
   }
 
-  &__item-buttons-dec {
+  &__item-buttons-decrement {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -105,7 +105,7 @@
     justify-content: space-between;
   }
 
-  &__item-buttons-inc_active {
+  &__item-buttons-increment_active {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
   

@@ -1,4 +1,4 @@
-mixin rich-checkbox-btn(options = {})
+mixin rich-checkbox-button(options = {})
   - 
     const { 
       title = '',
@@ -8,12 +8,12 @@ mixin rich-checkbox-btn(options = {})
       ], 
     } = options;
     
-  section.rich-checkbox-btn=title
-  div.div.rich-checkbox-btn__wrapper
-    div.rich-checkbox-btn__item
+  section.rich-checkbox-button=title
+  div.div.rich-checkbox-button__wrapper
+    div.rich-checkbox-button__item
     -for(let {subTitle,text} of list)  
-        div.rich-checkbox-btn__item
-          label.rich-checkbox-btn__check
-            input(class='rich-checkbox-btn__checkbox' type="checkbox")
-            span.rich-checkbox-btn__sub-title=subTitle
-          div.rich-checkbox-btn__text!=text
+        div.rich-checkbox-button__item
+          label.rich-checkbox-button__check
+            input(class='rich-checkbox-button__checkbox' type="checkbox")
+            span.rich-checkbox-button__sub-title=subTitle
+          div.rich-checkbox-button__text!=text

@@ -1,4 +1,4 @@
-include ../../../components/color-item/color-item.pug  
+include ../../../components/color-box/color-box.pug  
 include ../../../components/color-text/color-text.pug 
 
 doctype html
@@ -19,13 +19,13 @@ html
   body
     section.colors-and-type
       div.colors-and-type__row-color
-        +color-item({colorName : 'Dark Shade 100%', backgroundColor : 'darkShade-100'})
-        +color-item({colorName : 'Dark Shade 75%', backgroundColor : 'darkShade-75'})
-        +color-item({colorName : 'Dark Shade 50%', backgroundColor : 'darkShade-50'})
-        +color-item({colorName : 'Dark Shade 25%', backgroundColor : 'darkShade-25'})
-        +color-item({colorName : 'Dark Shade 5%', backgroundColor : 'darkShade-5'})
-        +color-item({colorName : 'Purple', backgroundColor : 'purple', colorCode : '#BC9CFF'})
-        +color-item({colorName : 'Green', backgroundColor : 'green', colorCode : '#6FCF97'})
+        +color-box({colorName : 'Dark Shade 100%', backgroundColor : 'darkShade-100'})
+        +color-box({colorName : 'Dark Shade 75%', backgroundColor : 'darkShade-75'})
+        +color-box({colorName : 'Dark Shade 50%', backgroundColor : 'darkShade-50'})
+        +color-box({colorName : 'Dark Shade 25%', backgroundColor : 'darkShade-25'})
+        +color-box({colorName : 'Dark Shade 5%', backgroundColor : 'darkShade-5'})
+        +color-box({colorName : 'Purple', backgroundColor : 'purple', colorCode : '#BC9CFF'})
+        +color-box({colorName : 'Green', backgroundColor : 'green', colorCode : '#6FCF97'})
       
       div.colors-and-type__row-text
         +color-text({title : 'H1', text : 'This one is the sub-section or</br> widget title', size : '24'})

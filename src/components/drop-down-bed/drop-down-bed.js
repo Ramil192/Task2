@@ -9,11 +9,11 @@ class DropDownBed {
   }
 
   _initialize() {
-    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down-bed__title-btn');
+    this.titleButton = this.outerContainerElement.querySelector('.js-drop-down-bed__title-button');
     this.items = this.outerContainerElement.querySelector('.js-drop-down-bed__items');
   }
 
-  _handleBtnTitleClick = () => {
+  _handleButtonTitleClick = () => {
     this.items.classList.toggle('drop-down-bed__body_show');
   }
 
@@ -25,7 +25,7 @@ class DropDownBed {
     const element = e.target;
     if (element.id) {
       const count = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-count');
-      const btnInc = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-inc');
+      const buttonIncrement = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-increment');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
       let newTitle = this.title;
@@ -34,7 +34,7 @@ class DropDownBed {
       let bedWord = 'кроватей';
       const bathroomsWord = '...';
 
-      if (element.id === 'dec') {
+      if (element.id === 'decrement') {
         count.innerHTML = parseInt(count.innerHTML, 10) + 1;
         guestName === 'спальни' ? this.countBedRooms += 1 : (guestName === 'кровати') ? this.countBed += 1 : this.countBathrooms += 1;
       } else if (count.innerHTML >= '1') {
@@ -50,16 +50,16 @@ class DropDownBed {
       }
 
       if (count.innerHTML > 0) {
-        btnInc.classList.add('drop-down-bed__item-buttons-inc_active');
+        buttonIncrement.classList.add('drop-down-bed__item-buttons-increment_active');
       } else {
-        btnInc.classList.remove('drop-down-bed__item-buttons-inc_active');
+        buttonIncrement.classList.remove('drop-down-bed__item-buttons-increment_active');
       }
-      this.titleBtn.innerHTML = newTitle;
+      this.titleButton.innerHTML = newTitle;
     }
   }
 
   _setEventHandlers() {
-    this.titleBtn.addEventListener('click', this._handleBtnTitleClick);
+    this.titleButton.addEventListener('click', this._handleButtonTitleClick);
     this.items.addEventListener('click', this._handleBodyClick);
   }
 

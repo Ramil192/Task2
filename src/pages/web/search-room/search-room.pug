@@ -3,7 +3,7 @@ include ../../../components/calendar/calendar.pug
 include ../../../components/drop-down/drop-down.pug
 include ../../../components/range-slider/range-slider.pug
 include ../../../components/checkbox-list/checkbox-list.pug
-include ../../../components/rich-checkbox-btn/rich-checkbox-btn.pug
+include ../../../components/rich-checkbox-button/rich-checkbox-button.pug
 include ../../../components/drop-down-bed/drop-down-bed.pug
 include ../../../components/slide/slide.pug
 include ../../../components/pagination/pagination.pug
@@ -55,7 +55,7 @@ html
               ]})
           
           div.search-room__row-left-item            
-            +rich-checkbox-btn({title:'доступность'})
+            +rich-checkbox-button({title:'доступность'})
           
           div.search-room__row-left-item
             +drop-down-bed({title : 'удобства номера'})

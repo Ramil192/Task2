@@ -8,9 +8,9 @@ include ../../../components/text-list/text-list.pug
 include ../../../components/radio-buttons/radio-buttons.pug
 include ../../../components/toggle/toggle.pug
 include ../../../components/like-button/like-button.pug
-include ../../../components/rate-btn/rate-btn.pug
+include ../../../components/rate-button/rate-button.pug
 include ../../../components/drop-down/drop-down.pug
-include ../../../components/rich-checkbox-btn/rich-checkbox-btn.pug
+include ../../../components/rich-checkbox-button/rich-checkbox-button.pug
 include ../../../components/range-slider/range-slider.pug
 include ../../../components/buttons/buttons.pug
 include ../../../components/pagination/pagination.pug
@@ -123,22 +123,22 @@ html
               
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title like button
-                div.form-elements__row-checkbox-item-like-btn
-                  div.form-elements__row-checkbox-item-like-btn-left
+                div.form-elements__row-checkbox-item-like-button
+                  div.form-elements__row-checkbox-item-like-button-left
                     +like-button({likeCount : 2 })
-                  div.form-elements__row-checkbox-item-like-btn-left
+                  div.form-elements__row-checkbox-item-like-button-left
                     +like-button({likeCount:13, isClick:true})
               
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title rate button
                 div.form-elements__row-checkbox-item-rate-button
                   div.form-elements__row-checkbox-item-rate-button-left
-                    +rate-btn({
+                    +rate-button({
                       blockNumber: 0,
                       checkedStarIndex: 4,
                     })
                   div.form-elements__row-checkbox-item-rate-button-right
-                    +rate-btn({
+                    +rate-button({
                       blockNumber: 1,
                       checkedStarIndex: 5,
                     })
@@ -155,30 +155,30 @@ html
                 }) 
               
               div.form-elements__row-checkbox-item
-                +rich-checkbox-btn({title:'RICH CHECKBOX BUTTONS'})               
+                +rich-checkbox-button({title:'RICH CHECKBOX BUTTONS'})               
             
-            div.form-elements__row-btn
+            div.form-elements__row-button
               
-              div.form-elements__row-btn-item
+              div.form-elements__row-button-item
                 +range-slider('Range Slider')
               
-              div.form-elements__row-btn-item
-                div.form-elements__row-btn-item-title buttons             
+              div.form-elements__row-button-item
+                div.form-elements__row-button-item-title buttons             
                 +buttons({modifier:['background']})
               
-              div.form-elements__row-btn-item             
+              div.form-elements__row-button-item             
                 +buttons({modifier:['border']})
               
-              div.form-elements__row-btn-item             
+              div.form-elements__row-button-item             
                 +buttons()
               
-              div.form-elements__row-btn-item             
+              div.form-elements__row-button-item             
                 +buttons({modifier:['form'],text:'перейти к оплате'})
               
-              div.form-elements__row-btn-item
+              div.form-elements__row-button-item
                 +pagination({title:'pagination'})
               
-              div.form-elements__row-btn-item
+              div.form-elements__row-button-item
                 +drop-down({
                   isOpen : true,
                   title : 'dropdown',
@@ -189,7 +189,7 @@ html
                   ], 
                 }) 
               
-              div.form-elements__row-btn-item
+              div.form-elements__row-button-item
               +bullet-list({title:'bullet list '}) 
           
           div.form-elements__row-footer

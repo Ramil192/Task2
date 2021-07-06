@@ -11,7 +11,7 @@ mixin calendar(options = {})
     const classDouble = isDouble ? ' js-calendar_double':'';
     const classRange = isRange ? ' js-calendar_range':'';
 
-  section(class='calendar js-calendar'+classDouble+''+classRange)
+  section(class=`calendar js-calendar${classDouble}${classRange}`)
     div.calendar__wrapper
       if(isDouble)
         div.calendar__items

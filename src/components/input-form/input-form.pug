@@ -21,6 +21,6 @@ mixin input-form(options = {})
   if(isForm)
     form(action="#" class=`form-email ${classModification}`) 
       input(class='input-form input-form_email' type="text" placeholder="Email")
-      button(class='input-form__email-btn' type="submit")
+      button(class='input-form__email-button' type="submit")
   else
     input(class=`input-form ${classModification}` type="text" value=value placeholder=placeholder)

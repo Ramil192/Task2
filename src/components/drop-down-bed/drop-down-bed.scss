@@ -21,7 +21,7 @@
     margin-bottom: 5px;
   }
 
-  &__title-btn {
+  &__title-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,7 @@
     background: url('./img/arrow-down.svg') no-repeat 232px 6px;
   }
 
-  &__title-btn-img {
+  &__title-button-img {
     margin-right: 9px;
   }
 
@@ -67,7 +67,7 @@
     width: 92px;
   }
 
-  &__item-buttons-inc {
+  &__item-buttons-increment {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -92,7 +92,7 @@
     visibility: visible;
   }
 
-  &__item-buttons-inc_active {
+  &__item-buttons-increment_active {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
   
