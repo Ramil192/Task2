@@ -19,7 +19,7 @@ mixin head(options = {})
   header.head
     div(class='head__item')
       a(href='index.html').head__link
-        img(src="./img/Logo.svg" alt="")
+        img(src="./img/logo.svg" alt="")
       ul.head__list
         -for(let {text,href,flag,isBold} of list)
           li(class=`head__link ${isBold && classModifier}`)
