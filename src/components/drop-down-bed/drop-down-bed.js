@@ -43,10 +43,19 @@ class DropDownBed {
       }
 
       bedRoomsWord = (this.countBedRooms === 1) ? 'спальня' : (this.countBedRooms > 1 && this.countBedRooms < 4) ? 'спальни' : bedRoomsWord;
+
       bedWord = (this.countBed === 1) ? 'кровать ' : (this.countBed > 1 && this.countBed < 4) ? 'кровати' : bedWord;
 
       if (this._isCount()) {
-        newTitle = `${this.countBedRooms} ${bedRoomsWord} , ${this.countBed} ${bedWord} ${this.countBathrooms} ${bathroomsWord}`;
+        newTitle = `${this.countBedRooms} ${bedRoomsWord}`;
+
+        if (this.countBed > 0) {
+          newTitle += ` , ${this.countBed} ${bedWord}`;
+        }
+
+        if (this.countBathrooms > 0) {
+          newTitle += ` ${this.countBathrooms} ${bathroomsWord}`;
+        }
       }
 
       if (count.innerHTML > 0) {

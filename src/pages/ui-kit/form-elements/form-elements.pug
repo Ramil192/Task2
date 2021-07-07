@@ -1,5 +1,6 @@
 include ../../../components/input-form/input-form.pug
 include ../../../components/drop-down/drop-down.pug
+include ../../../components/input-masked/input-masked.pug
 include ../../../components/calendar/calendar.pug
 include ../../../components/input-form/input-form.pug
 include ../../../components/drop-down-bed/drop-down-bed.pug
@@ -17,6 +18,7 @@ include ../../../components/pagination/pagination.pug
 include ../../../components/drop-down/drop-down.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/commentary/commentary.pug
+
 
 doctype html
 html
@@ -60,7 +62,8 @@ html
             })            
           
           div.form-elements__row-input-item
-            +calendar({title:'masked text filed'})
+            +input-masked({})
+            //- +calendar({title:'masked text filed'})
           
           div.form-elements__row-input-item
             +calendar({isDouble:true,title:'date dropdown'})
@@ -127,7 +130,7 @@ html
                   div.form-elements__row-checkbox-item-like-button-left
                     +like-button({likeCount : 2 })
                   div.form-elements__row-checkbox-item-like-button-left
-                    +like-button({likeCount:13, isClick:true})
+                    +like-button({likeCount:12, isClick:true})
               
               div.form-elements__row-checkbox-item
                 div.form-elements__row-checkbox-item-title rate button

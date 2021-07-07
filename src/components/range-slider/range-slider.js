@@ -14,17 +14,19 @@ class RangeSlider {
   }
 
   _initializeSlider() {
+    const _this = this;
+    
     this.$element.slider({
       range: true,
       min: 1000,
       max: 16000,
       values: [5000, 10000],
       slide(event, ui) {
-        this.$amount.val(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
+        _this.$amount.val(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
       },
     });
     this.$amount.val(`${this.$element.slider('values', 0)} ₽`
-    + ` - ${this.$element.slider('values', 1)} ₽`);
+      + ` - ${this.$element.slider('values', 1)} ₽`);
   }
 
   _render() {

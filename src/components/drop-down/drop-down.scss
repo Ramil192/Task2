@@ -22,10 +22,12 @@
     border-radius: 4px 4px 0px 0px;
     width: 100%;
     background: url(./img/arrow-down.svg) no-repeat 97% 40%;
+    cursor: pointer;
   }
 
   &__title-button-img {
     margin-right: 9px;
+   
   }
 
   &__items {
@@ -63,19 +65,21 @@
     border-radius: 50%;
     color: rgba(31, 32, 65, 0.5);
     border: 1px solid rgba(31, 32, 65, 0.25);
+    cursor: pointer;
   }
-
+  
   &__item-buttons-count {
     font-size: 12px;
     line-height: 16px;
   }
-
+  
   &__item-buttons-decrement {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     color: rgba(31, 32, 65, 0.5);
     border: 1px solid rgba(31, 32, 65, 0.5);
+    cursor: pointer;
   }
 
   &__item-buttons-control-clean {
@@ -84,6 +88,7 @@
     font-weight: bold;
     font-size: 13px;
     visibility: hidden;
+    cursor: pointer;
   }
   
   &__item-buttons-control-clean_show {
@@ -96,6 +101,7 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
+    cursor: pointer;
   }
 
   &__item-buttons-control {

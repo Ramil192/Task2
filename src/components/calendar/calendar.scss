@@ -9,20 +9,18 @@
   &__title {
     text-transform: uppercase;
     font-weight: bold;
-    color: #1F2041;
+    color: #1f2041;
     margin-bottom: 3px;
   }
 
-  &__items{
+  &__items {
     display: flex;
   }
 
-  &__item{
-
-    &:nth-child(1){
+  &__item {
+    &:nth-child(1) {
       margin-right: 20px;
     }
-
   }
 
   &__input {
@@ -45,7 +43,6 @@
     &:hover {
       border: 1px solid rgba(31, 32, 65, 0.5);
     }
-
   }
 
   &__buttons {
@@ -69,7 +66,6 @@
     &:focus {
       color: rgba(31, 32, 65, 0.5);
     }
-
   }
 
   &__apply-button {
@@ -87,13 +83,11 @@
     &:focus {
       color: rgba(31, 32, 65, 0.5);
     }
-
   }
-  
 }
 
 //------------------------------------------
-// стили чтобы подогнать календарь под макет 
+// стили чтобы подогнать календарь под макет
 .datepicker {
   width: max-content;
   padding-bottom: 1.25rem;
@@ -102,6 +96,11 @@
   box-sizing: border-box;
   box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
   border-radius: 0.25rem;
+  
+  
+  &--pointer {
+    display: none;
+  }
 
   & * {
     font-family: Montserrat, Arial, sans-serif;
@@ -112,8 +111,6 @@
       border: 0rem;
     }
   }
-
-
 
   &.active {
     width: max-content;
@@ -131,35 +128,35 @@
     text-align: center;
     font-size: 0.75rem;
     line-height: 0.9375rem;
-    color: rgba(31, 32, 65, 0.05)0;
+    color: rgba(31, 32, 65, 0.05) 0;
 
     &-day {
       &.-focus- {
         border-radius: 50%;
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
       }
 
       &.-selected- {
         position: relative;
-        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));
         border-radius: 50%;
 
         &.-focus- {
-          background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+          background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));
         }
       }
 
       &.-in-range- {
         &.-focus- {
           border-radius: 0%;
-          background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+          background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
         }
       }
 
       &.-current- {
         display: flex;
         align-items: center;
-        background: linear-gradient(180deg, rgb(111, 207, 151) 0%, rgb(102, 210, 234) 100%);;
+        background: linear-gradient(180deg, rgb(111, 207, 151) 0%, rgb(102, 210, 234) 100%);
         border-radius: 50%;
         font-weight: bold;
         font-size: 0.75rem;
@@ -176,7 +173,7 @@
           align-items: center;
           text-align: center;
           position: relative;
-          background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+          background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));
           border-radius: 50%;
           border: 0rem;
           font-weight: bold;
@@ -185,13 +182,13 @@
           color: white;
 
           &::after {
-            content: '';
+            content: "";
             z-index: -1;
             width: 50%;
             height: inherit;
             position: absolute;
             margin-left: 50%;
-            background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+            background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
           }
         }
 
@@ -204,7 +201,7 @@
 
       &.-in-range-.-other-month-,
       &.-in-range-.-other-month-.-focus- {
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
         color: rgba(31, 32, 65, 0.25);
       }
 
@@ -220,7 +217,7 @@
         align-items: center;
         text-align: center;
         position: relative;
-        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));
         border-radius: 50%;
         border: 0rem;
         font-weight: bold;
@@ -230,23 +227,23 @@
       }
 
       &.-range-from-::after {
-        content: '';
+        content: "";
         z-index: -1;
         width: 50%;
         height: inherit;
         position: absolute;
         margin-left: 50%;
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
       }
 
       &.-range-to-::after {
-        content: '';
+        content: "";
         z-index: -1;
         width: 50%;
         height: inherit;
         position: absolute;
         margin-right: 50%;
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
       }
 
       &.-range-from-.-disabled-::after,
@@ -255,8 +252,8 @@
       }
 
       &.-in-range- {
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
-        color: rgba(31, 32, 65, 0.05)0;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
+        color: rgba(31, 32, 65, 0.05) 0;
       }
 
       &.-disabled-,
@@ -291,11 +288,11 @@
 
       &.-focus- {
         border-radius: 50%;
-        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));;
+        background: linear-gradient(to bottom, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
       }
 
       &.-current- {
-        background: linear-gradient(180deg, rgb(111, 207, 151) 0%, rgb(102, 210, 234) 100%);;
+        background: linear-gradient(180deg, rgb(111, 207, 151) 0%, rgb(102, 210, 234) 100%);
         color: white;
         border-radius: 50%;
 
@@ -306,7 +303,7 @@
 
       &.-selected-,
       &.-selected-.-current- {
-        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));;
+        background: linear-gradient(to bottom, rgb(188, 156, 255), rgb(139, 164, 249));
         color: white;
         border-radius: 50%;
       }
@@ -328,7 +325,7 @@
       font-size: 1.1875rem;
       line-height: 1.5rem;
       text-align: center;
-      color: rgba(31, 32, 65, 1);;
+      color: rgba(31, 32, 65, 1);
     }
 
     &-action {
@@ -339,7 +336,7 @@
       }
 
       &:first-child::after {
-        content: '';
+        content: "";
         width: 1.5rem;
         height: 1.5rem;
         position: absolute;
@@ -347,12 +344,11 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
-        background: #fff url(/images/arrow-back.svg) no-repeat 0px 0px ;
-
+        background: #fff url(/images/arrow-back.svg) no-repeat 0px 0px;
       }
 
       &:last-child::after {
-        content: '';
+        content: "";
         width: 1.5rem;
         height: 1.5rem;
         position: absolute;
@@ -360,7 +356,7 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
         border: 0rem solid transparent;
-        background: #fff url(./img/arrow-forward.svg) no-repeat 0px 0px ;
+        background: #fff url(./img/arrow-forward.svg) no-repeat 0px 0px;
       }
     }
   }
@@ -403,5 +399,5 @@
     }
   }
 }
-// стили чтобы подогнать календарь под макет 
+// стили чтобы подогнать календарь под макет
 //-------------------------------------------

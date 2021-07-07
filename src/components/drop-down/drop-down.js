@@ -26,7 +26,7 @@ class DropDown {
   }
 
   _handleButtonOkClick = () => {
-    this.body.classList.remove('drop-down__body_show');
+    this.body.classList.remove('drop-down__items_show');
   }
 
   _handleBodyClick = (e) => {
@@ -75,7 +75,7 @@ class DropDown {
     this.titleButton.addEventListener('click', this._handleButtonTitleClick);
     this.body.addEventListener('click', this._handleBodyClick);
     this.buttonClean.addEventListener('click', this._handleButtonCleanClick);
-    this.buttonOk.addEventListener('click', this.handleButtonOkClick);
+    this.buttonOk.addEventListener('click', this._handleButtonOkClick);
   }
 
   _render() {

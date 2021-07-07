@@ -1,0 +1,9 @@
+mixin input-masked (options={})
+  -
+    const {
+      placeholder = ''
+    } = options;
+  
+  section.masked.js-masked
+    div.masked__title masked text field
+    input(class='masked__input js-masked__input' spellcheck="false" type="numeric" placeholder='ДД.ММ.ГГГГ')
