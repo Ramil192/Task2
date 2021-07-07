@@ -60,14 +60,19 @@ class Calendar {
     });
   }
 
+  _calendarButtonsIsHave(inst, animationCompleted) {
+    return !inst.$datepicker.find('.calendar__buttons').html() && !animationCompleted;
+  }
+
   _handleDatepickerShow = (inst, animationCompleted) => {
-    if (!animationCompleted && !inst.$datepicker.find('.calendar__buttons').html()) {
+    if (this._calendarButtonsIsHave(inst, animationCompleted)) {
       inst.$datepicker.append(
         `<div class="calendar__buttons">
             <p class="calendar__clear-button js-calendar__clear-button">очистить</p>
             <p class="calendar__apply-button js-calendar__apply-button">применить</p>
           </div>`,
       );
+
       this.clearButton = inst.$datepicker.find('.js-calendar__clear-button');
       this.clearButton.click(this._handleClearButtonClick.bind(this, inst));
 

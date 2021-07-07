@@ -15,7 +15,7 @@ class RangeSlider {
 
   _initializeSlider() {
     const _this = this;
-    
+
     this.$element.slider({
       range: true,
       min: 1000,

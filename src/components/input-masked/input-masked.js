@@ -1,4 +1,4 @@
-import InputMask from "inputmask";
+import InputMask from 'inputmask';
 
 class MaskInput {
   constructor(mask) {
@@ -8,7 +8,7 @@ class MaskInput {
 
   _initialize() {
     const target = this.mask.querySelector('.js-masked__input');
-    const inputMask = new InputMask("99.99.9999", { placeholder: "ДД.ММ.ГГГГ", nullable: false }).mask(target);
+    const inputMask = new InputMask('99.99.9999', { placeholder: 'ДД.ММ.ГГГГ', nullable: false }).mask(target);
   }
 
   _render() {

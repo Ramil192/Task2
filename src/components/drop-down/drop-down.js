@@ -29,6 +29,10 @@ class DropDown {
     this.body.classList.remove('drop-down__items_show');
   }
 
+  _menIsHave() {
+    return this.countAdult > 0 || this.countBaby > 0;
+  }
+
   _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
@@ -53,7 +57,7 @@ class DropDown {
 
       babyWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенца' : (this.countBaby > 4) ? 'младенцев' : babyWord;
 
-      if (this.countAdult > 0 || this.countBaby > 0) {
+      if (this._menIsHave()) {
         newTitle = `${this.countAdult} ${adultWord}`;
         if (this.countBaby > 0) {
           newTitle += `, ${this.countBaby} ${babyWord}`;
