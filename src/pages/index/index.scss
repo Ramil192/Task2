@@ -2,21 +2,27 @@
   max-width: 1440px;
   height: 830px;
   margin: 0px auto;
-  padding: 70px 151px 20px 140px;
+  padding: 71px 151px 20px 140px;
   position: relative;
-  background: url('./images/index.png')0px -71px no-repeat;
-
+  background-image: url(./images/index.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   &__text{
     color: rgba(31, 32, 65, 0.75);
     position: absolute;
-    right: 135px;
-    bottom: 24px;
+    right: 134px;
+    bottom: 20px;
     text-align: right;
     line-height: 24px;
   }
+  @media(max-width:672px){
+    padding: 70px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
 
   @media(max-width:532px){
-    padding: 70px 0px 20px 0px;
 
     &__text{
       right: 15px;
