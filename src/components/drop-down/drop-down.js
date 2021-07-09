@@ -22,6 +22,8 @@ class DropDown {
     this.body.querySelectorAll('.js-drop-down__item-buttons-count').forEach((element) => { element.innerHTML = 0; });
     this.body.querySelectorAll('.js-drop-down__item-buttons-increment').forEach((element) => element.classList.remove('drop-down__item-buttons-increment_active'));
     this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
+    this.countAdult = 0;
+    this.countBaby = 0;
     this.titleButton.innerHTML = this.title;
   }
 
@@ -33,6 +35,10 @@ class DropDown {
     return this.countAdult > 0 || this.countBaby > 0;
   }
 
+  _bothIsHave() {
+    return this.countAdult > 0 && this.countBaby > 0;
+  }
+
   _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
@@ -40,7 +46,7 @@ class DropDown {
       const buttonIncrement = element.parentElement.querySelector('.js-drop-down__item-buttons-increment');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
-      let newTitle = this.title;
+      let newTitle = '';
 
       let adultWord = 'гостей';
       let babyWord = 'младенец';
@@ -58,20 +64,36 @@ class DropDown {
       babyWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенца' : (this.countBaby > 4) ? 'младенцев' : babyWord;
 
       if (this._menIsHave()) {
-        newTitle = `${this.countAdult} ${adultWord}`;
-        if (this.countBaby > 0) {
-          newTitle += `, ${this.countBaby} ${babyWord}`;
+        console.log('sadfedsaffdsa;l;nk');
+        if(this.countAdult>0){
+          newTitle = `${this.countAdult} ${adultWord}`;
         }
+
+        if(this._bothIsHave()){
+          newTitle += `, `;
+        }
+
+        if (this.countBaby > 0) {
+          newTitle += `${this.countBaby} ${babyWord}`;
+        }
+
+        this.titleButton.innerHTML = newTitle;
+      }else{
+        this.titleButton.innerHTML = this.title;
       }
 
       if (count.innerHTML > 0) {
         buttonIncrement.classList.add('drop-down__item-buttons-increment_active');
-        this.buttonClean.classList.add('drop-down__item-buttons-control-clean_show');
       } else {
         buttonIncrement.classList.remove('drop-down__item-buttons-increment_active');
+      }
+      
+      if(this._menIsHave()){
+        this.buttonClean.classList.add('drop-down__item-buttons-control-clean_show');
+      }else{
         this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
       }
-      this.titleButton.innerHTML = newTitle;
+
     }
   }
 

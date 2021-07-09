@@ -7,5 +7,5 @@ mixin like-button(options)
     
     const classModification = isClick ? 'like-button_action' : ''
 
-  section(class=`like-button js-like-button ${classModification}`)
+  button(class=`like-button js-like-button ${classModification}`)
     div.like-button__count.js-like-button__count=likeCount
