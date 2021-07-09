@@ -1,6 +1,5 @@
-import '../../fonts/fonts.scss';
-import RoomSearch from '../../components/room-search/room-search';
-import './index.scss';
+function importAll(resolve) {
+  resolve.keys().forEach(resolve);
+}
 
-
-const roomSearch = new RoomSearch(document.querySelector('.room-search')); 
+importAll(require.context('../../../src/', true, /\.js$|\.scss$/));

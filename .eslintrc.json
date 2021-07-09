@@ -21,7 +21,12 @@
     "linebreak-style": "off",
     "no-param-reassign": 0,
     "class-methods-use-this": 0,
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": [
+      "error", {
+         "devDependencies": true
+      }
+  ]
   },
   "parser": "babel-eslint"
 }

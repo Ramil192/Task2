@@ -1,31 +1,31 @@
 class Like {
-  constructor(likeBtn) {
-    this.likeBtn = likeBtn;
-    this.render();
+  constructor(likeButton) {
+    this.likeButton = likeButton;
+    this._render();
   }
 
-  initialize() {
-    this.count = this.likeBtn.querySelector('.js-like-button__count');
+  _initialize() {
+    this.count = this.likeButton.querySelector('.js-like-button__count');
   }
 
-  handleBtnClick = () => {
-    if (this.likeBtn.classList.contains('like-button_action')) {
-      this.count.innerHTML = +this.count.innerHTML - 1;
-      this.likeBtn.classList.remove('like-button_action');
+  _handleButtonClick = () => {
+    if (this.likeButton.classList.contains('like-button_pressed')) {
+      this.count.innerHTML = parseInt(this.count.innerHTML, 10) - 1;
+      this.likeButton.classList.remove('like-button_pressed');
     } else {
-      this.count.innerHTML = +this.count.innerHTML + 1;
-      this.likeBtn.classList.add('like-button_action');
+      this.count.innerHTML = parseInt(this.count.innerHTML, 10) + 1;
+      this.likeButton.classList.add('like-button_pressed');
     }
   }
 
-  setEventHandlers() {
-    this.likeBtn.addEventListener('click', this.handleBtnClick);
+  _setEventHandlers() {
+    this.likeButton.addEventListener('click', this._handleButtonClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
 
-export default Like
+export default Like;

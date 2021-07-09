@@ -7,36 +7,42 @@ mixin head(options = {})
       text = 'Правила',
       list = [
         {text: 'О нас', isBold : true, href:'color-and-type.html', flag : false},
-        {text: 'Услуги', isBold : false , href:'form-elements.html', flag : true},
-        {text: 'Вакансии', isBold : false , href:'cards.html', flag : false},
-        {text: 'Новости', isBold : false , href:'header-and-footer.html', flag : false},
-        {text: 'Соглашения', isBold : false , href:'', flag : true}
+        {text: 'Услуги', isBold : '' , href:'form-elements.html', flag : true},
+        {text: 'Вакансии', isBold : '' , href:'cards.html', flag : false},
+        {text: 'Новости', isBold : '' , href:'header-and-footer.html', flag : false},
+        {text: 'Соглашения', isBold : '' , href:'#', flag : true}
       ], 
     } = options;
-    const classBold = 'head__link_bold';
+    
+    const classModifier = 'head__nav-list-item-link_bold';
 
   header.head
     div(class='head__item')
-      a(href='index.html').head__link
-        img(src="./img/Logo.svg" alt="")
-      ul.head__list
-        -for(let {text,href,flag,isBold} of list)
-          li(class=`head__link ${isBold && classBold}`)
-            a(href=href)=text
-            if(flag)
-              button.head__link_downBtn 
-        if (nameUser)
-          span.head__link.head__link_name=nameUser
-        else
-          li.head__link
-            +buttons({
-              modifier:['border','height','width'],
-              text:'войти',
-              href:'sign-in.html'
-            })
-          li.head__link
-            +buttons({
-              modifier:['form','height','no-img'],
-              text:'зарегистрироваться',
-              href:'registration.html',
-            }) 
+      a(href='index.html').head__nav-list-item
+        img(src="./img/logo.svg" alt="")
+      nav.head__nav
+        ul.head__nav-list
+          -for(let {text,href,flag,isBold} of list)
+            li(class=`head__nav-list-item`)
+              a(class=`head__nav-list-item-link ${isBold && classModifier}` href=href)=text
+              if(flag)
+                button.head__nav-list-item_down-button 
+
+          if (nameUser)
+            li.head__nav-list-item
+              span.head__nav-list-item-name=nameUser
+
+          else
+            li.head__nav-list-item
+              +buttons({
+                modifier:['border','height-34','min-width-87'],
+                text:'войти',
+                href:'sign-in.html'
+              })
+
+            li.head__nav-list-item
+              +buttons({
+                modifier:['form','height-34','delete-img'],
+                text:'зарегистрироваться',
+                href:'registration.html',
+              }) 

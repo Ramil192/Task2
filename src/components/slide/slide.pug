@@ -1,10 +1,10 @@
 include ../price-and-number/price-and-number.pug
-include ../rate-btn/rate-btn.pug
+include ../rate-button/rate-button.pug
 
 mixin slide(options = {})
   -
     const {
-      img = ['./img/roomDetail/image.png',
+      img = ['./img/left-big.png',
         './img/photo/image-2.png',
         './img/photo/image-3.png',
         './img/photo/image-4.png'],
@@ -17,14 +17,15 @@ mixin slide(options = {})
       review = '145',
     } = options;
 
-  div.rev
-    div.rev_slide 
+  div.slick
+    div.slick__slide
       -for(let i=0;i<img.length;i++)
-        div.rev_slide__item
-          img(class='rev_slide__img' src=img[i], alt="")
-    div.rev_slide__footer
-      div.rev_slide__footer-text
-        +price-and-number(number,pay)
-      div.rev_slide__footer-rating
-        +rate-btn(rating)
-        a(href='room-details.html').rev_slide__footer-review=review
+        div.slick__slide-item
+          img(class='slick__slide-img' src=img[i], alt="")
+          
+    div.slick__slide-footer
+      div.slick__slide-footer-text
+        +price-and-number({number,pay,isFont:true})
+      div.slick__slide-footer-rating
+        +rate-button(rating)
+        a(href='room-details.html').slick__slide-footer-review=review

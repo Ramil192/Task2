@@ -10,19 +10,22 @@ mixin drop-down-bed(options = {})
        {text : 'ванные комнаты' , count: 0},
       ], 
     } = options;
-    const classOpen = isOpen ? 'drop-down-bed__body_show' : '';
+    
+    const classModifier = isOpen ? 'drop-down-bed__body_show' : '';
 
   section.drop-down-bed.js-drop-down-bed
     div.drop-down-bed__titles
       div.drop-down-bed__title=title
-      div.drop-down-bed__subTitle=subTitle
+      div.drop-down-bed__sub-title=subTitle
+
     div.drop-down-bed__header
-      button.drop-down-bed__titleBtn.js-drop-down-bed__titleBtn Сколько комнат
-    div(class='drop-down-bed__body js-drop-down-bed__body ' + classOpen)
+      button.drop-down-bed__title-button.js-drop-down-bed__title-button Сколько комнат
+      
+    div(class=`drop-down-bed__items js-drop-down-bed__items ${classModifier}`)
       -for(let {text,count} of list)
-        div.drop-down-bed__bodyItem
-          div.drop-down-bed__bodyItem-title=text
-          div.drop-down-bed__bodyItem-btns 
-            button(class='drop-down-bed__bodyItem-btns-inc js-drop-down-bed__bodyItem-btns-inc ')#inc -
-            div.drop-down-bed__bodyItem-btns-count.js-drop-down-bed__bodyItem-btns-count=count
-            button.drop-down-bed__bodyItem-btns-dec#dec +
+        div.drop-down-bed__item
+          div.drop-down-bed__item-title=text
+          div.drop-down-bed__item-buttons 
+            button(class='drop-down-bed__item-buttons-increment js-drop-down-bed__item-buttons-increment ')#increment -
+            div.drop-down-bed__item-buttons-count.js-drop-down-bed__item-buttons-count=count
+            button.drop-down-bed__item-buttons-decrement#decrement +

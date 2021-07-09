@@ -1,26 +1,26 @@
 class Checkbox {
   constructor(outerContainerElement) {
     this.outerContainerElement = outerContainerElement;
-    this.render();
+    this._render();
   }
 
-  initialize() {
-    this.checkboxBtn = this.outerContainerElement.querySelector('.js-checkbox-list__titleBtn');
+  _initialize() {
+    this.checkboxButton = this.outerContainerElement.querySelector('.js-checkbox-list__title-button');
     this.checkboxItems = this.outerContainerElement.querySelector('.js-checkbox-list__items');
   }
 
-  handleCheckboxClick = () => {
+  _handleCheckboxClick = () => {
     this.checkboxItems.classList.toggle('checkbox-list__items_show');
-    this.checkboxBtn.classList.toggle('checkbox-list__titleBtn_rotate');
+    this.checkboxButton.classList.toggle('checkbox-list__title-button_rotate');
   }
 
-  setEventHandlers() {
-    this.checkboxBtn.addEventListener('click', this.handleCheckboxClick);
+  _setEventHandlers() {
+    this.checkboxButton.addEventListener('click', this._handleCheckboxClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
 

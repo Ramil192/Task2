@@ -4,84 +4,110 @@ class DropDown {
     this.countAdult = 0;
     this.countBaby = 0;
     this.title = 'Сколько гостей';
-    this.render();
+    this._render();
   }
 
-  initialize() {
-    this.titleBtn = this.outerContainerElement.querySelector('.js-drop-down__titleBtn');
-    this.body = this.outerContainerElement.querySelector('.js-drop-down__body');
-    this.btnClean = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-clean');
-    this.btnOk = this.outerContainerElement.querySelector('.js-drop-down__bodyItem-btns-control-ok');
+  _initialize() {
+    this.titleButton = this.outerContainerElement.querySelector('.js-drop-down__title-button');
+    this.body = this.outerContainerElement.querySelector('.js-drop-down__items');
+    this.buttonClean = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-clean');
+    this.buttonOk = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-ok');
   }
 
-  handleBtnTitleClick = () => {
-    this.body.classList.toggle('drop-down__body_show');
+  _handleButtonTitleClick = () => {
+    this.body.classList.toggle('drop-down__items_show');
   }
 
-  handleBtnCleanClick = () => {
-    this.body.querySelectorAll('.js-drop-down__bodyItem-btns-count').forEach((element) => { element.innerHTML = 0; });
-    this.body.querySelectorAll('.js-drop-down__bodyItem-btns-inc').forEach((element) => element.classList.remove('drop-down__bodyItem-btns-inc_active'));
-    this.btnClean.classList.remove('drop-down__bodyItem-btns-control-clean_show');
-    this.titleBtn.innerHTML = this.title;
+  _handleButtonCleanClick = () => {
+    this.body.querySelectorAll('.js-drop-down__item-buttons-count').forEach((element) => { element.innerHTML = 0; });
+    this.body.querySelectorAll('.js-drop-down__item-buttons-increment').forEach((element) => element.classList.remove('drop-down__item-buttons-increment_active'));
+    this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
+    this.countAdult = 0;
+    this.countBaby = 0;
+    this.titleButton.innerHTML = this.title;
   }
 
-  handleBtnOkClick = () => {
-    this.body.classList.remove('drop-down__body_show');
+  _handleButtonOkClick = () => {
+    this.body.classList.remove('drop-down__items_show');
   }
 
-  handleBodyClick = (e) => {
+  _menIsHave() {
+    return this.countAdult > 0 || this.countBaby > 0;
+  }
+
+  _bothIsHave() {
+    return this.countAdult > 0 && this.countBaby > 0;
+  }
+
+  _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
-      const count = element.parentElement.querySelector('.js-drop-down__bodyItem-btns-count');
-      const btnInc = element.parentElement.querySelector('.js-drop-down__bodyItem-btns-inc');
+      const count = element.parentElement.querySelector('.js-drop-down__item-buttons-count');
+      const buttonIncrement = element.parentElement.querySelector('.js-drop-down__item-buttons-increment');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
-      let newTitle = this.title;
+      let newTitle = '';
 
       let adultWord = 'гостей';
-      let babytWord = 'младенец';
+      let babyWord = 'младенец';
 
-      if (element.id === 'dec') {
-        count.innerHTML = +count.innerHTML + 1;
+      if (element.id === 'decrement') {
+        count.innerHTML = parseInt(count.innerHTML, 10) + 1;
         guestName === 'младенцы' ? this.countBaby += 1 : this.countAdult += 1;
       } else if (count.innerHTML >= '1') {
-        count.innerHTML = +count.innerHTML - 1;
+        count.innerHTML = parseInt(count.innerHTML, 10) - 1;
         guestName === 'младенцы' ? this.countBaby -= 1 : this.countAdult -= 1;
       }
 
       adultWord = (this.countAdult === 1) ? 'гость' : (this.countAdult > 1 && this.countAdult < 4) ? 'гостья' : adultWord;
 
-      babytWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенецa' : (this.countBaby > 4) ? 'младенецв' : babytWord;
+      babyWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенца' : (this.countBaby > 4) ? 'младенцев' : babyWord;
 
-      if (this.countAdult > 0 || this.countBaby > 0) {
-        newTitle = `${this.countAdult} ${adultWord}`;
-        if (this.countBaby > 0) {
-          newTitle += `, ${this.countBaby} ${babytWord}`;
+      if (this._menIsHave()) {
+        console.log('sadfedsaffdsa;l;nk');
+        if(this.countAdult>0){
+          newTitle = `${this.countAdult} ${adultWord}`;
         }
+
+        if(this._bothIsHave()){
+          newTitle += `, `;
+        }
+
+        if (this.countBaby > 0) {
+          newTitle += `${this.countBaby} ${babyWord}`;
+        }
+
+        this.titleButton.innerHTML = newTitle;
+      }else{
+        this.titleButton.innerHTML = this.title;
       }
 
       if (count.innerHTML > 0) {
-        btnInc.classList.add('drop-down__bodyItem-btns-inc_active');
-        this.btnClean.classList.add('drop-down__bodyItem-btns-control-clean_show');
+        buttonIncrement.classList.add('drop-down__item-buttons-increment_active');
       } else {
-        btnInc.classList.remove('drop-down__bodyItem-btns-inc_active');
-        this.btnClean.classList.remove('drop-down__bodyItem-btns-control-clean_show');
+        buttonIncrement.classList.remove('drop-down__item-buttons-increment_active');
       }
-      this.titleBtn.innerHTML = newTitle;
+      
+      if(this._menIsHave()){
+        this.buttonClean.classList.add('drop-down__item-buttons-control-clean_show');
+      }else{
+        this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
+      }
+
     }
   }
 
-  setEventHandlers() {
-    this.titleBtn.addEventListener('click', this.handleBtnTitleClick);
-    this.body.addEventListener('click', this.handleBodyClick);
-    this.btnClean.addEventListener('click', this.handleBtnCleanClick);
-    this.btnOk.addEventListener('click', this.handleBtnOkClick);
+  _setEventHandlers() {
+    this.titleButton.addEventListener('click', this._handleButtonTitleClick);
+    this.body.addEventListener('click', this._handleBodyClick);
+    this.buttonClean.addEventListener('click', this._handleButtonCleanClick);
+    this.buttonOk.addEventListener('click', this._handleButtonOkClick);
   }
 
-  render() {
-    this.initialize();
-    this.setEventHandlers();
+  _render() {
+    this._initialize();
+    this._setEventHandlers();
   }
 }
-export default DropDown;
 
+export default DropDown;

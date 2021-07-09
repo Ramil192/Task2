@@ -5,7 +5,8 @@ mixin comfortList(options= {})
         {imgName:'smile', title:'Комфорт', subTitle:'Шумопоглощающие стены'},
         {imgName:'city', title:'Удобство', subTitle:'Окно в каждой из спален'},
       ]} = options;
+      
   -for(let {imgName,title,subTitle} of list)
     section(class = `text-list text-list_${imgName}`)
       div.text-list__title=title
-      div.text-list__subtTitle=subTitle
+      div.text-list__sub-title=subTitle

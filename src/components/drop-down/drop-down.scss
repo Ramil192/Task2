@@ -2,41 +2,46 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
   &__title {
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
   }
-  &__header {
-  }
-  &__titleBtn {
+
+  &__title-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0px 9px 12px;
+    padding: 11px 0px 8px 14px;
     font-size: 14px;
     line-height: 23px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     color: rgba(31, 32, 65, 0.75);
     border-radius: 4px 4px 0px 0px;
-
     width: 100%;
-    background: url(./img/arrow-down.svg) no-repeat 97% 40%;
+    background: url(./img/arrow-down.svg) no-repeat 97% 53%;
+    cursor: pointer;
   }
-  &__titleBtn-img {
+
+  &__title-button-img {
     margin-right: 9px;
+   
   }
-  &__body {
+
+  &__items {
     padding: 3px 7px 5px 15px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 0px 0px 4px 4px;
     display: none;
   }
-  &__body_show {
+
+  &__items_show {
     display: block;
   }
-  &__bodyItem {
+
+  &__item {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
@@ -46,58 +51,68 @@
     align-items: center;
     margin-bottom: 8px;
   }
-  &__bodyItem-title {
-  }
-  &__bodyItem-btns {
+
+  &__item-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 92px;
   }
-  &__bodyItem-btns-inc {
+
+  &__item-buttons-increment {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     color: rgba(31, 32, 65, 0.5);
     border: 1px solid rgba(31, 32, 65, 0.25);
+    cursor: pointer;
   }
-
-  &__bodyItem-btns-count {
+  
+  &__item-buttons-count {
     font-size: 12px;
     line-height: 16px;
   }
-  &__bodyItem-btns-dec {
+  
+  &__item-buttons-decrement {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-
     color: rgba(31, 32, 65, 0.5);
     border: 1px solid rgba(31, 32, 65, 0.5);
+    cursor: pointer;
   }
-  &__bodyItem-btns-control-clean {
+
+  &__item-buttons-control-clean {
     text-transform: uppercase;
     color: #bc9cff;
     font-weight: bold;
     font-size: 13px;
     visibility: hidden;
+    cursor: pointer;
   }
-  &__bodyItem-btns-control-clean_show {
+  
+  &__item-buttons-control-clean_show {
     visibility: visible;
   }
-  &__bodyItem-btns-control-ok {
+
+  &__item-buttons-control-ok {
     text-transform: uppercase;
     color: #bc9cff;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
+    cursor: pointer;
   }
-  &__bodyItem-btns-control {
+
+  &__item-buttons-control {
     margin-top: 11px;
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  &__bodyItem-btns-inc_active {
+
+  &__item-buttons-increment_active {
     border: 1px solid rgba(31, 32, 65, 0.5);
   }
+  
 }

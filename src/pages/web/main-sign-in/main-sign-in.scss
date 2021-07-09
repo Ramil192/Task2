@@ -1,14 +1,9 @@
-@import '../../../main.scss';
-@import '../../../components/head/head.scss';
-@import '../../../components/sign-in/sign-in.scss';
-@import '../../../components/footer/footer.scss';
-
 .main-sign-in {
-  max-width: 1440px;
+  width: 100%;
   margin: 0px auto;
-  height: 704px;
+  height: 684px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('./../../img/sign-in.png')no-repeat 50%;
+  background: url('./img/sign-in.png')no-repeat 50%;
 }

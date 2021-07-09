@@ -5,64 +5,147 @@ const images = require('file-loader');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
-const pages = [
-  { pageName: 'header-and-footer', pageType: 'ui-kit' },
-  { pageName: 'form-elements', pageType: 'ui-kit' },
-  { pageName: 'color-and-type', pageType: 'ui-kit' },
-  { pageName: 'cards', pageType: 'ui-kit' },
-  { pageName: 'search-room', pageType: 'web' },
-  { pageName: 'registration', pageType: 'web' },
-  { pageName: 'main-sign-in', pageType: 'web' },
-  { pageName: 'room-details', pageType: 'web' },
-];
 
 const pluginsOptions = [];
 
-pages.forEach((e) => {
-  pluginsOptions.push(
-    new HtmlWebpackPlugin({
-      filename: `./${e.pageName}.html`,
-      template: `./src/pages/${e.pageType}/${e.pageName}/${e.pageName}.pug`,
-      inject: true,
-      chunks: [e.pageName],
-    }),
-  );
-});
-
-const entries = pages.reduce((obj, curEntry) => {
-  obj[curEntry.pageName] = `./src/pages/${curEntry.pageType}/${curEntry.pageName}/${curEntry.pageName}.js`;
-  return obj;
-}, {});
-entries.favicon = './src/img/favicons/favicons.js';
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/index/index.pug',
+  //favicon: './src/public/images/icon/favicon.png',
+  filename: 'index.html'
+}));
 
 pluginsOptions.push(new HtmlWebpackPlugin({
-  filename: './index.html',
-  template: './src/pages/index/index.pug',
-  inject: true,
-  chunks: ['index'],
+  inject: false,
+  hash: true,
+  template: './src/pages/ui-kit/color-and-type/color-and-type.pug',
+  filename: 'color-and-type.html'
 }));
-entries.index = './src/pages/index/index.js';
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/ui-kit/form-elements/form-elements.pug',
+  filename: 'form-elements.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/ui-kit/cards/cards.pug',
+  filename: 'cards.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/ui-kit/header-and-footer/header-and-footer.pug',
+  filename: 'header-and-footer.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/web/main-sign-in/main-sign-in.pug',
+  filename: 'sign-in.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/web/registration/registration.pug',
+  filename: 'registration.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/web/room-details/room-details.pug',
+  filename: 'room-details.html'
+}));
+
+pluginsOptions.push(new HtmlWebpackPlugin({
+  inject: false,
+  hash: true,
+  template: './src/pages/web/search-room/search-room.pug',
+  filename: 'search-room.html'
+}));
 
 pluginsOptions.push(new MiniCssExtractPlugin({
-  filename: '[name].css',
+  filename: "style.css",
 }));
-pluginsOptions.push(new CopyWebpackPlugin([{
-  from: './src/fonts',
-  to: './fonts'
-},
-{
-  from: './src/img',
-  to: './img'
-}
+
+pluginsOptions.push(new CopyWebpackPlugin([
+  {
+    from: './src/fonts',
+    to: './fonts',
+  },
+  {
+    from: './src/img',
+    to: './img'
+  },
+  {
+    from: './src/components/footer/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/slide/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/like-button/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/rate-button/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/text-list/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/buttons/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/calendar/images/',
+    to: './images'
+  },
+  {
+    from: './src/components/pagination/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/index/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/room-details/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/room-details/images/',
+    to: './images'
+  },
+  {
+    from: './src/pages/web/search-room/images/',
+    to: './images'
+  },
+
 ]));
+
 pluginsOptions.push(new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery',
 }));
 
 module.exports = {
-  entry: entries,
-  
+  entry: {
+    index: './src/pages/index/index.js',
+  },
+
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'

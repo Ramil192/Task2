@@ -1,23 +1,13 @@
-@import '../../../main.scss';
-@import '../../../components/head/head.scss';
-@import '../../../components/drop-down/drop-down.scss';
-@import '../../../components/checkbox-list/checkbox-list.scss';
-@import '../../../components/rich-checkbox-btn/rich-checkbox-btn.scss';
-@import '../../../components/range-slider/range-slider.scss';
-@import '../../../components/drop-down-bed/drop-down-bed.scss';
-@import '../../../components/slide/slide.scss';
-@import '../../../components/pagination/pagination.scss';
-@import '../../../components/footer/footer.scss';
-@import '../../../components/calendar/calendar.scss';
-
 .search-room {
   max-width: 1440px;
   margin: 0px auto;
+
   &__row {
     padding: 30px 0px 0px 140px;
     display: flex;
     margin-bottom: 74px;
     position: relative;
+
     &::before {
       content: "";
       width: 100%;
@@ -27,49 +17,64 @@
       bottom: -72px;
       left: 0px;
     }
+
   }
+
   &__row-left {
     width: 266px;
   }
+
   &__row-left-item {
     margin-bottom: 29px;
+
     &:nth-child(1) {
       margin-bottom: 20px;
     }
+    
     &:nth-child(3) {
       margin-bottom: 57px;
     }
+
     &:nth-child(4) {
       margin-bottom: 31px;
     }
+
     &:nth-child(5) {
       margin-bottom: 31px;
     }
+
     &:nth-child(6) {
       margin-bottom: 27px;
     }
+
   }
+
   &__row-right {
     margin-left: 59px;
   }
+  
   &__row-right-items {
     display: flex;
     flex-wrap: wrap;
   }
+  
   &__row-right-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     margin-bottom:22px;
   }
+  
   &__row-right-item {
     margin-right: 13px;
     margin-bottom: 20px;
   }
+  
   &__row-right-pagination{
     display: flex;
     justify-content: center;
     margin-right: 155px;
     margin-top: 8px;
   }
+  
 }
