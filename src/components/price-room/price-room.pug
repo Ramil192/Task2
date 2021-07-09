@@ -2,7 +2,7 @@ mixin price-room()
   section.price-room
     div.price-room__header 
       include ../price-and-number/price-and-number.pug
-      +price-and-number('888','9 990₽')
+      +price-and-number({number:'888',pay:'9 990₽'})
 
     div.price-room__item
       include ../calendar/calendar.pug

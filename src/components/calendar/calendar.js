@@ -29,6 +29,9 @@ class Calendar {
   _oneDatepicker() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
+      navTitles: {
+        days: 'MM yyyy',
+      },
       // inline: true,
       onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
@@ -40,11 +43,15 @@ class Calendar {
     this.$twoInput = this.$dateInputs.eq(1);
 
     this.datepickerInstance = this.$oneInput.datepicker({
+      navTitles: {
+        days: 'MM yyyy',
+      },
       range: true,
       minDate: new Date(),
       onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     }).data('datepicker');
+
     this.datepickerInstance.show();
     this.datepickerInstance.hide();
   }
@@ -52,6 +59,9 @@ class Calendar {
   _oneDatepickerWithRange() {
     this.$targetInput = this.$dateInputs.eq(0);
     this.$targetInput.datepicker({
+      navTitles: {
+        days: 'MM yyyy',
+      },
       range: true,
       dateFormat: 'dd M',
       multipleDatesSeparator: ' - ',

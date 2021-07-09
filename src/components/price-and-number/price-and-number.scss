@@ -8,8 +8,12 @@
     font-size: 23px;
     line-height: 18px;
 
+    &_font-size-19{
+      font-size: 19px;
+    }
+
     &::after {
-      content: "люкс";
+      content: " люкс";
       font-weight: bold;
       font-size: 15px;
       line-height: 15px;

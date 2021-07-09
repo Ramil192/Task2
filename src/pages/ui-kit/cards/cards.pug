@@ -8,7 +8,7 @@ doctype html
 html
   head
     meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    meta(name='viewport' content="initial-scale=1.0, width=device-width")
     title Toxin Hotel
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
@@ -35,23 +35,32 @@ html
           div(class="datepicker-here" data-language='en')
           //datepicker-here тут ошибка, но это инициализация календаря   
         div.cards__right-colum-item
-          +slide(
-            ['./img/left-big.png',
-            './img/photo/image-2.png',
-            './img/photo/image-3.png',
-            './img/photo/image-4.png'],
-            888,
-            '9 990₽',
-            5,
-            145)
+          +slide({
+            img : ['./img/left-big.png',
+              './img/photo/image-2.png',
+              './img/photo/image-3.png',
+              './img/photo/image-4.png'],
+              number:888,
+              pay :'9 990₽',
+              rating : { 
+                blockNumber : 1,
+                checkedStarIndex :5,
+              },
+              review :145
+          })
         div.cards__right-colum-item
-          +slide(
-            ['./img/photo/image-5.png',
+          +slide({
+           img : ['./img/photo/image-5.png',
             './img/photo/image-6.png',
             './img/photo/image-7.png',
             './img/photo/image-8.png'],
-            840,
-            '9 990₽',
-            4,
-            65)
+            number:840,
+            pay :'9 990₽',
+            rating : { 
+              blockNumber : 2,
+              checkedStarIndex :4,
+            },
+            review :65
+          }
+)
     script(src = "index.js")

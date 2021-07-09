@@ -98,13 +98,15 @@
   box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
   border-radius: 0.25rem;
   
-  
+  // &--nav-title{
+  //   font-family: Montserrat, Arial, sans-serif;
+  // }
   &--pointer {
     display: none;
   }
 
   & * {
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Montserrat, Arial, sans-serif !important;
   }
 
   &.active {

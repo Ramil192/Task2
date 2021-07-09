@@ -6,6 +6,7 @@ mixin input-form(options = {})
       placeholder = '',
       isForm = false,
       isFooter = false,
+      type = text
     } = options;
 
     let classModification = '';
@@ -23,4 +24,4 @@ mixin input-form(options = {})
       input(class='input-form input-form_email' type="email" placeholder="Email")
       button(class='input-form__email-button' type="submit")
   else
-    input(class=`input-form ${classModification}` type="text" value=value placeholder=placeholder)
+    input(class=`input-form ${classModification}` type=type value=value placeholder=placeholder)

@@ -18,14 +18,14 @@ mixin slide(options = {})
     } = options;
 
   div.slick
-    div.slick_slide 
+    div.slick__slide
       -for(let i=0;i<img.length;i++)
-        div.slick_slide__item
-          img(class='slick_slide__img' src=img[i], alt="")
+        div.slick__slide-item
+          img(class='slick__slide-img' src=img[i], alt="")
           
-    div.slick_slide__footer
-      div.slick_slide__footer-text
-        +price-and-number(number,pay)
-      div.slick_slide__footer-rating
+    div.slick__slide-footer
+      div.slick__slide-footer-text
+        +price-and-number({number,pay,isFont:true})
+      div.slick__slide-footer-rating
         +rate-button(rating)
-        a(href='room-details.html').slick_slide__footer-review=review
+        a(href='room-details.html').slick__slide-footer-review=review
