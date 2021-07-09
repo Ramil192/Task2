@@ -9,12 +9,12 @@ class Like {
   }
 
   _handleButtonClick = () => {
-    if (this.likeButton.classList.contains('like-button_action')) {
+    if (this.likeButton.classList.contains('like-button_pressed')) {
       this.count.innerHTML = parseInt(this.count.innerHTML, 10) - 1;
-      this.likeButton.classList.remove('like-button_action');
+      this.likeButton.classList.remove('like-button_pressed');
     } else {
       this.count.innerHTML = parseInt(this.count.innerHTML, 10) + 1;
-      this.likeButton.classList.add('like-button_action');
+      this.likeButton.classList.add('like-button_pressed');
     }
   }
 
