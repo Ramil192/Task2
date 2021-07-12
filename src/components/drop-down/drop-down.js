@@ -65,12 +65,12 @@ class DropDown {
 
       if (this._menIsHave()) {
         console.log('sadfedsaffdsa;l;nk');
-        if(this.countAdult>0){
+        if (this.countAdult > 0) {
           newTitle = `${this.countAdult} ${adultWord}`;
         }
 
-        if(this._bothIsHave()){
-          newTitle += `, `;
+        if (this._bothIsHave()) {
+          newTitle += ', ';
         }
 
         if (this.countBaby > 0) {
@@ -78,7 +78,7 @@ class DropDown {
         }
 
         this.titleButton.innerHTML = newTitle;
-      }else{
+      } else {
         this.titleButton.innerHTML = this.title;
       }
 
@@ -87,13 +87,12 @@ class DropDown {
       } else {
         buttonIncrement.classList.remove('drop-down__item-buttons-increment_active');
       }
-      
-      if(this._menIsHave()){
+
+      if (this._menIsHave()) {
         this.buttonClean.classList.add('drop-down__item-buttons-control-clean_show');
-      }else{
+      } else {
         this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
       }
-
     }
   }
 
