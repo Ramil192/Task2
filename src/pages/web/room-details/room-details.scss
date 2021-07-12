@@ -27,7 +27,7 @@
   }
 
   &__description-left {
-    margin-right: 54px;
+    flex: 0 1 61.2%;
   }
 
   &__description-status {
@@ -170,6 +170,7 @@
     font-size: 14px;
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
+    margin-top: 7px;
   }
 
   &__commentary-item {
