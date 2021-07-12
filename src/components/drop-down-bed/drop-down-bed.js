@@ -21,6 +21,15 @@ class DropDownBed {
     return (this.countBedRooms > 0) || (this.countBed > 0) || (this.countBathrooms > 0);
   }
 
+  _isHaveBedRoomsAndBed() {
+    return (this.countBedRooms > 0 && this.countBed > 0);
+  }
+
+  _isHaveBedRoomsOrBed() {
+    return (this.countBedRooms > 0 && this.countBathrooms > 0) || (this.countBed > 0 && this.countBathrooms > 0);
+  }
+
+
   _handleBodyClick = (e) => {
     const element = e.target;
     if (element.id) {
@@ -28,7 +37,7 @@ class DropDownBed {
       const buttonIncrement = element.parentElement.querySelector('.js-drop-down-bed__item-buttons-increment');
       const guestName = element.parentElement.previousElementSibling.innerHTML;
 
-      let newTitle = this.title;
+      let newTitle = '';
 
       let bedRoomsWord = 'спален';
       let bedWord = 'кроватей';
@@ -47,15 +56,30 @@ class DropDownBed {
       bedWord = (this.countBed === 1) ? 'кровать ' : (this.countBed > 1 && this.countBed < 4) ? 'кровати' : bedWord;
 
       if (this._isCount()) {
-        newTitle = `${this.countBedRooms} ${bedRoomsWord}`;
+        if (this.countBedRooms > 0) {
+          newTitle += `${this.countBedRooms} ${bedRoomsWord}`;
+        }
+
+        if (this._isHaveBedRoomsAndBed()) {
+          newTitle += ' , '
+        }
 
         if (this.countBed > 0) {
-          newTitle += ` , ${this.countBed} ${bedWord}`;
+          newTitle += `${this.countBed} ${bedWord}`;
+        }
+
+        if (this._isHaveBedRoomsOrBed()) {
+          newTitle += ' , '
         }
 
         if (this.countBathrooms > 0) {
           newTitle += ` ${this.countBathrooms} ${bathroomsWord}`;
         }
+
+        this.titleButton.innerHTML = newTitle;
+
+      } else {
+        this.titleButton.innerHTML = this.title;
       }
 
       if (count.innerHTML > 0) {
@@ -63,7 +87,6 @@ class DropDownBed {
       } else {
         buttonIncrement.classList.remove('drop-down-bed__item-buttons-increment_active');
       }
-      this.titleButton.innerHTML = newTitle;
     }
   }
 
