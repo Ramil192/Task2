@@ -12,6 +12,7 @@
   &__body {
     display: flex;
     margin-top: 10px;
+    justify-content: space-between;
   }
 
   &__header-text {
@@ -25,7 +26,6 @@
 
   &__body-text {
     max-width: 653px;
-    margin-left: 19px;
     color: rgba(31, 32, 65, 0.75);
     font-size: 14px;
     line-height: 24px;

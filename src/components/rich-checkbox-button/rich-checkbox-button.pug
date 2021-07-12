@@ -9,11 +9,11 @@ mixin rich-checkbox-button(options = {})
     } = options;
     
   section.rich-checkbox-button=title
-  div.div.rich-checkbox-button__wrapper
-    div.rich-checkbox-button__item
-    -for(let {subTitle,text} of list)  
-        div.rich-checkbox-button__item
-          label.rich-checkbox-button__check
-            input(class='rich-checkbox-button__checkbox' type="checkbox")
-            span.rich-checkbox-button__sub-title=subTitle
-          div.rich-checkbox-button__text!=text
+    div.div.rich-checkbox-button__wrapper
+      div.rich-checkbox-button__item
+      -for(let {subTitle,text} of list)  
+          div.rich-checkbox-button__item
+            label.rich-checkbox-button__check
+              input(class='rich-checkbox-button__checkbox' type="checkbox")
+              span.rich-checkbox-button__sub-title=subTitle
+            div.rich-checkbox-button__text!=text
