@@ -10,21 +10,24 @@ mixin head(options = {})
         {text: 'Услуги', isBold : '' , href:'form-elements.html', flag : true},
         {text: 'Вакансии', isBold : '' , href:'cards.html', flag : false},
         {text: 'Новости', isBold : '' , href:'header-and-footer.html', flag : false},
-        {text: 'Соглашения', isBold : '' , href:'#', flag : true}
+        {text: 'Соглашения', isBold : '' , href:'https://www.error.com/', flag : true}
       ], 
     } = options;
-    
+
     const classModifier = 'head__nav-list-item-link_bold';
 
+
   header.head
-    div(class='head__item')
-      a(href='index.html').head__nav-list-item
+    div(class="head__item")
+      a(href="index.html").head__nav-list-item
         img(src="./img/logo.svg" alt="")
       nav.head__nav
         ul.head__nav-list
           -for(let {text,href,flag,isBold} of list)
-            li(class=`head__nav-list-item`)
-              a(class=`head__nav-list-item-link ${isBold && classModifier}` href=href)=text
+            -const target = href === 'https://www.error.com/' ? "_blank" : "_self";
+            
+            li(class="head__nav-list-item")
+              a(class=`head__nav-list-item-link ${isBold && classModifier}` href=href target=target )=text
               if(flag)
                 button.head__nav-list-item_down-button 
 
