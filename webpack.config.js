@@ -1,10 +1,21 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const images = require('file-loader');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
+const pages = [
+  { pageName: 'color-and-type', pageType: 'ui-kit' },
+  { pageName: 'form-elements', pageType: 'ui-kit' },
+  { pageName: 'cards', pageType: 'ui-kit' },
+  { pageName: 'header-and-footer', pageType: 'ui-kit' },
+  { pageName: 'main-sign-in', pageType: 'web' },
+  { pageName: 'registration', pageType: 'web' },
+  { pageName: 'room-details', pageType: 'web' },
+  { pageName: 'search-room', pageType: 'web' },
+];
 
 const pluginsOptions = [];
 
@@ -12,65 +23,20 @@ pluginsOptions.push(new HtmlWebpackPlugin({
   inject: false,
   hash: true,
   template: './src/pages/index/index.pug',
-  //favicon: './src/public/images/icon/favicon.png',
   filename: 'index.html'
 }));
 
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/ui-kit/color-and-type/color-and-type.pug',
-  filename: 'color-and-type.html'
-}));
+pages.forEach((e) => {
+  pluginsOptions.push(
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: `./src/pages/${e.pageType}/${e.pageName}/${e.pageName}.pug`,
+      filename: `${e.pageName}.html`,
+    }),
+  );
+});
 
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/ui-kit/form-elements/form-elements.pug',
-  filename: 'form-elements.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/ui-kit/cards/cards.pug',
-  filename: 'cards.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/ui-kit/header-and-footer/header-and-footer.pug',
-  filename: 'header-and-footer.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/web/main-sign-in/main-sign-in.pug',
-  filename: 'sign-in.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/web/registration/registration.pug',
-  filename: 'registration.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/web/room-details/room-details.pug',
-  filename: 'room-details.html'
-}));
-
-pluginsOptions.push(new HtmlWebpackPlugin({
-  inject: false,
-  hash: true,
-  template: './src/pages/web/search-room/search-room.pug',
-  filename: 'search-room.html'
-}));
 
 pluginsOptions.push(new MiniCssExtractPlugin({
   filename: "style.css",
@@ -86,36 +52,14 @@ pluginsOptions.push(new CopyWebpackPlugin([
     to: './img'
   },
   {
-    from: './src/components/footer/images/',
-    to: './images'
+    context: './src/components/',
+    from:  '**/*.svg',
+    to: path.resolve(__dirname, 'docs/images/[name].[ext]')
   },
   {
-    from: './src/components/slide/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/like-button/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/rate-button/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/text-list/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/buttons/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/calendar/images/',
-    to: './images'
-  },
-  {
-    from: './src/components/pagination/images/',
-    to: './images'
+    context: './src/components/',
+    from:  '**/*.png',
+    to: path.resolve(__dirname, 'docs/images/[name].[ext]')
   },
   {
     from: './src/pages/index/images/',
@@ -140,6 +84,8 @@ pluginsOptions.push(new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery',
 }));
+
+pluginsOptions.push(new CleanWebpackPlugin());
 
 module.exports = {
   entry: {
@@ -228,9 +174,6 @@ module.exports = {
       {
         test: /\.(ttf|eot|woff|woff2|svg|png|jpg)$/,
         loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
       },
     ]
   },
