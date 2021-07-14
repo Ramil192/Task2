@@ -18,8 +18,9 @@ html
   body
     +head()
     
-    div.main-sign-in
-      +account-registration('Регистрация аккаунта')
+    div.registration
+      div.registration__items
+        +account-registration('Регистрация аккаунта')
       
     include ../../../components/footer/footer.pug
 
