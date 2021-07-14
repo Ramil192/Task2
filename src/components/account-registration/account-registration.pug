@@ -5,7 +5,7 @@ include ../toggle/toggle.pug
 include ../buttons/buttons.pug
 
 
-mixin account-registration(title)
+mixin account-registration(title,submitName)
   section.account-registration
     div.account-registration__title=title
     div.account-registration__item
@@ -31,7 +31,7 @@ mixin account-registration(title)
       +toggle('Получать спецпредложения',false)
     
     div.account-registration__item
-      +buttons({modifier:['form'],text:'зарегистрироваться'})
+      +buttons({modifier:['form'],text:submitName})
     
     div.account-registration__item
       div.account-registration__footer
