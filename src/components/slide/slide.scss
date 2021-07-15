@@ -1,5 +1,8 @@
 .slick {
-  &__slide {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+   &__slide {
     width: 270px;
     height: 151px;
   }
@@ -7,7 +10,7 @@
   &__slide-footer {
     background-color: #ffffff;
     width: 270px;
-    padding: 24px 20px 17px 22px;
+    padding: 24px 20px 17px 20px;
   }
 
   &__slide-footer-text {
@@ -23,9 +26,12 @@
     }
   }
 
+  &__slide-item {
+    height: 151px;
+  }
   &__slide-img {
     width: 270px;
-    height: 150px;
+    height: 100%;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
@@ -94,3 +100,4 @@
     background: #ffffff;
   }
 }
+
