@@ -1,5 +1,4 @@
 .commentary {
-
   &__header {
     display: flex;
   }
@@ -7,22 +6,25 @@
   &__img {
     width: 48px;
     height: 48px;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border-radius: 32px;
+    border: 2px solid #FFFFFF;
   }
 
   &__body {
     display: flex;
     margin-top: 10px;
   }
-  
+
   &__header-text {
     margin-left: 10px;
   }
-  
+
   &__header-name {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+
   &__body-text {
     max-width: 653px;
     color: rgba(31, 32, 65, 0.75);
@@ -30,5 +32,4 @@
     line-height: 24px;
     margin-left: 16px;
   }
-  
 }

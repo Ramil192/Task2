@@ -19,8 +19,8 @@ mixin drop-down-bed(options = {})
       div.drop-down-bed__sub-title=subTitle
 
     div.drop-down-bed__header
-      button.drop-down-bed__title-button.js-drop-down-bed__title-button Сколько комнат
-      
+      input(class="drop-down-bed__input js-drop-down-bed__input" value="Сколько комнат" readonly)
+
     div(class=`drop-down-bed__items js-drop-down-bed__items ${classModifier}`)
       -for(let {text,count} of list)
         div.drop-down-bed__item

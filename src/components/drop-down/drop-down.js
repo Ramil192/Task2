@@ -8,7 +8,7 @@ class DropDown {
   }
 
   _initialize() {
-    this.titleButton = this.outerContainerElement.querySelector('.js-drop-down__title-button');
+    this.dropDownInput = this.outerContainerElement.querySelector('.js-drop-down__input');
     this.body = this.outerContainerElement.querySelector('.js-drop-down__items');
     this.buttonClean = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-clean');
     this.buttonOk = this.outerContainerElement.querySelector('.js-drop-down__item-buttons-control-ok');
@@ -24,7 +24,7 @@ class DropDown {
     this.buttonClean.classList.remove('drop-down__item-buttons-control-clean_show');
     this.countAdult = 0;
     this.countBaby = 0;
-    this.titleButton.innerHTML = this.title;
+    this.dropDownInput.value = this.title;
   }
 
   _handleButtonOkClick = () => {
@@ -64,7 +64,7 @@ class DropDown {
       babyWord = (this.countBaby > 1 && this.countBaby < 4) ? 'младенца' : (this.countBaby > 4) ? 'младенцев' : babyWord;
 
       if (this._menIsHave()) {
-        console.log('sadfedsaffdsa;l;nk');
+
         if (this.countAdult > 0) {
           newTitle = `${this.countAdult} ${adultWord}`;
         }
@@ -77,9 +77,9 @@ class DropDown {
           newTitle += `${this.countBaby} ${babyWord}`;
         }
 
-        this.titleButton.innerHTML = newTitle;
+        this.dropDownInput.value = newTitle;
       } else {
-        this.titleButton.innerHTML = this.title;
+        this.dropDownInput.value = this.title;
       }
 
       if (count.innerHTML > 0) {
@@ -97,7 +97,7 @@ class DropDown {
   }
 
   _setEventHandlers() {
-    this.titleButton.addEventListener('click', this._handleButtonTitleClick);
+    this.dropDownInput.addEventListener('click', this._handleButtonTitleClick);
     this.body.addEventListener('click', this._handleBodyClick);
     this.buttonClean.addEventListener('click', this._handleButtonCleanClick);
     this.buttonOk.addEventListener('click', this._handleButtonOkClick);

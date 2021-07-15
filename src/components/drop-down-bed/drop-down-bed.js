@@ -9,7 +9,7 @@ class DropDownBed {
   }
 
   _initialize() {
-    this.titleButton = this.outerContainerElement.querySelector('.js-drop-down-bed__title-button');
+    this.dropDownBedInput = this.outerContainerElement.querySelector('.js-drop-down-bed__input');
     this.items = this.outerContainerElement.querySelector('.js-drop-down-bed__items');
   }
 
@@ -76,10 +76,10 @@ class DropDownBed {
           newTitle += ` ${this.countBathrooms} ${bathroomsWord}`;
         }
 
-        this.titleButton.innerHTML = newTitle;
+        this.dropDownBedInput.value = newTitle;
 
       } else {
-        this.titleButton.innerHTML = this.title;
+        this.dropDownBedInput.value = this.title;
       }
 
       if (count.innerHTML > 0) {
@@ -91,7 +91,7 @@ class DropDownBed {
   }
 
   _setEventHandlers() {
-    this.titleButton.addEventListener('click', this._handleButtonTitleClick);
+    this.dropDownBedInput.addEventListener('click', this._handleButtonTitleClick);
     this.items.addEventListener('click', this._handleBodyClick);
   }
 
