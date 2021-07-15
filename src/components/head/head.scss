@@ -2,11 +2,12 @@
 .head {
   max-width: 100%;
   background-color: #fff;
-
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  
   &__item {
     display: flex;
     justify-content: flex-end;
-    padding: 15px 141px 14px 140px;
+    padding: 15px 141px 15px 140px;
     max-width: 1440px;
     margin: 0px auto;
     position: relative;
@@ -61,7 +62,7 @@
   &__nav-list-item_down-button {
     width: 21px;
     height: 11px;
-    background: url("./img/headDown.svg") no-repeat 3px 3px;
+    background: url("./img/check-mark-opacity-50.svg") no-repeat 3px 3px;
     margin-top: 0px;
   }
 

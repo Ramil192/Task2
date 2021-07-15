@@ -15,7 +15,7 @@ mixin drop-down(options={})
   section.drop-down.js-drop-down
     div.drop-down__title=title 
     div.drop-down__header
-      button.drop-down__title-button.js-drop-down__title-button Сколько гостей
+      input(class="drop-down__input js-drop-down__input" value="Сколько гостей" readonly)
 
     div(class=`drop-down__items  js-drop-down__items ${classModifier}`)
       -for(let item of list )

@@ -1,12 +1,14 @@
-.main-sign-in {
-  width: 100%;
-  margin: 0px auto;
-  height: 703px;
+.registration{
+  height: 684px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url('./img/sign-in.png');
-  background-position: bottom;
+  background-position: 0px -69px;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  &__items{
+    margin-left: 6px;
+  }
 }
