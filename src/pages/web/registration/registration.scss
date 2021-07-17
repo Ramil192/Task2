@@ -11,4 +11,12 @@
   &__items{
     margin-left: 6px;
   }
+  @media (max-width:400px) {
+    
+    &__items{
+      margin-left: 0px;
+    }
+  }
+
+
 }
