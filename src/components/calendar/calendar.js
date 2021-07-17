@@ -32,7 +32,6 @@ class Calendar {
       navTitles: {
         days: 'MM yyyy',
       },
-      // inline: true,
       onShow: this._handleDatepickerShow,
       onSelect: this._handleDoubleInputSelectRange,
     });
